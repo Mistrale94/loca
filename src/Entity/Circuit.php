@@ -6,6 +6,7 @@ use App\Repository\CircuitRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CircuitRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Circuit
 {
     #[ORM\Id]
@@ -22,7 +23,7 @@ class Circuit
     #[ORM\Column(type: 'string', length: 100)]
     private $locality;
 
-    #[ORM\ManyToOne(targetEntity: Filter::class, inversedBy: 'circuits')]
+    #[ORM\ManyToOne(targetEntity: Filter::class)]
     #[ORM\JoinColumn(nullable: false)]
     private $filter_id;
 
@@ -122,5 +123,15 @@ class Circuit
         $this->modified_at = $modified_at;
 
         return $this;
+    }
+
+    #[ORM\PrePersist]
+    public function setCreatedAtValue(){
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    #[ORM\PrePersist]
+    public function setUpdatedAtValue(){
+        $this->updatedAt = new \DateTimeImmutable();
     }
 }

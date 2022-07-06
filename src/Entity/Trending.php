@@ -6,6 +6,7 @@ use App\Repository\TrendingRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: TrendingRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Trending
 {
     #[ORM\Id]
@@ -62,5 +63,15 @@ class Trending
         $this->modified_at = $modified_at;
 
         return $this;
+    }
+
+    #[ORM\PrePersist]
+    public function setCreatedAtValue(){
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    #[ORM\PrePersist]
+    public function setUpdatedAtValue(){
+        $this->updatedAt = new \DateTimeImmutable();
     }
 }
