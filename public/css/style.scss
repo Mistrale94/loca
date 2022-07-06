@@ -135,15 +135,305 @@ header{
             display: none;
         }
     }
+    .headmain{
+        padding: 50px;
+        #headcontainer{
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            margin: 0 auto;
+            h1{
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 41px;
+                letter-spacing: -0.03em;
+                width: 350px;
 
+                position: relative;
+                svg{
+                    position: absolute;
+                    bottom: -10px;
+                    left: 10px;
 
+                }
+            }
+            div:nth-child(3){
+               margin-top: 48px;
+               p{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-size: 16px;
+                line-height: 24px;
+                span{
+                    font-weight:bold;
+                }
+               }
+            }
+            div:nth-child(4){
+                margin-top: 48px;
+                #button{
+                    color: white;
+                    width: 218px;
+                    height: 56px;
+                    border-radius: 32px;
+                    background: #36706B;
+                    transition: 300ms;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;
+        
+                }
+        
+                #button:hover{
+                    background: #F8961E;
+                }
+            }
+            
+        }
+    }
+
+}
+#topfive{
+    padding: 50px;
+    background-color: #D6E2E1;
+    .container{
+        width: 350px;
+        margin: 0 auto;
+        h1{
+            width: 224px;
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 29px;
+            line-height: 33px;
+            letter-spacing: -0.03em;
+
+            position: relative;
+            svg{
+                position: absolute;
+                top: -46px;
+                right: 27px;
+            }
+        }
+        p{
+            margin-top: 24px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .slider{
+            margin-top: 30px;
+            margin-bottom: 50px;
+            article{
+                background-color: #FFFFFF;
+                border-radius: 0px 0px 32px 32px;
+                img{
+                    width: 100%;
+                }
+                div{
+                    padding: 30px;
+                    h1{
+                        font-family: 'Ubuntu';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 28px;
+                        letter-spacing: -0.03em;
+                    }
+                    p:nth-child(2){
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 19px;
+                    }
+                    p:nth-child(3){
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                        
+                        text-align: right;
+                        a{
+                            color: #33706B;
+                        }
+                    }
+                }
+
+            }
+        }
+        >a{
+            padding: 16px 56px;
+            background: #33706B;
+            border-radius: 32px;
+            border: none;
+            color: #FFFFFF;
+
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-decoration: none;
+
+        }
+        
+
+    }
+}
+#aventure{
+    padding: 50px;
+    background-color: #D6E2E1;
+    .container{
+        width: 350px;
+        margin: 0 auto;
+        h1{
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 29px;
+            line-height: 33px;
+            letter-spacing: -0.03em;
+
+            position: relative;
+            svg{
+                position: absolute;
+            }
+        }
+        p{
+            margin-top:30px;
+            width: 285px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        form{
+            margin-top: 50px;
+            h1{
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+    
+                letter-spacing: -0.03em;
+            }
+            div{
+                margin-top: 32px;
+                background-color: #FFFFFF;
+                border-radius: 16px;
+                padding: 10px;
+                width: 350px;
+                display: flex;
+                justify-content: space-between;
+                label{
+                    padding: 20px 41px;
+                    border-radius: 16px;
+
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .active{
+                    background: #33706B;
+                    color: #FFFFFF;
+                }
+            }
+            input{
+                margin-top: 20px;
+                width: 100%;
+                border-radius: 16px;
+                border: none;
+                height: 76px;
+
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #B2B3B2;
+                padding: 20px;
+            }
+            button{
+                margin-top: 32px;
+                padding: 16px 56px;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                background: #33706B;
+                color: #FFFFFF;
+                border-radius: 32px;
+                border: none;
+            }
+
+        }
+    }
+
+}
+#visiter{
+    padding: 50px;
+    
+    .container{
+        width: 350px;
+        margin: 0 auto;
+        h1{
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 29px;
+            line-height: 33px;
+            letter-spacing: -0.03em;
+            position: relative;
+
+            svg{
+                position: absolute;
+            }
+        }
+        p{
+            margin-top: 20px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        div{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            article{
+                width: 322.18px;
+                height: 333.09px;
+
+                background: #33706B;
+                border-radius: 32px;
+            }
+        }
+    }
 }
 
 
 footer{
     background-color: #36706B;
     color: #FFFFFF;
-    padding: 100px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     
@@ -214,7 +504,7 @@ footer{
 
         #footnews{
             margin-top:50px;
-            width: 600px;
+            width: 300px;
             h1{
                 font-size: 20px;
                 margin-bottom: 20px;
@@ -231,7 +521,7 @@ footer{
             #mc_embed_signup
             {
                 #mc_embed_signup_scroll{
-                    width: 600px;
+                    width: 300px;
                     .mc-field-group{
                         width: 80%;
                         #mce-EMAIL{

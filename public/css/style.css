@@ -132,10 +132,322 @@ header nav .desktop_nav {
   display: none;
 }
 
+header .headmain {
+  padding: 50px;
+}
+
+header .headmain #headcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 0 auto;
+}
+
+header .headmain #headcontainer h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.03em;
+  width: 350px;
+  position: relative;
+}
+
+header .headmain #headcontainer h1 svg {
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+}
+
+header .headmain #headcontainer div:nth-child(3) {
+  margin-top: 48px;
+}
+
+header .headmain #headcontainer div:nth-child(3) p {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+header .headmain #headcontainer div:nth-child(3) p span {
+  font-weight: bold;
+}
+
+header .headmain #headcontainer div:nth-child(4) {
+  margin-top: 48px;
+}
+
+header .headmain #headcontainer div:nth-child(4) #button {
+  color: white;
+  width: 218px;
+  height: 56px;
+  border-radius: 32px;
+  background: #36706B;
+  transition: 300ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+header .headmain #headcontainer div:nth-child(4) #button:hover {
+  background: #F8961E;
+}
+
+#topfive {
+  padding: 50px;
+  background-color: #D6E2E1;
+}
+
+#topfive .container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+#topfive .container h1 {
+  width: 224px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  position: relative;
+}
+
+#topfive .container h1 svg {
+  position: absolute;
+  top: -46px;
+  right: 27px;
+}
+
+#topfive .container p {
+  margin-top: 24px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#topfive .container .slider {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+#topfive .container .slider article {
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 32px 32px;
+}
+
+#topfive .container .slider article img {
+  width: 100%;
+}
+
+#topfive .container .slider article div {
+  padding: 30px;
+}
+
+#topfive .container .slider article div h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+}
+
+#topfive .container .slider article div p:nth-child(2) {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+#topfive .container .slider article div p:nth-child(3) {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+}
+
+#topfive .container .slider article div p:nth-child(3) a {
+  color: #33706B;
+}
+
+#topfive .container > a {
+  padding: 16px 56px;
+  background: #33706B;
+  border-radius: 32px;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+#aventure {
+  padding: 50px;
+  background-color: #D6E2E1;
+}
+
+#aventure .container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+#aventure .container h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  position: relative;
+}
+
+#aventure .container h1 svg {
+  position: absolute;
+}
+
+#aventure .container p {
+  margin-top: 30px;
+  width: 285px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#aventure .container form {
+  margin-top: 50px;
+}
+
+#aventure .container form h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+}
+
+#aventure .container form div {
+  margin-top: 32px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 10px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#aventure .container form div label {
+  padding: 20px 41px;
+  border-radius: 16px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#aventure .container form div .active {
+  background: #33706B;
+  color: #FFFFFF;
+}
+
+#aventure .container form input {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 16px;
+  border: none;
+  height: 76px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #B2B3B2;
+  padding: 20px;
+}
+
+#aventure .container form button {
+  margin-top: 32px;
+  padding: 16px 56px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  background: #33706B;
+  color: #FFFFFF;
+  border-radius: 32px;
+  border: none;
+}
+
+#visiter {
+  padding: 50px;
+}
+
+#visiter .container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+#visiter .container h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  position: relative;
+}
+
+#visiter .container h1 svg {
+  position: absolute;
+}
+
+#visiter .container p {
+  margin-top: 20px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#visiter .container div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#visiter .container div article {
+  width: 322.18px;
+  height: 333.09px;
+  background: #33706B;
+  border-radius: 32px;
+}
+
 footer {
   background-color: #36706B;
   color: #FFFFFF;
-  padding: 100px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -218,7 +530,7 @@ footer div.footer-container article:nth-child(2) p {
 
 footer div.footer-container #footnews {
   margin-top: 50px;
-  width: 600px;
+  width: 300px;
 }
 
 footer div.footer-container #footnews h1 {
@@ -235,7 +547,7 @@ footer div.footer-container #footnews p {
 }
 
 footer div.footer-container #footnews #mc_embed_signup #mc_embed_signup_scroll {
-  width: 600px;
+  width: 300px;
 }
 
 footer div.footer-container #footnews #mc_embed_signup #mc_embed_signup_scroll .mc-field-group {
