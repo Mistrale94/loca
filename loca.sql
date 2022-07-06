@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 06 juil. 2022 à 08:59
+-- Généré le : mer. 06 juil. 2022 à 10:05
 -- Version du serveur : 5.7.36
 -- Version de PHP : 8.0.13
 
@@ -32,8 +32,8 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `mail` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` datetime NOT NULL,
-  `modified_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -51,8 +51,8 @@ CREATE TABLE IF NOT EXISTS `circuit` (
   `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `locality` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` datetime NOT NULL,
-  `modified_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`),
   KEY `IDX_1325F3A656F56DA8` (`filter_id_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -76,7 +76,8 @@ CREATE TABLE IF NOT EXISTS `doctrine_migration_versions` (
 --
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
-('DoctrineMigrations\\Version20220706085742', '2022-07-06 08:58:49', 397);
+('DoctrineMigrations\\Version20220706085742', '2022-07-06 08:58:49', 397),
+('DoctrineMigrations\\Version20220706095150', '2022-07-06 09:52:11', 197);
 
 -- --------------------------------------------------------
 
@@ -88,8 +89,8 @@ DROP TABLE IF EXISTS `filter`;
 CREATE TABLE IF NOT EXISTS `filter` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` datetime NOT NULL,
-  `modified_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -117,6 +118,25 @@ CREATE TABLE IF NOT EXISTS `messenger_messages` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `reservation`
+--
+
+DROP TABLE IF EXISTS `reservation`;
+CREATE TABLE IF NOT EXISTS `reservation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gender` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `first_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `month` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mail` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `trending`
 --
 
@@ -124,8 +144,8 @@ DROP TABLE IF EXISTS `trending`;
 CREATE TABLE IF NOT EXISTS `trending` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `article_id_id` int(11) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `modified_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`),
   KEY `IDX_931EF4ED8F3EC46` (`article_id_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -141,8 +161,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mail` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` datetime NOT NULL,
-  `modified_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
