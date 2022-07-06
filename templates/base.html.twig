@@ -13,6 +13,7 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
+    {% block body %}
     <body>
         <header>
             <nav>
@@ -71,7 +72,7 @@
             </nav>
        
 
-        {% block body %}{% endblock %}
+    {% endblock %}
         <footer id="contact">
             <h1>Restons connectés</h1>
             <p>Cette page a été réfléchie et intégrée de manière éco-conçue pour préserver l’environnement.</p>
