@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 06 juil. 2022 à 10:05
+-- Généré le : mer. 06 juil. 2022 à 14:33
 -- Version du serveur : 5.7.36
 -- Version de PHP : 8.0.13
 
@@ -20,22 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `loca`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `admin`
---
-
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `mail` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
-  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -77,7 +61,31 @@ CREATE TABLE IF NOT EXISTS `doctrine_migration_versions` (
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
 ('DoctrineMigrations\\Version20220706085742', '2022-07-06 08:58:49', 397),
-('DoctrineMigrations\\Version20220706095150', '2022-07-06 09:52:11', 197);
+('DoctrineMigrations\\Version20220706095150', '2022-07-06 09:52:11', 197),
+('DoctrineMigrations\\Version20220706133117', '2022-07-06 13:32:55', 112);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `editor`
+--
+
+DROP TABLE IF EXISTS `editor`;
+CREATE TABLE IF NOT EXISTS `editor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `roles` json NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_CCF1F1BAE7927C74` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `editor`
+--
+
+INSERT INTO `editor` (`id`, `email`, `roles`, `password`) VALUES
+(1, 'quat94@gmail.com', '[\"ROLE_USER\"]', '$2y$13$OcJ3jwqHIBczIZONQl85w.9laSPl3kYg00sfri5JOjQbjLba2BZNa');
 
 -- --------------------------------------------------------
 
@@ -92,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `filter` (
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
