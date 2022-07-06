@@ -2,32 +2,31 @@
 
 namespace App\Entity;
 
-use App\Repository\CircuitRepository;
+use App\Repository\ReservationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: CircuitRepository::class)]
-class Circuit
+#[ORM\Entity(repositoryClass: ReservationRepository::class)]
+class Reservation
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
 
+    #[ORM\Column(type: 'string', length: 50)]
+    private $gender;
+
     #[ORM\Column(type: 'string', length: 100)]
-    private $image;
+    private $last_name;
+
+    #[ORM\Column(type: 'string', length: 100)]
+    private $first_name;
 
     #[ORM\Column(type: 'string', length: 50)]
-    private $title;
+    private $month;
 
     #[ORM\Column(type: 'string', length: 100)]
-    private $locality;
-
-    #[ORM\ManyToOne(targetEntity: filter::class, inversedBy: 'circuits')]
-    #[ORM\JoinColumn(nullable: false)]
-    private $filter_id;
-
-    #[ORM\Column(type: 'text')]
-    private $content;
+    private $mail;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
@@ -40,62 +39,62 @@ class Circuit
         return $this->id;
     }
 
-    public function getImage(): ?string
+    public function getGender(): ?string
     {
-        return $this->image;
+        return $this->gender;
     }
 
-    public function setImage(string $image): self
+    public function setGender(string $gender): self
     {
-        $this->image = $image;
+        $this->gender = $gender;
 
         return $this;
     }
 
-    public function getTitle(): ?string
+    public function getLastName(): ?string
     {
-        return $this->title;
+        return $this->last_name;
     }
 
-    public function setTitle(string $title): self
+    public function setLastName(string $last_name): self
     {
-        $this->title = $title;
+        $this->last_name = $last_name;
 
         return $this;
     }
 
-    public function getLocality(): ?string
+    public function getFirstName(): ?string
     {
-        return $this->locality;
+        return $this->first_name;
     }
 
-    public function setLocality(string $locality): self
+    public function setFirstName(string $first_name): self
     {
-        $this->locality = $locality;
+        $this->first_name = $first_name;
 
         return $this;
     }
 
-    public function getFilterId(): ?filter
+    public function getMonth(): ?string
     {
-        return $this->filter_id;
+        return $this->month;
     }
 
-    public function setFilterId(?filter $filter_id): self
+    public function setMonth(string $month): self
     {
-        $this->filter_id = $filter_id;
+        $this->month = $month;
 
         return $this;
     }
 
-    public function getContent(): ?string
+    public function getMail(): ?string
     {
-        return $this->content;
+        return $this->mail;
     }
 
-    public function setContent(string $content): self
+    public function setMail(string $mail): self
     {
-        $this->content = $content;
+        $this->mail = $mail;
 
         return $this;
     }

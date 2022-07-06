@@ -21,10 +21,10 @@ class Filter
     #[ORM\OneToMany(mappedBy: 'filter_id', targetEntity: Circuit::class, orphanRemoval: true)]
     private $circuits;
 
-    #[ORM\Column(type: 'datetime')]
+    #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
 
-    #[ORM\Column(type: 'datetime')]
+    #[ORM\Column(type: 'datetime_immutable')]
     private $modified_at;
 
     public function __construct()
@@ -79,24 +79,24 @@ class Filter
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeImmutable
     {
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    public function setCreatedAt(\DateTimeImmutable $created_at): self
     {
         $this->created_at = $created_at;
 
         return $this;
     }
 
-    public function getModifiedAt(): ?\DateTimeInterface
+    public function getModifiedAt(): ?\DateTimeImmutable
     {
         return $this->modified_at;
     }
 
-    public function setModifiedAt(\DateTimeInterface $modified_at): self
+    public function setModifiedAt(\DateTimeImmutable $modified_at): self
     {
         $this->modified_at = $modified_at;
 
