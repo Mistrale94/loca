@@ -22,7 +22,7 @@ class Circuit
     #[ORM\Column(type: 'string', length: 100)]
     private $locality;
 
-    #[ORM\ManyToOne(targetEntity: filter::class, inversedBy: 'circuits')]
+    #[ORM\ManyToOne(targetEntity: Filter::class, inversedBy: 'circuits')]
     #[ORM\JoinColumn(nullable: false)]
     private $filter_id;
 
@@ -76,12 +76,12 @@ class Circuit
         return $this;
     }
 
-    public function getFilterId(): ?filter
+    public function getFilterId(): ?Filter
     {
         return $this->filter_id;
     }
 
-    public function setFilterId(?filter $filter_id): self
+    public function setFilterId(?Filter $filter_id): self
     {
         $this->filter_id = $filter_id;
 
