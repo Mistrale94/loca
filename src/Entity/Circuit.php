@@ -3,7 +3,10 @@
 namespace App\Entity;
 
 use App\Repository\CircuitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use DateTimeImmutable;
 
 #[ORM\Entity(repositoryClass: CircuitRepository::class)]
 #[ORM\HasLifecycleCallbacks]
@@ -127,11 +130,11 @@ class Circuit
 
     #[ORM\PrePersist]
     public function setCreatedAtValue(){
-        $this->createdAt = new \DateTimeImmutable();
+        $this->created_at = new \DateTimeImmutable();
     }
 
     #[ORM\PrePersist]
-    public function setUpdatedAtValue(){
-        $this->updatedAt = new \DateTimeImmutable();
+    public function setModifiedAtValue(){
+        $this->modified_at = new \DateTimeImmutable();
     }
 }

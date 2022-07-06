@@ -16,8 +16,6 @@ class CircuitType extends AbstractType
             ->add('title')
             ->add('locality')
             ->add('content')
-            ->add('created_at')
-            ->add('modified_at')
             ->add('filter_id')
         ;
     }
