@@ -6,6 +6,7 @@ use App\Repository\ReservationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Reservation
 {
     #[ORM\Id]
@@ -121,5 +122,15 @@ class Reservation
         $this->modified_at = $modified_at;
 
         return $this;
+    }
+
+    #[ORM\PrePersist]
+    public function setCreatedAtValue(){
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    #[ORM\PrePersist]
+    public function setUpdatedAtValue(){
+        $this->updatedAt = new \DateTimeImmutable();
     }
 }

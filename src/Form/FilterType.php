@@ -13,8 +13,6 @@ class FilterType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('created_at')
-            ->add('modified_at')
         ;
     }
 
