@@ -13,6 +13,7 @@
             <script src="/js/script.js"></script>
         {% endblock %}
     </head>
+    {% block body %}
     <body>
         <header>
             <nav>
@@ -69,9 +70,6 @@
                     
                 </div>
             </nav>
-       
-
-        {% block body %}{% endblock %}
         <footer id="contact">
             <h1>Restons connectés</h1>
             <p>Cette page a été réfléchie et intégrée de manière éco-conçue pour préserver l’environnement.</p>
@@ -126,4 +124,5 @@
     </footer>
 
     </body>
+    {% endblock %}
 </html>
