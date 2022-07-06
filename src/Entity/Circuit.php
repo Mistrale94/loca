@@ -3,9 +3,13 @@
 namespace App\Entity;
 
 use App\Repository\CircuitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use DateTimeImmutable;
 
 #[ORM\Entity(repositoryClass: CircuitRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Circuit
 {
     #[ORM\Id]
@@ -22,7 +26,7 @@ class Circuit
     #[ORM\Column(type: 'string', length: 100)]
     private $locality;
 
-    #[ORM\ManyToOne(targetEntity: Filter::class, inversedBy: 'circuits')]
+    #[ORM\ManyToOne(targetEntity: Filter::class)]
     #[ORM\JoinColumn(nullable: false)]
     private $filter_id;
 
@@ -122,5 +126,15 @@ class Circuit
         $this->modified_at = $modified_at;
 
         return $this;
+    }
+
+    #[ORM\PrePersist]
+    public function setCreatedAtValue(){
+        $this->created_at = new \DateTimeImmutable();
+    }
+
+    #[ORM\PrePersist]
+    public function setModifiedAtValue(){
+        $this->modified_at = new \DateTimeImmutable();
     }
 }
