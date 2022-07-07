@@ -13,7 +13,7 @@
             <script src="/js/script.js"></script>
         {% endblock %}
     </head>
-    {% block body %}
+    
     <body>
         <header>
             <nav>
@@ -22,24 +22,16 @@
                 </a>
                 <ul class="desktop_nav">
                     <li>
-                        <a href="#value">Nos valeurs</a>
+                        <a href="#value">Accueil</a>
                     </li>
                     <li>
-                        <a href="#travel">Notre concept</a>
+                        <a href="#travel">Concept</a>
                     </li>
                     <li>
-                        <a href="#quiz">Quizz</a>
+                        <a href="#quiz">Circuits</a>
                     </li>
-                    <li>
-                        <a href="#portraits">Portraits</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <div class="btn-toggle" onclick="btntoggle()">
-                        <img src="/image/akar-icons_sun-fill.png" alt="" id="darkmode">
-                    </div>
                 </ul>
+                <a href="">Se connecter</a>
                 <div class="mobile-nav">
                     <a id="burger" onClick="menu();">
                        <img src="/image/Menu.png" alt="" id="img-burger">
@@ -47,29 +39,25 @@
     
                     <ul class="mobile_link-group">
                         <a onclick="menu()">
-                        <img src="asset/image/Group 2017.png" alt=""></a>
+                        <img src="/image/close.png" alt=""></a>
                         <li class="mobile_link">
-                            <a href="#value">Nos valeurs</a>
+                            <a href="#value">Accueil</a>
                         </li>
                         <li class="mobile_link">
-                            <a href="#travel">Notre concept</a>
+                            <a href="#travel">Concept</a>
                         </li>
                         <li class="mobile_link">
-                            <a href="#quiz">Quizz</a>
+                            <a href="#quiz">Circuits</a>
                         </li>
-                        <li class="mobile_link">
-                            <a href="#portraits">Portraits</a>
+                        <li>
+                            <a href="">Se connecter</a>
                         </li>
-                        <li class="mobile_link">
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <div class="btn-toggle" onclick="btntoggle()">
-                            <img src="/image/akar-icons_sun-fill.png" alt="" id="darkmode">
-                        </div>
                     </ul>
                     
                 </div>
             </nav>
+            {% block body %}
+            {% endblock %}
         <footer id="contact">
             <h1>Restons connectés</h1>
             <p>Cette page a été réfléchie et intégrée de manière éco-conçue pour préserver l’environnement.</p>
@@ -124,5 +112,5 @@
     </footer>
 
     </body>
-    {% endblock %}
+    
 </html>

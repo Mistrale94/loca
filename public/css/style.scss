@@ -16,6 +16,192 @@
 
 header{
     nav{
+        border: 2px solid red;
+        height: 70px;
+        padding: 0 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+
+        a{
+            img{
+                height: 27px;
+            }
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+
+            li{
+                padding: 0 15px 0 15px;
+
+                a{
+                    text-decoration: none;
+                    color: #191A19;
+                    font-family: 'Ubuntu';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 18px;
+                    text-align: center;
+                    letter-spacing: -0.03em;
+                }
+                a:hover::after{
+                    width: 50%;
+                    background: #36706B;
+                }
+                a::after{
+                    content: '';
+                    display: block;
+                    margin: auto;
+                    margin-top: 2px;
+                    height: 1px;
+                    width: 0;
+                    background: transparent;
+                    transition: width .5s ease, background-color .5s ease;
+                }
+            }
+        }
+        div.mobile-nav, a#burger, .mobile_link-group{
+            display: none;
+        }
+
+        #burger {
+            cursor: pointer;
+        }
+
+        .mobile_link-group {
+            position: absolute;
+            z-index: 4;
+            right: 0;
+            top: 0px;
+            background: rgb(54, 112, 107);
+            width: 320px;
+            height: 700px;
+            display: block;
+
+            > a{
+                padding: 73px 32px 95px 15px;
+                cursor: pointer;
+            }
+        }
+
+        .mobile_link-group li {
+            text-align: right;
+            padding: 25px 20px;
+            cursor: pointer;
+        }
+
+        .mobile_link-group .social {
+            cursor: auto;
+        }
+        div.mobile-nav{
+            ul.mobile_link-group{
+                li.mobile_link{
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+    .headmain{
+        padding: 120px 100px;
+        #headcontainer{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            
+            figure{
+                width: 50%;
+                
+                img{
+                    width: 100%;
+                }
+            }
+            article{
+                display: flex;
+                flex-direction: column;
+                width: 610px;
+                justify-content: center;
+                h1{
+                    font-family: 'Ubuntu';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 64px;
+                    line-height: 74px;
+                    letter-spacing: -0.03em;
+                    width: 610px;
+    
+                    position: relative;
+                    svg{
+                        position: absolute;
+                        bottom: -10px;
+                        left: 10px;
+    
+                    }
+                }
+                #headsubtitle{
+                    margin-top: 48px;
+                    p{
+                     font-family: 'Raleway';
+                     font-style: normal;
+                     font-weight: 700;
+                     font-size: 16px;
+                     line-height: 24px;
+                     span{
+                         font-weight:bold;
+                     }
+                    }
+                 }
+
+                 #actions{
+                    margin-top: 48px;
+                    #button{
+                        color: white;
+                        width: 218px;
+                        height: 56px;
+                        border-radius: 32px;
+                        background: #36706B;
+                        transition: 300ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+            
+                    }
+            
+                    #button:hover{
+                        background: #F8961E;
+                    }
+                }
+
+            }
+            
+            
+        }
+    }
+
+
+}
+
+
+
+
+@media (max-width: 1000px){
+header{
+    nav{
         height: 70px;
         display: flex;
         justify-content: space-between;
@@ -62,21 +248,6 @@ header{
                     background: transparent;
                     transition: width .5s ease, background-color .5s ease;
                 }
-            }
-        }
-        div.btn-toggle{
-            width: 40px;
-            height: 40px;
-            background-color: #162D2B;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            margin: 0 15px 0 15px;
-            cursor: pointer;
-
-            img.darkmode{
-                height: 20px;
             }
         }
 
@@ -138,64 +309,66 @@ header{
     .headmain{
         padding: 50px;
         #headcontainer{
-            display: flex;
             flex-direction: column;
             width: 350px;
             margin: 0 auto;
-            h1{
-                font-family: 'Ubuntu';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 36px;
-                line-height: 41px;
-                letter-spacing: -0.03em;
-                width: 350px;
-
-                position: relative;
-                svg{
-                    position: absolute;
-                    bottom: -10px;
-                    left: 10px;
-
-                }
+            figure{
+                width: 100%;
             }
-            div:nth-child(3){
-               margin-top: 48px;
-               p{
-                font-family: 'Raleway';
-                font-style: normal;
-                font-size: 16px;
-                line-height: 24px;
-                span{
-                    font-weight:bold;
+            article{
+                
+                h1{
+                    font-size: 36px;
+                    line-height: 41px;
+                    width: 350px;
+                    position: relative;
+                    svg{
+                        position: absolute;
+                        bottom: -10px;
+                        left: 10px;
+                        width: 100px;
+                    }
                 }
-               }
-            }
-            div:nth-child(4){
-                margin-top: 48px;
-                #button{
-                    color: white;
-                    width: 218px;
-                    height: 56px;
-                    border-radius: 32px;
-                    background: #36706B;
-                    transition: 300ms;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                #headsubtitle{
+                    margin-top: 48px;
+                    p{
+                        width: 350px;
+                        font-size: 16px;
+                        line-height: 24px;
 
-                    font-family: 'Raleway';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 24px;
-        
+                    }
+                 }
+
+                 #actions{
+
+                    #button{
+                        color: white;
+                        width: 218px;
+                        height: 56px;
+                        border-radius: 32px;
+                        background: #36706B;
+                        transition: 300ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+            
+                    }
+            
+                    #button:hover{
+                        background: #F8961E;
+                    }
                 }
-        
-                #button:hover{
-                    background: #F8961E;
-                }
+                
             }
+            
+            
+           
             
         }
     }
@@ -581,4 +754,5 @@ footer{
          background-size: contain;
 
     }
+}
 }
