@@ -16,7 +16,6 @@
 
 header{
     nav{
-        border: 2px solid red;
         height: 70px;
         padding: 0 100px;
         display: flex;
@@ -200,6 +199,7 @@ header{
 
 
 @media (max-width: 1000px){
+
 header{
     nav{
         height: 70px;
@@ -249,6 +249,9 @@ header{
                     transition: width .5s ease, background-color .5s ease;
                 }
             }
+        }
+        #connecter{
+            display: none;
         }
 
         div.mobile-nav, #burger {
@@ -307,7 +310,7 @@ header{
         }
     }
     .headmain{
-        padding: 50px;
+        padding: 100px 50px;
         #headcontainer{
             flex-direction: column;
             width: 350px;
@@ -316,23 +319,24 @@ header{
                 width: 100%;
             }
             article{
+                width: 350px;
                 
                 h1{
                     font-size: 36px;
                     line-height: 41px;
-                    width: 350px;
+                    width: 100%;
                     position: relative;
                     svg{
                         position: absolute;
-                        bottom: -10px;
-                        left: 10px;
-                        width: 100px;
+                        bottom: -5px;
+                        left: 42px;
+                        width: 150px;
                     }
                 }
                 #headsubtitle{
                     margin-top: 48px;
                     p{
-                        width: 350px;
+                        width: 100%;
                         font-size: 16px;
                         line-height: 24px;
 
@@ -375,8 +379,9 @@ header{
 
 }
 #topfive{
-    padding: 50px;
+    padding: 100px 50px;
     background-color: #D6E2E1;
+    overflow: hidden;
     .container{
         width: 350px;
         margin: 0 auto;
@@ -407,6 +412,23 @@ header{
         .slider{
             margin-top: 30px;
             margin-bottom: 50px;
+            margin-right: -150px;
+            .carousel-items {
+                display: flex;
+                overflow-x: scroll;
+                //border: 1px solid red;
+                scroll-snap-type: x mandatory;
+
+            }
+            ::-webkit-scrollbar {
+                display: none;
+              }
+            .carousel-item {
+                flex-grow: 1;
+                margin-left: 32px;
+                //border: 1px solid blue;
+                scroll-snap-align: start;
+            }
             article{
                 background-color: #FFFFFF;
                 border-radius: 0px 0px 32px 32px;
@@ -415,6 +437,9 @@ header{
                 }
                 div{
                     padding: 30px;
+                    a{
+                        text-decoration: none;
+                    }
                     h1{
                         font-family: 'Ubuntu';
                         font-style: normal;
@@ -439,7 +464,17 @@ header{
                         
                         text-align: right;
                         a{
-                            color: #33706B;
+                            color: #33706B; 
+                        }
+                        svg{
+                            fill:currentColor;
+                            color:#33706B;
+                        }
+                        &:hover a{
+                            color: #F8961E;
+                        }
+                        &:hover svg{
+                            fill:#F8961E;
                         }
                     }
                 }
@@ -460,17 +495,23 @@ header{
             line-height: 24px;
             text-decoration: none;
 
+            &:hover{
+                background: #F8961E;
+            }
+
         }
         
 
     }
 }
 #aventure{
-    padding: 50px;
-    background-color: #D6E2E1;
+    padding: 100px 50px;
     .container{
         width: 350px;
         margin: 0 auto;
+        figure{
+            margin-bottom: 50px;
+        }
         h1{
             font-family: 'Ubuntu';
             font-style: normal;
@@ -482,6 +523,9 @@ header{
             position: relative;
             svg{
                 position: absolute;
+                width: 150px;
+                top: -7px;
+                right: 83px;
             }
         }
         p{
@@ -506,7 +550,7 @@ header{
             }
             div{
                 margin-top: 32px;
-                background-color: #FFFFFF;
+                background: #D6E2E1;
                 border-radius: 16px;
                 padding: 10px;
                 width: 350px;
@@ -521,6 +565,7 @@ header{
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 24px;
+                    color: #33706B;
                 }
                 .active{
                     background: #33706B;
@@ -541,6 +586,7 @@ header{
                 line-height: 24px;
                 color: #B2B3B2;
                 padding: 20px;
+                border: 1px solid #8C8D8C;
             }
             button{
                 margin-top: 32px;
@@ -554,52 +600,28 @@ header{
                 color: #FFFFFF;
                 border-radius: 32px;
                 border: none;
+                &:hover{
+                    background-color: #F8961E;
+                    cursor: pointer;
+                }
             }
 
         }
     }
 
-}
-#visiter{
-    padding: 50px;
-    
-    .container{
-        width: 350px;
-        margin: 0 auto;
-        h1{
-            font-family: 'Ubuntu';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 29px;
-            line-height: 33px;
-            letter-spacing: -0.03em;
-            position: relative;
-
-            svg{
-                position: absolute;
-            }
-        }
-        p{
-            margin-top: 20px;
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-        }
-        div{
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            article{
-                width: 322.18px;
-                height: 333.09px;
-
-                background: #33706B;
-                border-radius: 32px;
-            }
-        }
+    &:after{
+        background-image: url(../image/Vector.svg);
+        position: absolute;
+        top: 2041px;
+        right: 0px;
+        display: block;
+        content: "";
+        width: 50px;
+        height: 215px;
+        background-repeat:no-repeat;
+        background-size: contain;
     }
+
 }
 
 
@@ -677,7 +699,7 @@ footer{
 
         #footnews{
             margin-top:50px;
-            width: 300px;
+            //width: 300px;
             h1{
                 font-size: 20px;
                 margin-bottom: 20px;
@@ -690,13 +712,15 @@ footer{
                 font-weight: 300;
                 font-size: 16px;
             }
-
             #mc_embed_signup
             {
+                width: 100%;
+                form{
+                    width: 100%;
+                }
                 #mc_embed_signup_scroll{
-                    width: 300px;
                     .mc-field-group{
-                        width: 80%;
+                        width: 100%;
                         #mce-EMAIL{
                             font-family: "Raleway", sans-serif;
                             margin-top: 20px;
@@ -712,16 +736,17 @@ footer{
                 }
 
                 #mc-embedded-subscribe{
-                font-family: "Raleway", sans-serif;
-                cursor: pointer;
-                color: #33706B;
-                background: white;
-                padding: 10px 20px;
-                border: 1px solid var(--main-color-vert50);
-                border-radius: 8px;
-                font-weight: 600;
-                margin-top: 20px;
-                transition: 300ms;
+                    cursor: pointer;
+                    background: white;
+                    height: 58px;
+                    width: 66px;
+                    border: 1px solid var(--main-color-vert50);
+                    border-radius: 8px;
+                    margin-top: 20px;
+                    transition: 300ms;
+                    background-image: url("../image/button_newsletter.svg");
+                    background-repeat:no-repeat;
+                    background-position: center;
                 }
                 #mc-embedded-subscribe:hover{
                     color: white;
@@ -733,26 +758,45 @@ footer{
             
         }
     }
-    &>p:last-child{
+    >a{
         text-align: center;
-        margin-top: 150px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+        text-decoration: none;
+        width: 140px;
+        margin: 0 auto;
+        margin-top: 85px;
+    }
+
+    #droit{
+        margin-top: 40px;
+        text-align: center;
         font-family: 'Raleway';
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
     }
-    #back_top{
+    
+    &>div:last-child{
 
-        position: absolute;
-        bottom: -6200px;
-        left: 90%;
-        display: block;
-        content: "";
-        width: 27px;
-        height: 75px;
-         background-repeat:no-repeat;
-         background-size: contain;
-
+        position: relative;
+        a{
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            display: block;
+            content: "";
+            width: 27px;
+            height: 75px;
+             background-repeat:no-repeat;
+             background-size: contain;
+        }
+        
     }
 }
 }
