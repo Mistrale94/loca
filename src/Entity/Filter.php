@@ -27,7 +27,7 @@ class Filter
     #[ORM\Column(type: 'datetime_immutable')]
     private $modified_at;
 
-    #[ORM\OneToMany(mappedBy: 'filter_id', targetEntity: Circuit::class, orphanRemoval: true)]
+    #[ORM\ManyToMany(mappedBy: 'filter_id', targetEntity: Circuit::class, orphanRemoval: true)]
     private $circuits;
 
    

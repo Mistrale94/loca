@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Discover index{% endblock %}
+
+{% block body %}
+    <h1>Discover index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Legend</th>
+                <th>Created_at</th>
+                <th>Modified_at</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for discover in discovers %}
+            <tr>
+                <td>{{ discover.id }}</td>
+                <td>{{ discover.image }}</td>
+                <td>{{ discover.legend }}</td>
+                <td>{{ discover.createdAt ? discover.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ discover.modifiedAt ? discover.modifiedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_discover_show', {'id': discover.id}) }}">show</a>
+                    <a href="{{ path('app_discover_edit', {'id': discover.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_discover_new') }}">Create new</a>
+{% endblock %}
