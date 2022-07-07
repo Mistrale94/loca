@@ -26,7 +26,7 @@ class Circuit
     #[ORM\Column(type: 'string', length: 100)]
     private $locality;
 
-    #[ORM\ManyToOne(targetEntity: Filter::class)]
+    #[ORM\ManyToMany(targetEntity: Filter::class)]
     #[ORM\JoinColumn(nullable: false)]
     private $filter_id;
 
@@ -38,6 +38,18 @@ class Circuit
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $modified_at;
+
+    #[ORM\Column(type: 'text')]
+    private $relationship;
+
+    #[ORM\Column(type: 'text')]
+    private $duration;
+
+    #[ORM\Column(type: 'string', length: 50)]
+    private $price;
+
+    #[ORM\Column(type: 'text')]
+    private $full_content;
 
     public function getId(): ?int
     {
@@ -136,5 +148,83 @@ class Circuit
     #[ORM\PrePersist]
     public function setModifiedAtValue(){
         $this->modified_at = new \DateTimeImmutable();
+    }
+
+    public function getRelationship(): ?string
+    {
+        return $this->relationship;
+    }
+
+    public function setRelationship(string $relationship): self
+    {
+        $this->relationship = $relationship;
+
+        return $this;
+    }
+
+    public function getDuration(): ?string
+    {
+        return $this->duration;
+    }
+
+    public function setDuration(string $duration): self
+    {
+        $this->duration = $duration;
+
+        return $this;
+    }
+
+    public function getPrice(): ?string
+    {
+        return $this->price;
+    }
+
+    public function setPrice(string $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getFullContent(): ?string
+    {
+        return $this->full_content;
+    }
+
+    public function setFullContent(string $full_content): self
+    {
+        $this->full_content = $full_content;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Program>
+     */
+    public function getProgramId(): Collection
+    {
+        return $this->program_id;
+    }
+
+    public function addProgramId(Program $programId): self
+    {
+        if (!$this->program_id->contains($programId)) {
+            $this->program_id[] = $programId;
+            $programId->setCircuit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProgramId(Program $programId): self
+    {
+        if ($this->program_id->removeElement($programId)) {
+            // set the owning side to null (unless already changed)
+            if ($programId->getCircuit() === $this) {
+                $programId->setCircuit(null);
+            }
+        }
+
+        return $this;
     }
 }

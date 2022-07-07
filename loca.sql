@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 06 juil. 2022 à 14:33
+-- Généré le : jeu. 07 juil. 2022 à 13:03
 -- Version du serveur : 5.7.36
 -- Version de PHP : 8.0.13
 
@@ -30,15 +30,63 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `circuit`;
 CREATE TABLE IF NOT EXISTS `circuit` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `filter_id_id` int(11) NOT NULL,
   `image` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `locality` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
-  PRIMARY KEY (`id`),
-  KEY `IDX_1325F3A656F56DA8` (`filter_id_id`)
+  `relationship` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `duration` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `full_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `circuit_filter`
+--
+
+DROP TABLE IF EXISTS `circuit_filter`;
+CREATE TABLE IF NOT EXISTS `circuit_filter` (
+  `circuit_id` int(11) NOT NULL,
+  `filter_id` int(11) NOT NULL,
+  PRIMARY KEY (`circuit_id`,`filter_id`),
+  KEY `IDX_7A076D78CF2182C8` (`circuit_id`),
+  KEY `IDX_7A076D78D395B25E` (`filter_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `discover`
+--
+
+DROP TABLE IF EXISTS `discover`;
+CREATE TABLE IF NOT EXISTS `discover` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `legend` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `discover_circuit`
+--
+
+DROP TABLE IF EXISTS `discover_circuit`;
+CREATE TABLE IF NOT EXISTS `discover_circuit` (
+  `discover_id` int(11) NOT NULL,
+  `circuit_id` int(11) NOT NULL,
+  PRIMARY KEY (`discover_id`,`circuit_id`),
+  KEY `IDX_B7357ACB98537D7C` (`discover_id`),
+  KEY `IDX_B7357ACBCF2182C8` (`circuit_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -62,7 +110,17 @@ CREATE TABLE IF NOT EXISTS `doctrine_migration_versions` (
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
 ('DoctrineMigrations\\Version20220706085742', '2022-07-06 08:58:49', 397),
 ('DoctrineMigrations\\Version20220706095150', '2022-07-06 09:52:11', 197),
-('DoctrineMigrations\\Version20220706133117', '2022-07-06 13:32:55', 112);
+('DoctrineMigrations\\Version20220706133117', '2022-07-06 13:32:55', 112),
+('DoctrineMigrations\\Version20220707090236', '2022-07-07 09:03:35', 99),
+('DoctrineMigrations\\Version20220707103042', '2022-07-07 10:31:07', 194),
+('DoctrineMigrations\\Version20220707121510', '2022-07-07 12:15:25', 209),
+('DoctrineMigrations\\Version20220707122659', '2022-07-07 12:27:10', 151),
+('DoctrineMigrations\\Version20220707122846', '2022-07-07 12:28:59', 123),
+('DoctrineMigrations\\Version20220707123059', '2022-07-07 12:31:07', 170),
+('DoctrineMigrations\\Version20220707123932', '2022-07-07 12:39:43', 227),
+('DoctrineMigrations\\Version20220707124513', '2022-07-07 12:45:22', 223),
+('DoctrineMigrations\\Version20220707124931', '2022-07-07 12:49:38', 134),
+('DoctrineMigrations\\Version20220707130059', '2022-07-07 13:01:08', 150);
 
 -- --------------------------------------------------------
 
@@ -126,6 +184,43 @@ CREATE TABLE IF NOT EXISTS `messenger_messages` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `producer`
+--
+
+DROP TABLE IF EXISTS `producer`;
+CREATE TABLE IF NOT EXISTS `producer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `circuit_id` int(11) NOT NULL,
+  `image` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  PRIMARY KEY (`id`),
+  KEY `IDX_976449DCCF2182C8` (`circuit_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `program`
+--
+
+DROP TABLE IF EXISTS `program`;
+CREATE TABLE IF NOT EXISTS `program` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `circuit_id` int(11) NOT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
+  PRIMARY KEY (`id`),
+  KEY `IDX_92ED7784CF2182C8` (`circuit_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `reservation`
 --
 
@@ -140,22 +235,6 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `trending`
---
-
-DROP TABLE IF EXISTS `trending`;
-CREATE TABLE IF NOT EXISTS `trending` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `article_id_id` int(11) NOT NULL,
-  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
-  `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
-  PRIMARY KEY (`id`),
-  KEY `IDX_931EF4ED8F3EC46` (`article_id_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -179,16 +258,30 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 --
--- Contraintes pour la table `circuit`
+-- Contraintes pour la table `circuit_filter`
 --
-ALTER TABLE `circuit`
-  ADD CONSTRAINT `FK_1325F3A656F56DA8` FOREIGN KEY (`filter_id_id`) REFERENCES `filter` (`id`);
+ALTER TABLE `circuit_filter`
+  ADD CONSTRAINT `FK_7A076D78CF2182C8` FOREIGN KEY (`circuit_id`) REFERENCES `circuit` (`id`),
+  ADD CONSTRAINT `FK_7A076D78D395B25E` FOREIGN KEY (`filter_id`) REFERENCES `filter` (`id`) ON DELETE CASCADE;
 
 --
--- Contraintes pour la table `trending`
+-- Contraintes pour la table `discover_circuit`
 --
-ALTER TABLE `trending`
-  ADD CONSTRAINT `FK_931EF4ED8F3EC46` FOREIGN KEY (`article_id_id`) REFERENCES `circuit` (`id`);
+ALTER TABLE `discover_circuit`
+  ADD CONSTRAINT `FK_B7357ACB98537D7C` FOREIGN KEY (`discover_id`) REFERENCES `discover` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_B7357ACBCF2182C8` FOREIGN KEY (`circuit_id`) REFERENCES `circuit` (`id`) ON DELETE CASCADE;
+
+--
+-- Contraintes pour la table `producer`
+--
+ALTER TABLE `producer`
+  ADD CONSTRAINT `FK_976449DCCF2182C8` FOREIGN KEY (`circuit_id`) REFERENCES `circuit` (`id`);
+
+--
+-- Contraintes pour la table `program`
+--
+ALTER TABLE `program`
+  ADD CONSTRAINT `FK_92ED7784CF2182C8` FOREIGN KEY (`circuit_id`) REFERENCES `circuit` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

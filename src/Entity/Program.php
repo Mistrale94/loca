@@ -2,21 +2,23 @@
 
 namespace App\Entity;
 
-use App\Repository\TrendingRepository;
+use App\Repository\ProgramRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: TrendingRepository::class)]
-#[ORM\HasLifecycleCallbacks]
-class Trending
+#[ORM\Entity(repositoryClass: ProgramRepository::class)]
+class Program
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\ManyToOne(targetEntity: circuit::class)]
+    #[ORM\ManyToOne(targetEntity: circuit::class, inversedBy: 'program_id')]
     #[ORM\JoinColumn(nullable: false)]
-    private $article_id;
+    private $circuit;
+
+    #[ORM\Column(type: 'text')]
+    private $content;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
@@ -29,14 +31,26 @@ class Trending
         return $this->id;
     }
 
-    public function getArticleId(): ?circuit
+    public function getCircuit(): ?circuit
     {
-        return $this->article_id;
+        return $this->circuit;
     }
 
-    public function setArticleId(?circuit $article_id): self
+    public function setCircuit(?circuit $circuit): self
     {
-        $this->article_id = $article_id;
+        $this->circuit = $circuit;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }
@@ -65,13 +79,4 @@ class Trending
         return $this;
     }
 
-    #[ORM\PrePersist]
-    public function setCreatedAtValue(){
-        $this->createdAt = new \DateTimeImmutable();
-    }
-
-    #[ORM\PrePersist]
-    public function setUpdatedAtValue(){
-        $this->updatedAt = new \DateTimeImmutable();
-    }
 }
