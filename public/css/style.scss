@@ -624,6 +624,124 @@ header{
 
 }
 
+section#circuits{
+    h1{
+        font-size: 29px;
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        color: #191A19;
+        margin-bottom: 48px;
+        margin-left: 32px;
+    }
+    h2{
+        font-size: 24px;
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        color: #333333;
+        margin-bottom: 24px;
+        margin-left: 32px;
+    }
+    div.select-container{
+        margin-left: 32px;
+
+        select{
+            width: 130px;
+            height: 56px;
+            background-color: #33706b;
+            border: none;
+            border-radius: 8px;
+            color: #D6E2E1;
+            padding: 16px;
+
+            option{
+                font-family: 'Raleway';
+                font-weight: 500;
+                font-size: 16px;
+            }
+            
+        }
+        select:first-child{
+            margin-right: 16px;
+        }
+    }
+    div.card-circuit-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div.card-circuit{
+            background-color: #D6E2E1;
+            padding: 24px 27px;
+            margin: 48px 0;
+            width: 350px;
+            border-radius: 0 0 32px 32px;
+
+            h3{
+                font-weight: 400;
+                font-size: 24px;
+                font-family: 'Ubuntu';
+                font-style: normal;
+                letter-spacing: -0.03em;
+                margin: 8px 0;
+                color: #191A19;
+            }
+            p:first-of-type{
+                font-family: 'Raleway';
+                font-weight: 500;
+                font-size: 13px;
+                font-style: normal;
+                margin-bottom: 16px;
+                color: #191A19;
+            }
+            div.filter-circuit-container{
+                margin-bottom: 8px;
+                display: flex;
+                flex-wrap: wrap;
+
+                p.filter-label{
+                    padding: 8px 16px;
+                    margin-bottom: 8px;
+                    margin-right: 8px;
+                    width: fit-content;
+                    background-color: #ADC6C4;
+                    border-radius: 8px;
+                    color: #333333;
+                    font-size: 13px;
+                    font-weight: 500;
+                    font-family: 'Raleway';
+                }
+            }
+            div.discover-circuit{
+                margin-bottom: 19px;
+
+                p{
+                    font-size: 16px;
+                    font-family: 'Raleway';
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                }
+            }
+            p:nth-child(6){
+                background-color: #33706B;
+                padding: 16px 56px;
+                border-radius: 32px;
+                text-align: center;
+                
+                a{
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-family: 'Raleway';
+                    text-decoration: none;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
 
 footer{
     background-color: #36706B;

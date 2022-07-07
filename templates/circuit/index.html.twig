@@ -3,7 +3,60 @@
 {% block title %}Circuits index{% endblock %}
 
 {% block body %}
-    <h1>Circuit index</h1>
 
-    <a href="{{ path('app_filter_new') }}">Create new</a>
+    <section id="circuits">
+        <h1>Les 5 circuits</h1>
+
+        <h2>5 offres</h2>
+
+        <div class="select-container">
+            <select name="filter" id="filter-select">
+                <option value="">Filtres</option>
+                <option value="">Gastronomie</option>
+                <option value="">Oenologie</option>
+                <option value="">Diner</option>
+                <option value="">Maison d'hôte</option>
+                <option value="">En amoureux</option>
+                <option value="">Solo</option>
+            </select>
+            <select name="filter" id="filter-select">
+                <option value="">Pertinance</option>
+                <option value="">Gastronomie</option>
+                <option value="">Oenologie</option>
+                <option value="">Diner</option>
+                <option value="">Maison d'hôte</option>
+                <option value="">En amoureux</option>
+                <option value="">Solo</option>
+            </select>
+        </div>
+        <div class="card-circuit-container">
+            {% for circuit in circuits %}
+                <div class="card-circuit">
+                    <img src="/image/{{circuit.image}}" alt="">
+                    <h3>{{circuit.title}}</h3>
+                    <p>{{circuit.locality}}</p>
+                    <div class="filter-circuit-container">
+                        <p class="filter-label">Gastronomie</p>
+                        <p class="filter-label">Oenologie</p>
+                        <p class="filter-label">Diner</p>
+                        <p class="filter-label">Maison d'hôte</p>
+                        <p class="filter-label">En amoureux</p>
+                        <p class="filter-label">Solo</p>
+                    </div>
+                    <div class="discover-circuit">
+                        <p>{{circuit.content}}</p>
+                        <p>Découvrez...</p>
+                    </div>
+                    <p>
+                        <a href="{{ path('app_circuit_show', {'id': circuit.id}) }}">Accéder au parcours</a>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    
+
+    
+
 {% endblock %}

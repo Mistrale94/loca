@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Filter;
+use App\Form\FilterType;
+use App\Repository\FilterRepository;
 use App\Entity\Circuit;
 use App\Form\CircuitType;
 use App\Repository\CircuitRepository;
@@ -14,10 +17,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class CircuitController extends AbstractController
 {
     #[Route('/', name: 'app_circuit_index', methods: ['GET'])]
-    public function index(CircuitRepository $circuitRepository): Response
+    public function index(CircuitRepository $circuitRepository, FilterRepository $filterRepository): Response
     {
         return $this->render('circuit/index.html.twig', [
             'circuits' => $circuitRepository->findAll(),
+            'filters' => $filterRepository->findAll()
         ]);
     }
 

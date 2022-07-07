@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Repository\FilterRepository;
 use App\Repository\CircuitRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
