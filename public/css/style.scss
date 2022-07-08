@@ -214,7 +214,7 @@ header{
 
 #topfive{
     position: relative;
-    padding: 100px 250px;
+    padding: 110px 250px;
     background-color: #D6E2E1;
     .container{
         margin: 0 auto;
@@ -697,7 +697,7 @@ section#quiz{
 }
 
 #aventure{
-    padding: 100px 150px;
+    padding: 110px 150px;
     .container{
         margin: 0 auto;
         display: flex;
@@ -961,7 +961,7 @@ footer{
                     background-image: url("../image/button_newsletter.svg");
                     background-repeat:no-repeat;
                     background-position: center;
-                    
+
                     &:hover{
                     background: #F8961E;
                     background-image: url("../image/button_newsletter.svg");
