@@ -355,7 +355,7 @@ header nav div.mobile-nav ul.mobile_link-group li.mobile_link a {
 
 section#quiz {
   background-color: #D6E2E1;
-  padding: 112px 400px;
+  padding: 112px 500px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -841,17 +841,14 @@ section#quiz #popup #popup_newsletter strong div {
   left: -204px;
 }
 
-#aventure:after {
-  background-image: url(../image/aventure.svg);
+#aventure > div {
+  position: relative;
+}
+
+#aventure > div svg {
   position: absolute;
-  top: 3471px;
-  right: 0px;
-  display: block;
-  content: "";
-  width: 50px;
-  height: 215px;
-  background-repeat: no-repeat;
-  background-size: contain;
+  top: 10px;
+  right: -149px;
 }
 
 footer {
@@ -1037,6 +1034,85 @@ footer > p:last-child {
 @media (max-width: 1600px) {
   #topfive {
     padding: 100px 100px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .headmain {
+    padding: 120px 50px;
+  }
+  .headmain #headcontainer figure {
+    min-width: 450px;
+  }
+  .headmain #headcontainer article {
+    width: 450px;
+  }
+  .headmain #headcontainer article h1 {
+    font-size: 54px;
+    width: 450px;
+  }
+  .headmain #headcontainer article h1 svg {
+    position: absolute;
+    bottom: -10px;
+    left: -16px;
+  }
+  .headmain:after {
+    width: 50px;
+  }
+  #topfive {
+    padding: 100px 100px;
+  }
+  #topfive .container > svg {
+    position: absolute;
+    top: 184px;
+    left: 750px;
+  }
+  #topfive .container .slider .carousel-items {
+    margin-left: -80px;
+    margin-right: -100px;
+    justify-content: space-between;
+  }
+  #topfive .container .slider article {
+    width: 70%;
+  }
+  section#quiz {
+    padding: 112px 300px;
+  }
+  #aventure {
+    padding: 100px 100px;
+  }
+  #aventure .container {
+    justify-content: center;
+    align-items: center;
+  }
+  #aventure .container article h1 {
+    font-size: 46px;
+  }
+  #aventure .container article h1 svg {
+    width: 235px;
+    top: -4px;
+    right: -8px;
+  }
+  #aventure .container article p {
+    margin-top: 20px;
+  }
+  #aventure .container article form {
+    margin-top: 20px;
+  }
+  #aventure .container article form svg {
+    left: -151px;
+  }
+  #aventure > div svg {
+    right: -100px;
+  }
+  footer {
+    padding: 100px 100px;
+  }
+  footer div.footer-container #footnews {
+    width: 50%;
+  }
+  footer div.footer-container #footnews a {
+    margin-left: 270px;
   }
 }
 
@@ -1293,7 +1369,7 @@ footer > p:last-child {
   }
   section#quiz {
     align-items: center;
-    padding: 185px 0;
+    padding: 100px 0;
   }
   section#quiz div#quizdeco {
     display: none;
@@ -1447,17 +1523,11 @@ footer > p:last-child {
   #aventure .container form svg {
     display: none;
   }
-  #aventure:after {
-    background-image: url(../image/Vector.svg);
-    position: absolute;
-    top: 2041px;
-    right: 0px;
-    display: block;
-    content: "";
-    width: 50px;
-    height: 215px;
-    background-repeat: no-repeat;
-    background-size: contain;
+  #aventure .container > div {
+    display: none;
+  }
+  #aventure .container > div svg {
+    display: none;
   }
   section#circuits h1 {
     font-size: 29px;
@@ -1686,7 +1756,7 @@ footer > p:last-child {
   }
   footer div.footer-container #footnews > div:last-child a {
     bottom: 7px;
-    left: 509px;
+    left: 96%;
     display: block;
     content: "";
     width: 27px;
@@ -1707,19 +1777,5 @@ footer > p:last-child {
     width: 140px;
     margin: 0 auto;
     margin-top: 85px;
-  }
-  footer > div:last-child {
-    position: relative;
-  }
-  footer > div:last-child a {
-    position: absolute;
-    bottom: 50px;
-    right: 0;
-    display: block;
-    content: "";
-    width: 27px;
-    height: 75px;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 }

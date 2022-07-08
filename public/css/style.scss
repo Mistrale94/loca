@@ -353,13 +353,12 @@ header{
 
 section#quiz{
     background-color:#D6E2E1;
-    padding: 112px 400px;
+    padding: 112px 500px;
     display: flex;
     flex-direction: column;
     position: relative;
     h1{
         margin-bottom: 64px;
-
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 400;
@@ -826,18 +825,13 @@ section#quiz{
         }
         
     }
-
-    &:after{
-        background-image: url(../image/aventure.svg);
-        position: absolute;
-        top: 3471px;;
-        right: 0px;
-        display: block;
-        content: "";
-        width: 50px;
-        height: 215px;
-        background-repeat:no-repeat;
-        background-size: contain;
+    >div{
+        position: relative;
+        svg{
+            position: absolute;
+            top: 10px;
+            right: -149px;
+        }
     }
 
 }
@@ -1023,10 +1017,108 @@ footer{
     #topfive{
         padding: 100px 100px;
     }
+}
+@media (max-width: 1400px){
+    .headmain{
+        padding: 120px 50px;
+        #headcontainer{
+            figure{
+                min-width: 450px;
+            }
+            article{
+                width: 450px;
+                h1{
+                    font-size: 54px;
+                    width: 450px;
+                    svg{
+                        position: absolute;
+                        bottom: -10px;
+                        left: -16px;
+    
+                    }
+                }
+            }
+        }
+        &:after{
+            width: 50px;
+
+        }
+    }
+    #topfive{
+        padding: 100px 100px;
+        .container{
+
+            >svg{
+                position: absolute;
+                top: 184px;
+                left: 750px;
+            }
+
+            .slider{
+                .carousel-items {
+                    margin-left:-80px;
+                    margin-right:-100px;
+                    justify-content: space-between;
+                }
+                article{
+                    width: 70%;
+                }
+            }
+
+        }
+
+    }
+    section#quiz{
+        padding: 112px 300px;
+    }
+    #aventure{
+        padding: 100px 100px;
+        .container{
+            justify-content: center;
+            align-items: center;
+            article{
+                h1{
+                    font-size: 46px;
+
+                    svg{
+                        width: 235px;
+                        top: -4px;
+                        right: -8px;
+                    }
+                }
+                p{
+                    margin-top: 20px;
+                }
+                form{
+                    margin-top: 20px;
+
+                    svg{
+                        left: -151px;
+                    }
+                }
+            }
+           
+        }
+        >div{
+            svg{
+                right: -100px;
+            }
+        }
+    }
+    footer{
+        padding: 100px 100px;
+        div.footer-container{
+            #footnews{
+                width: 50%;
+
+                a{
+                    margin-left: 270px;
+                }
+            }
+        }
+    }
     
 }
-
-
 
 
 @media (max-width: 1000px){
@@ -1328,7 +1420,7 @@ header{
 }
 section#quiz{
     align-items: center;
-    padding: 185px 0;
+    padding: 100px 0;
 
     div#quizdeco{
         display: none;
@@ -1507,19 +1599,12 @@ section#quiz{
             }
 
         }
-    }
-
-    &:after{
-        background-image: url(../image/Vector.svg);
-        position: absolute;
-        top: 2041px;
-        right: 0px;
-        display: block;
-        content: "";
-        width: 50px;
-        height: 215px;
-        background-repeat:no-repeat;
-        background-size: contain;
+        >div{
+            display: none;
+            svg{
+                display: none;
+            }
+        }
     }
 
 }
@@ -1772,7 +1857,7 @@ footer{
 
                 a{
                     bottom: 7px;
-                    left: 509px;
+                    left: 96%;
                     display: block;
                     content: "";
                     width: 27px;
@@ -1798,23 +1883,6 @@ footer{
         width: 140px;
         margin: 0 auto;
         margin-top: 85px;
-    }
-    
-    &>div:last-child{
-
-        position: relative;
-        a{
-            position: absolute;
-            bottom: 50px;
-            right: 0;
-            display: block;
-            content: "";
-            width: 27px;
-            height: 75px;
-             background-repeat:no-repeat;
-             background-size: contain;
-        }
-        
     }
 }
 }
