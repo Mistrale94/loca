@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 07 juil. 2022 à 13:03
+-- Généré le : jeu. 07 juil. 2022 à 22:38
 -- Version du serveur : 5.7.36
 -- Version de PHP : 8.0.13
 
@@ -41,7 +41,15 @@ CREATE TABLE IF NOT EXISTS `circuit` (
   `price` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `full_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `circuit`
+--
+
+INSERT INTO `circuit` (`id`, `image`, `title`, `locality`, `content`, `created_at`, `modified_at`, `relationship`, `duration`, `price`, `full_content`) VALUES
+(1, 'circuit1.png', 'Dijon, de la moutarde au Cassis', 'Weekend à Dijon, Bourgogne-Franche-Comté', 'Circuit en 8 étapes sur deux jours,', '2022-07-07 16:37:50', '2022-07-07 16:37:50', 'test', 'test', 'test', 'test'),
+(2, 'circuit2.png', 'Bredin, en Bretagne du Nord', 'Weekend à Dijon, Bourgogne-Franche-Comté', 'Circuit en 8 étapes sur deux jours,', '2022-07-07 22:34:02', '2022-07-07 22:34:02', 'test', 'test', 'test', 'test');
 
 -- --------------------------------------------------------
 
@@ -57,6 +65,13 @@ CREATE TABLE IF NOT EXISTS `circuit_filter` (
   KEY `IDX_7A076D78CF2182C8` (`circuit_id`),
   KEY `IDX_7A076D78D395B25E` (`filter_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `circuit_filter`
+--
+
+INSERT INTO `circuit_filter` (`circuit_id`, `filter_id`) VALUES
+(1, 3);
 
 -- --------------------------------------------------------
 
@@ -158,7 +173,15 @@ CREATE TABLE IF NOT EXISTS `filter` (
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `filter`
+--
+
+INSERT INTO `filter` (`id`, `name`, `created_at`, `modified_at`) VALUES
+(3, 'Gastronomie', '2022-07-07 14:36:16', '2022-07-07 14:36:16'),
+(4, 'Boisson', '2022-07-07 16:28:17', '2022-07-07 16:28:17');
 
 -- --------------------------------------------------------
 
