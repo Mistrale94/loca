@@ -12,6 +12,19 @@
         {% block javascripts %}
             <script src="/js/script.js"></script>
         {% endblock %}
+        <script src="https://unpkg.com/typebot-js@2.2"></script>
+        <script>
+        var typebotCommands = Typebot.initBubble({
+            url: "https://viewer.typebot.io/my-typebot-0y30071",
+            proactiveMessage: {
+            avatarUrl:
+                "https://s3.fr-par.scw.cloud/typebot/public/typebots/cl5bhn4jo266209men0y30071/Logo Loca responsive VF.png",
+            textContent: "J'ai une question ! ",
+            delay: 0,
+            },
+            button: { color: "#33706B" },
+        });
+        </script>
     </head>
             {% block header %}
             <header>
@@ -56,7 +69,7 @@
     
     {% block body %}
         <body>
-            <header>
+            <header id="top">
                 <nav>
                     <a href="">
                         <img src="/image/logo.png" alt="Logo" id="logo">
@@ -104,21 +117,22 @@
                 <h1>Restons connectés</h1>
                 <p>Cette page a été réfléchie et intégrée de manière éco-conçue pour préserver l’environnement.</p>
                 <div class="footer-container">
-                    <article>
-                        <img src="/image/logo-white.png">
-                        <a href="https://www.instagram.com/mangez_loca/"><img src="/image/footer-fleche.svg" alt=""> Instragram</a>
-                        <a href="https://m.facebook.com/Mangez_loca-104896332278725/"><img src="/image/footer-fleche.svg" alt=""> Facebook</a>
-                        <a href="https://www.pinterest.fr/Mangez_Loca/_saved/"><img src="/image/footer-fleche.svg" alt=""> Pinterest</a>
-                    </article>
-
-                    <article>
-                        <h1>Ressources</h1>
-                        <p>Support</p>
-                        <p>Devenir partenaire</p>
-                        <p>Termes et conditions</p>
-                        <p>Cookies & privacy</p>
-                    </article>
-                        
+                    <div class="containerLeft">
+                        <article>
+                            <img src="/image/logo-white.png">
+                            <a href="https://www.instagram.com/mangez_loca/"><img src="/image/footer-fleche.svg" alt=""> Instragram</a>
+                            <a href="https://m.facebook.com/Mangez_loca-104896332278725/"><img src="/image/footer-fleche.svg" alt=""> Facebook</a>
+                            <a href="https://www.pinterest.fr/Mangez_Loca/_saved/"><img src="/image/footer-fleche.svg" alt=""> Pinterest</a>
+                        </article>
+    
+                        <article>
+                            <h1>Ressources</h1>
+                            <p>Support</p>
+                            <p>Devenir partenaire</p>
+                            <p>Termes et conditions</p>
+                            <p>Cookies & privacy</p>
+                        </article>
+                    </div>
 
                     <article id="footnews">
                         <h1>Inscrivez vous à la newsletter</h1>
@@ -147,22 +161,25 @@
                             </form>
                         </div>
                         <!--End mc_embed_signup-->
+                        <a href="">Connexion admin</a>
+
+                        <div>
+                            <a href="#top">
+                                <svg width="27" height="76" viewBox="0 0 27 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.8537 0.239311C13.9404 0.327212 14.0053 0.444407 14.0053 0.497148C14.0053 0.561609 14.0775 0.614351 14.1858 0.637791C14.4529 0.690532 14.915 1.26482 15.8896 2.75913C18.8711 7.33584 20.5099 9.22278 24.8703 13.0963C26.6679 14.6961 27 15.0418 27 15.3055C27 15.9325 24.069 14.7664 21.6217 13.1725C20.6904 12.5689 19.0227 11.2386 18.2503 10.4885C17.485 9.74432 16.6043 8.73054 16.0267 7.93943C15.4275 7.1073 15.2976 6.90805 14.8644 6.09351C14.6695 5.73604 14.5179 5.48992 14.5179 5.5368C14.5179 5.58368 14.5468 5.87668 14.5829 6.18141C14.6479 6.70881 14.8211 8.75397 14.9078 9.90254C15.1893 13.7057 15.4059 20.1225 15.5286 28.1566C15.6802 37.8257 15.4709 53.1791 15.0882 60.8265C15.0521 61.6 14.9872 62.9185 14.9439 63.7565C14.5973 70.6128 14.027 75.0957 13.4928 75.0957C13.2473 75.0957 12.973 73.9471 12.742 71.9899C12.381 68.802 12.1356 64.2956 11.8973 56.3142C11.7674 52.1301 11.7674 31.5555 11.8973 27.0139C12.0489 21.4644 12.2872 15.4227 12.4532 12.8619C12.6842 9.24036 12.973 6.17555 13.1824 5.0094C13.204 4.8629 13.1535 4.93321 12.9874 5.24379C11.3198 8.50785 8.52594 11.4262 5.01738 13.5651C3.37139 14.5672 1.7254 15.3231 0.736364 15.5282C0.20214 15.6395 7.38754e-07 15.6044 7.38754e-07 15.4051C7.38754e-07 15.1297 0.418717 14.6961 2.31016 13.0377C6.5984 9.25794 8.64144 6.95494 11.4425 2.69467C12.4965 1.09488 12.9874 0.444412 13.2979 0.23345C13.565 0.0459284 13.666 0.0517888 13.8537 0.239311Z" fill="white"/>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
                     </article>
                 </div>  
-                    <a href="">Connexion admin</a>
-                    <p id="droit">Loca Inc 2022. Tous droits réservés</p>
-                    <div>
-                        <a href="">
-                            <svg width="27" height="76" viewBox="0 0 27 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.8537 0.239311C13.9404 0.327212 14.0053 0.444407 14.0053 0.497148C14.0053 0.561609 14.0775 0.614351 14.1858 0.637791C14.4529 0.690532 14.915 1.26482 15.8896 2.75913C18.8711 7.33584 20.5099 9.22278 24.8703 13.0963C26.6679 14.6961 27 15.0418 27 15.3055C27 15.9325 24.069 14.7664 21.6217 13.1725C20.6904 12.5689 19.0227 11.2386 18.2503 10.4885C17.485 9.74432 16.6043 8.73054 16.0267 7.93943C15.4275 7.1073 15.2976 6.90805 14.8644 6.09351C14.6695 5.73604 14.5179 5.48992 14.5179 5.5368C14.5179 5.58368 14.5468 5.87668 14.5829 6.18141C14.6479 6.70881 14.8211 8.75397 14.9078 9.90254C15.1893 13.7057 15.4059 20.1225 15.5286 28.1566C15.6802 37.8257 15.4709 53.1791 15.0882 60.8265C15.0521 61.6 14.9872 62.9185 14.9439 63.7565C14.5973 70.6128 14.027 75.0957 13.4928 75.0957C13.2473 75.0957 12.973 73.9471 12.742 71.9899C12.381 68.802 12.1356 64.2956 11.8973 56.3142C11.7674 52.1301 11.7674 31.5555 11.8973 27.0139C12.0489 21.4644 12.2872 15.4227 12.4532 12.8619C12.6842 9.24036 12.973 6.17555 13.1824 5.0094C13.204 4.8629 13.1535 4.93321 12.9874 5.24379C11.3198 8.50785 8.52594 11.4262 5.01738 13.5651C3.37139 14.5672 1.7254 15.3231 0.736364 15.5282C0.20214 15.6395 7.38754e-07 15.6044 7.38754e-07 15.4051C7.38754e-07 15.1297 0.418717 14.6961 2.31016 13.0377C6.5984 9.25794 8.64144 6.95494 11.4425 2.69467C12.4965 1.09488 12.9874 0.444412 13.2979 0.23345C13.565 0.0459284 13.666 0.0517888 13.8537 0.239311Z" fill="white"/>
-                                </svg>
-                                
-                        </a>
-                    </div>
+                  
+                    <p>Loca Inc 2022. Tous droits réservés</p>
+                   
                 </footer>
             {% endblock %}
         
 
     </body>
-    
+    <script src="/js/quiz.js"></script>
 </html>
