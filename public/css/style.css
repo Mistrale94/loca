@@ -2103,15 +2103,15 @@ footer {
       font-style: normal;
       font-weight: 400;
       font-size: 36px; }
-    header div#headcontainer:after {
+    header div#concept-headcontainer:after {
       display: none; }
-    header #headtitle {
+    header #concept-headtitle {
       width: 500px; }
-      header #headtitle h1 svg:first-child {
+      header #concept-headtitle h1 svg:first-child {
         top: -32px;
         right: 11%;
         width: 200px; }
-      header #headtitle h1 svg:last-child {
+      header #concept-headtitle h1 svg:last-child {
         width: 80px;
         bottom: -5;
         right: 26px; }
@@ -2124,7 +2124,7 @@ footer {
       header div#actions svg {
         right: -8%;
         top: 110px; }
-    header div#headcontainer {
+    header div#concept-headcontainer {
       width: 80%; }
 
   #who {
@@ -2325,11 +2325,11 @@ footer {
   footer::after {
     display: none; } }
 @media (max-width: 620px) {
-  header #headcontainer:after {
+  header #concept-headcontainer:after {
     display: none !important; }
-  header #headtitle {
+  header #concept-headtitle {
     width: 300px; }
-    header #headtitle h1 svg:first-child {
+    header #concept-headtitle h1 svg:first-child {
       top: 10px;
       right: 25%; }
 
@@ -2357,22 +2357,22 @@ footer {
       width: 100%;
       border-radius: 0; } }
 @media (max-width: 414px) {
-  header div.headmain div#headcontainer div#headtitle {
+  header div.concept-headmain div#concept-headcontainer div#concept-headtitle {
     margin-bottom: 56px; }
-    header div.headmain div#headcontainer div#headtitle h1 {
+    header div.concept-headmain div#concept-headcontainer div#concept-headtitle h1 {
       font-weight: 400;
       font-size: 36px; }
-  header div.headmain div#headcontainer div#headsubtitle {
+  header div.concept-headmain div#concept-headcontainer div#concept-headsubtitle {
     padding: 0;
     width: 349px;
     margin-bottom: 56px; }
-    header div.headmain div#headcontainer div#headsubtitle p {
+    header div.concept-headmain div#concept-headcontainer div#concept-headsubtitle p {
       font-weight: 300;
       font-size: 16px; }
-  header div.headmain div#headcontainer div#actions {
+  header div.concept-headmain div#concept-headcontainer div#actions {
     font-weight: 300;
     font-size: 16px; }
-    header div.headmain div#headcontainer div#actions a p#button {
+    header div.concept-headmain div#concept-headcontainer div#actions a p#button {
       margin: 0;
       width: 223px; }
 

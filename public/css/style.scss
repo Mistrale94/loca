@@ -2950,10 +2950,10 @@ footer{
             font-size: 36px;
 
         }
-        div#headcontainer:after{
+        div#concept-headcontainer:after{
             display: none;
         }
-        #headtitle{
+        #concept-headtitle{
             width: 500px;
             h1{
                 svg:first-child{
@@ -2984,7 +2984,7 @@ footer{
                 top: 110px;
             }
         }
-        div#headcontainer{
+        div#concept-headcontainer{
             width: 80%;
         }
         
@@ -3322,10 +3322,10 @@ footer{
 @media (max-width: 620px){
 
     header{
-        #headcontainer:after{
+        #concept-headcontainer:after{
             display: none !important;
         }
-        #headtitle{
+        #concept-headtitle{
             width: 300px;
             h1{
                 svg:first-child{
@@ -3379,9 +3379,9 @@ footer{
 
 @media (max-width: 414px){
     header{
-        div.headmain{
-            div#headcontainer{
-                div#headtitle{
+        div.concept-headmain{
+            div#concept-headcontainer{
+                div#concept-headtitle{
                     margin-bottom: 56px;
 
                     h1{
@@ -3389,7 +3389,7 @@ footer{
                         font-size: 36px;
                     }
                 }
-                div#headsubtitle{
+                div#concept-headsubtitle{
                     padding: 0;
                     width: 349px;
                     margin-bottom: 56px;
