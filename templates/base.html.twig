@@ -12,6 +12,19 @@
         {% block javascripts %}
             <script src="/js/script.js"></script>
         {% endblock %}
+        <script src="https://unpkg.com/typebot-js@2.2"></script>
+        <script>
+        var typebotCommands = Typebot.initBubble({
+            url: "https://viewer.typebot.io/my-typebot-0y30071",
+            proactiveMessage: {
+            avatarUrl:
+                "https://s3.fr-par.scw.cloud/typebot/public/typebots/cl5bhn4jo266209men0y30071/Logo Loca responsive VF.png",
+            textContent: "J'ai une question ! ",
+            delay: 0,
+            },
+            button: { color: "#33706B" },
+        });
+        </script>
     </head>
             {% block header %}
             <header>
