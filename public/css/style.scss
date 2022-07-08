@@ -1610,16 +1610,30 @@ section#quiz{
 }
 
 section#circuits{
-    h1{
-        font-size: 29px;
-        font-family: 'Ubuntu';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: -0.03em;
-        color: #191A19;
-        margin-bottom: 48px;
-        margin-left: 32px;
+    margin-top: 80px;
+
+    div.title-circuit-container{
+        position: relative;
+        width: fit-content;
+
+        svg{
+            position: absolute;
+            position: absolute;
+            top: -40px;
+            right: 35%;
+        }
+        h1{
+            font-size: 29px;
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            color: #191A19;
+            margin-bottom: 48px;
+            margin-left: 32px;
+        }
     }
+    
     h2{
         font-size: 24px;
         font-family: 'Ubuntu';
@@ -1657,7 +1671,13 @@ section#circuits{
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        position: relative;
+        
+        svg{
+            position: absolute;
+            left: 0;
+            top: 40px;
+        }
         div.card-circuit{
             background-color: #D6E2E1;
             padding: 24px 27px;

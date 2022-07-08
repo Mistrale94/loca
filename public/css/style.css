@@ -1529,7 +1529,20 @@ footer > p:last-child {
   #aventure .container > div svg {
     display: none;
   }
-  section#circuits h1 {
+  section#circuits {
+    margin-top: 80px;
+  }
+  section#circuits div.title-circuit-container {
+    position: relative;
+    width: fit-content;
+  }
+  section#circuits div.title-circuit-container svg {
+    position: absolute;
+    position: absolute;
+    top: -40px;
+    right: 35%;
+  }
+  section#circuits div.title-circuit-container h1 {
     font-size: 29px;
     font-family: 'Ubuntu';
     font-style: normal;
@@ -1573,6 +1586,12 @@ footer > p:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+  }
+  section#circuits div.card-circuit-container svg {
+    position: absolute;
+    left: 0;
+    top: 40px;
   }
   section#circuits div.card-circuit-container div.card-circuit {
     background-color: #D6E2E1;
