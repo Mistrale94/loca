@@ -104,32 +104,32 @@ header nav div.mobile-nav ul.mobile_link-group li.mobile_link a {
   color: #FFFFFF;
 }
 
-header .headmain {
+.headmain {
   padding: 120px 100px;
 }
 
-header .headmain #headcontainer {
+.headmain #headcontainer {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
 }
 
-header .headmain #headcontainer figure {
+.headmain #headcontainer figure {
   width: 40%;
 }
 
-header .headmain #headcontainer figure img {
+.headmain #headcontainer figure img {
   width: 100%;
 }
 
-header .headmain #headcontainer article {
+.headmain #headcontainer article {
   display: flex;
   flex-direction: column;
   width: 610px;
   justify-content: center;
 }
 
-header .headmain #headcontainer article h1 {
+.headmain #headcontainer article h1 {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
@@ -141,17 +141,17 @@ header .headmain #headcontainer article h1 {
   position: relative;
 }
 
-header .headmain #headcontainer article h1 svg {
+.headmain #headcontainer article h1 svg {
   position: absolute;
   bottom: -10px;
   left: 76px;
 }
 
-header .headmain #headcontainer article #headsubtitle {
+.headmain #headcontainer article #headsubtitle {
   margin-top: 48px;
 }
 
-header .headmain #headcontainer article #headsubtitle p {
+.headmain #headcontainer article #headsubtitle p {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -160,19 +160,19 @@ header .headmain #headcontainer article #headsubtitle p {
   color: #333333;
 }
 
-header .headmain #headcontainer article #headsubtitle p span {
+.headmain #headcontainer article #headsubtitle p span {
   font-weight: bold;
 }
 
-header .headmain #headcontainer article #actions {
+.headmain #headcontainer article #actions {
   margin-top: 48px;
 }
 
-header .headmain #headcontainer article #actions a {
+.headmain #headcontainer article #actions a {
   text-decoration: none;
 }
 
-header .headmain #headcontainer article #actions #button {
+.headmain #headcontainer article #actions #button {
   color: white;
   width: 218px;
   height: 56px;
@@ -189,11 +189,11 @@ header .headmain #headcontainer article #actions #button {
   line-height: 24px;
 }
 
-header .headmain #headcontainer article #actions #button:hover {
+.headmain #headcontainer article #actions #button:hover {
   background: #F8961E;
 }
 
-header .headmain:after {
+.headmain:after {
   position: absolute;
   background-image: url("../image/headerRight.svg");
   width: 99px;
@@ -1130,41 +1130,41 @@ footer > p:last-child {
   header nav .desktop_nav {
     display: none;
   }
-  header .headmain {
+  .headmain {
     padding: 100px 50px;
   }
-  header .headmain #headcontainer {
+  .headmain #headcontainer {
     flex-direction: column;
     width: 350px;
     margin: 0 auto;
   }
-  header .headmain #headcontainer figure {
+  .headmain #headcontainer figure {
     width: 100%;
   }
-  header .headmain #headcontainer article {
+  .headmain #headcontainer article {
     width: 350px;
   }
-  header .headmain #headcontainer article h1 {
+  .headmain #headcontainer article h1 {
     font-size: 36px;
     line-height: 41px;
     width: 100%;
     position: relative;
   }
-  header .headmain #headcontainer article h1 svg {
+  .headmain #headcontainer article h1 svg {
     position: absolute;
     bottom: -5px;
     left: 42px;
     width: 150px;
   }
-  header .headmain #headcontainer article #headsubtitle {
+  .headmain #headcontainer article #headsubtitle {
     margin-top: 48px;
   }
-  header .headmain #headcontainer article #headsubtitle p {
+  .headmain #headcontainer article #headsubtitle p {
     width: 100%;
     font-size: 16px;
     line-height: 24px;
   }
-  header .headmain #headcontainer article #actions #button {
+  .headmain #headcontainer article #actions #button {
     color: white;
     width: 218px;
     height: 56px;
@@ -1180,10 +1180,10 @@ footer > p:last-child {
     font-size: 16px;
     line-height: 24px;
   }
-  header .headmain #headcontainer article #actions #button:hover {
+  .headmain #headcontainer article #actions #button:hover {
     background: #F8961E;
   }
-  header .headmain:after {
+  .headmain:after {
     width: 0px;
   }
   #topfive {
