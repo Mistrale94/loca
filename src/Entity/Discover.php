@@ -19,10 +19,10 @@ class Discover
     private $image;
 
     #[ORM\Column(type: 'string', length: 100)]
-    private $legend;
+    private $content;
 
-    #[ORM\ManyToMany(targetEntity: circuit::class)]
-    private $circuit_id;
+    #[ORM\ManyToMany(targetEntity: Circuit::class, inversedBy: 'discovers')]
+    private $circuit;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
@@ -32,7 +32,7 @@ class Discover
 
     public function __construct()
     {
-        $this->circuit_id = new ArrayCollection();
+        $this->circuit = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -52,38 +52,38 @@ class Discover
         return $this;
     }
 
-    public function getLegend(): ?string
+    public function getContent(): ?string
     {
-        return $this->legend;
+        return $this->content;
     }
 
-    public function setLegend(string $legend): self
+    public function setContent(string $content): self
     {
-        $this->legend = $legend;
+        $this->content = $content;
 
         return $this;
     }
 
     /**
-     * @return Collection<int, circuit>
+     * @return Collection<int, Circuit>
      */
-    public function getCircuitId(): Collection
+    public function getCircuit(): Collection
     {
-        return $this->circuit_id;
+        return $this->circuit;
     }
 
-    public function addCircuitId(circuit $circuitId): self
+    public function addCircuit(Circuit $circuit): self
     {
-        if (!$this->circuit_id->contains($circuitId)) {
-            $this->circuit_id[] = $circuitId;
+        if (!$this->circuit->contains($circuit)) {
+            $this->circuit[] = $circuit;
         }
 
         return $this;
     }
 
-    public function removeCircuitId(circuit $circuitId): self
+    public function removeCircuit(Circuit $circuit): self
     {
-        $this->circuit_id->removeElement($circuitId);
+        $this->circuit->removeElement($circuit);
 
         return $this;
     }
@@ -111,4 +111,5 @@ class Discover
 
         return $this;
     }
+
 }

@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Repository\FilterRepository;
 use App\Repository\CircuitRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -18,7 +17,7 @@ class Circuit
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 100)]
+    #[ORM\Column(type: 'string', length: 50)]
     private $image;
 
     #[ORM\Column(type: 'string', length: 50)]
@@ -27,30 +26,52 @@ class Circuit
     #[ORM\Column(type: 'string', length: 100)]
     private $locality;
 
-    #[ORM\ManyToMany(targetEntity: Filter::class)]
-    #[ORM\JoinColumn(nullable: false)]
-    private $filter_id;
-
     #[ORM\Column(type: 'text')]
     private $content;
 
-    #[ORM\Column(type: 'datetime_immutable')]
-    private $created_at;
+    #[ORM\ManyToMany(targetEntity: Filter::class, inversedBy: 'circuits')]
+    private $filter;
 
-    #[ORM\Column(type: 'datetime_immutable')]
-    private $modified_at;
+    #[ORM\ManyToMany(targetEntity: Discover::class, mappedBy: 'circuit')]
+    private $discover;
 
-    #[ORM\Column(type: 'text')]
+    #[ORM\Column(type: 'string', length: 50)]
     private $relationship;
 
-    #[ORM\Column(type: 'text')]
+    #[ORM\Column(type: 'string', length: 50)]
     private $duration;
 
     #[ORM\Column(type: 'string', length: 50)]
     private $price;
 
     #[ORM\Column(type: 'text')]
-    private $full_content;
+    private $fullcontent;
+
+    #[ORM\OneToMany(mappedBy: 'circuit', targetEntity: Producer::class, orphanRemoval: true)]
+    private $producer;
+
+    #[ORM\OneToMany(mappedBy: 'circuit', targetEntity: Program::class, orphanRemoval: true)]
+    private $program;
+
+    #[ORM\Column(type: 'datetime_immutable', nullable: true)]
+    private $created_at;
+
+    #[ORM\Column(type: 'datetime_immutable', nullable: true)]
+    private $modified_at;
+
+    #[ORM\Column(type: 'string', length: 100)]
+    private $stage;
+
+    #[ORM\Column(type: 'text')]
+    private $destination;
+
+    public function __construct()
+    {
+        $this->filter = new ArrayCollection();
+        $this->producer = new ArrayCollection();
+        $this->discover = new ArrayCollection();
+        $this->program = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -93,18 +114,6 @@ class Circuit
         return $this;
     }
 
-    public function getFilterId(): ?Filter
-    {
-        return $this->filter_id;
-    }
-
-    public function setFilterId(?Filter $filter_id): self
-    {
-        $this->filter_id = $filter_id;
-
-        return $this;
-    }
-
     public function getContent(): ?string
     {
         return $this->content;
@@ -117,38 +126,55 @@ class Circuit
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
+    /**
+     * @return Collection<int, Filter>
+     */
+    public function getFilter(): Collection
     {
-        return $this->created_at;
+        return $this->filter;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    public function addFilter(Filter $filter): self
     {
-        $this->created_at = $created_at;
+        if (!$this->filter->contains($filter)) {
+            $this->filter[] = $filter;
+        }
 
         return $this;
     }
 
-    public function getModifiedAt(): ?\DateTimeImmutable
+    public function removeFilter(Filter $filter): self
     {
-        return $this->modified_at;
-    }
-
-    public function setModifiedAt(\DateTimeImmutable $modified_at): self
-    {
-        $this->modified_at = $modified_at;
+        $this->filter->removeElement($filter);
 
         return $this;
     }
 
-    #[ORM\PrePersist]
-    public function setCreatedAtValue(){
-        $this->created_at = new \DateTimeImmutable();
+    /**
+     * @return Collection<int, Discover>
+     */
+    public function getDiscover(): Collection
+    {
+        return $this->discover;
     }
 
-    #[ORM\PrePersist]
-    public function setModifiedAtValue(){
-        $this->modified_at = new \DateTimeImmutable();
+    public function addDiscover(Discover $discover): self
+    {
+        if (!$this->discover->contains($discover)) {
+            $this->discover[] = $discover;
+            $discover->addCircuit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDiscover(Discover $discover): self
+    {
+        if ($this->discover->removeElement($discover)) {
+            $discover->removeCircuit($this);
+        }
+
+        return $this;
     }
 
     public function getRelationship(): ?string
@@ -187,45 +213,130 @@ class Circuit
         return $this;
     }
 
-    public function getFullContent(): ?string
+    public function getFullcontent(): ?string
     {
-        return $this->full_content;
+        return $this->fullcontent;
     }
 
-    public function setFullContent(string $full_content): self
+    public function setFullcontent(string $fullcontent): self
     {
-        $this->full_content = $full_content;
+        $this->fullcontent = $fullcontent;
 
         return $this;
     }
 
+        
     /**
-     * @return Collection<int, Program>
+     * @return Collection<int, producer>
      */
-    public function getProgramId(): Collection
+    public function getProducer(): Collection
     {
-        return $this->program_id;
+        return $this->producer;
     }
-
-    public function addProgramId(Program $programId): self
+    
+    public function addProducer(producer $producer): self
     {
-        if (!$this->program_id->contains($programId)) {
-            $this->program_id[] = $programId;
-            $programId->setCircuit($this);
+        if (!$this->producer->contains($producer)) {
+            $this->producer[] = $producer;
+            $producer->setCircuit($this);
         }
-
+        
         return $this;
     }
-
-    public function removeProgramId(Program $programId): self
+    
+    public function removeProducer(producer $producer): self
     {
-        if ($this->program_id->removeElement($programId)) {
+        if ($this->producer->removeElement($producer)) {
             // set the owning side to null (unless already changed)
-            if ($programId->getCircuit() === $this) {
-                $programId->setCircuit(null);
+            if ($producer->getCircuit() === $this) {
+                $producer->setCircuit(null);
             }
         }
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, program>
+     */
+    public function getProgram(): Collection
+    {
+        return $this->program;
+    }
+    
+    public function addProgram(program $program): self
+    {
+        if (!$this->program->contains($program)) {
+            $this->program[] = $program;
+            $program->setCircuit($this);
+        }
+        
+        return $this;
+    }
+    
+    public function removeProgram(program $program): self
+    {
+        if ($this->program->removeElement($program)) {
+            // set the owning side to null (unless already changed)
+            if ($program->getCircuit() === $this) {
+                $program->setCircuit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    {
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getModifiedAt(): ?\DateTimeImmutable
+    {
+        return $this->modified_at;
+    }
+
+    public function setModifiedAt(\DateTimeImmutable $modified_at): self
+    {
+        $this->modified_at = $modified_at;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->title;
+    }
+
+    public function getStage(): ?string
+    {
+        return $this->stage;
+    }
+
+    public function setStage(string $stage): self
+    {
+        $this->stage = $stage;
+
+        return $this;
+    }
+
+    public function getDestination(): ?string
+    {
+        return $this->destination;
+    }
+
+    public function setDestination(string $destination): self
+    {
+        $this->destination = $destination;
+
+        return $this;
+    }
+
 }

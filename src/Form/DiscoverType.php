@@ -13,10 +13,10 @@ class DiscoverType extends AbstractType
     {
         $builder
             ->add('image')
-            ->add('legend')
+            ->add('content')
             ->add('created_at')
             ->add('modified_at')
-            ->add('circuit_id')
+            ->add('circuit')
         ;
     }
 

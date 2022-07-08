@@ -16,16 +16,16 @@ class Producer
     #[ORM\Column(type: 'string', length: 50)]
     private $image;
 
-    #[ORM\Column(type: 'string', length: 100)]
+    #[ORM\Column(type: 'string', length: 50)]
     private $name;
 
-    #[ORM\Column(type: 'text')]
+    #[ORM\Column(type: 'string', length: 100)]
     private $product;
 
     #[ORM\Column(type: 'text')]
     private $content;
 
-    #[ORM\ManyToOne(targetEntity: circuit::class)]
+    #[ORM\ManyToOne(targetEntity: Circuit::class)]
     #[ORM\JoinColumn(nullable: false)]
     private $circuit;
 
@@ -88,12 +88,12 @@ class Producer
         return $this;
     }
 
-    public function getCircuit(): ?circuit
+    public function getCircuit(): ?Circuit
     {
         return $this->circuit;
     }
 
-    public function setCircuit(?circuit $circuit): self
+    public function setCircuit(?Circuit $circuit): self
     {
         $this->circuit = $circuit;
 
@@ -123,4 +123,10 @@ class Producer
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
+
 }

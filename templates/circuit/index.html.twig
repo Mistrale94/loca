@@ -20,13 +20,12 @@
 
         <div class="select-container">
             <select name="filter" id="filter-select">
-                <option value="">Filtres</option>
-                <option value="">Gastronomie</option>
-                <option value="">Oenologie</option>
-                <option value="">Diner</option>
-                <option value="">Maison d'hôte</option>
-                <option value="">En amoureux</option>
-                <option value="">Solo</option>
+                <option value="">Filtre</option>
+                {% for circuit in circuits %}
+                    {% for f in circuit.filter %}
+                        <option value="">{{f.name}}</option>
+                    {% endfor %}
+                {% endfor %}
             </select>
             <select name="filter" id="filter-select">
                 <option value="">Pertinance</option>
@@ -51,12 +50,9 @@
                     <h3>{{circuit.title}}</h3>
                     <p>{{circuit.locality}}</p>
                     <div class="filter-circuit-container">
-                        <p class="filter-label">Gastronomie</p>
-                        <p class="filter-label">Oenologie</p>
-                        <p class="filter-label">Diner</p>
-                        <p class="filter-label">Maison d'hôte</p>
-                        <p class="filter-label">En amoureux</p>
-                        <p class="filter-label">Solo</p>
+                        {% for f in circuit.filter %}
+                            <p class="filter-label">{{f.name}}</p>
+                        {% endfor %}
                     </div>
                     <div class="discover-circuit">
                         <p>{{circuit.content}}</p>

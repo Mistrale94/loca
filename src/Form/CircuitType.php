@@ -6,6 +6,7 @@ use App\Entity\Circuit;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class CircuitType extends AbstractType
 {
@@ -16,11 +17,13 @@ class CircuitType extends AbstractType
             ->add('title')
             ->add('locality')
             ->add('content')
-            ->add('filter_id')
+            ->add('filter')
+            ->add('stage')
             ->add('relationship')
             ->add('duration')
             ->add('price')
             ->add('full_content')
+            ->add('destination')
         ;
     }
 

@@ -21,15 +21,14 @@ class Filter
     #[ORM\Column(type: 'string', length: 50)]
     private $name;
 
+    #[ORM\ManyToMany(targetEntity: Circuit::class, mappedBy: 'filter')]
+    private $circuits;
+
     #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $modified_at;
-
-    #[ORM\ManyToMany(mappedBy: 'filter_id', targetEntity: Circuit::class, orphanRemoval: true)]
-    private $circuits;
-
    
 
     public function __construct()
@@ -53,7 +52,6 @@ class Filter
 
         return $this;
     }
-
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
@@ -79,17 +77,7 @@ class Filter
         return $this;
     }
     
-    #[ORM\PrePersist]
-    public function setCreatedAtValue(){
-        $this->created_at = new \DateTimeImmutable();
-    }
-
-    #[ORM\PrePersist]
-    public function setModifiedAtValue(){
-        $this->modified_at = new \DateTimeImmutable();
-    }
-
-     /**
+    /**
      * @return Collection<int, Circuit>
      */
     public function getCircuits(): Collection
@@ -101,22 +89,30 @@ class Filter
     {
         if (!$this->circuits->contains($circuit)) {
             $this->circuits[] = $circuit;
-            $circuit->setFilterId($this);
+            $circuit->addFilter($this);
         }
 
         return $this;
     }
-    
+
     public function removeCircuit(Circuit $circuit): self
     {
         if ($this->circuits->removeElement($circuit)) {
-            // set the owning side to null (unless already changed)
-            if ($circuit->getFilterId() === $this) {
-                $circuit->setFilterId(null);
-            }
+            $circuit->removeFilter($this);
         }
 
         return $this;
+    }
+
+
+    #[ORM\PrePersist]
+    public function setCreatedAtValue(){
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    #[ORM\PrePersist]
+    public function setModifiedAtValue(){
+        $this->modifiedAt = new \DateTimeImmutable();
     }
 
     public function __toString()

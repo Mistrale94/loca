@@ -9,6 +9,9 @@
 @font-face {
   font-family: "Amithen";
   src: url("../font/Amithen.otf") format("otf"); }
+form {
+  margin-top: 200px; }
+
 header nav {
   height: 70px;
   padding: 0 100px;
@@ -16,8 +19,7 @@ header nav {
   align-items: center;
   position: fixed;
   width: 100%;
-  z-index: 5;
-  background-color: #FFFFFF; }
+  z-index: 5; }
   header nav a img {
     height: 27px; }
   header nav ul {
@@ -760,7 +762,7 @@ footer {
     align-items: center;
     width: 100%;
     z-index: 5;
-    position: initial;
+    position: fixed;
     padding: 0 30px; }
     header nav .desktop_nav {
       display: none; }
@@ -1100,7 +1102,7 @@ footer {
       background-size: contain; }
 
   section#circuits {
-    margin-top: 80px; }
+    padding-top: 150px; }
     section#circuits div.title-circuit-container {
       position: relative;
       width: fit-content; }
@@ -1206,6 +1208,188 @@ footer {
             font-family: 'Raleway';
             text-decoration: none;
             color: #FFFFFF; }
+
+  section#show-circuit img.show-circuit-banner {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 32px; }
+  section#show-circuit div.show-circuit-container {
+    padding: 0 32px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-title {
+      margin-bottom: 48px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-title h1 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 29px;
+        letter-spacing: -0.03em;
+        margin-bottom: 8px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-title p {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: -0.03em; }
+    section#show-circuit div.show-circuit-container div.show-circuit-icone {
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone {
+        width: 136px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; }
+        section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone img {
+          margin-bottom: 16px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone p {
+          font-family: 'Raleway';
+          font-weight: 500;
+          font-size: 16px;
+          color: #333333; }
+      section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone:first-child {
+        margin-bottom: 36px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone-down {
+        display: flex;
+        width: 100%;
+        justify-content: space-around; }
+    section#show-circuit div.show-circuit-container p.show-circuit-fullcontent {
+      margin-bottom: 112px;
+      font-family: 'Raleway';
+      font-weight: 500;
+      font-size: 16px;
+      color: #595959; }
+    section#show-circuit div.show-circuit-container div.show-circuit-discover {
+      margin-bottom: 80px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-discover h2 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 29px;
+        letter-spacing: -0.03em;
+        color: #191A19;
+        margin-bottom: 48px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card {
+          margin-bottom: 32px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card img {
+            margin-bottom: 16px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card p {
+            font-family: 'Ubuntu';
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: -0.03em;
+            color: #333333; }
+    section#show-circuit div.show-circuit-container div.show-circuit-product {
+      margin-bottom: 112px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title {
+        width: 295px;
+        margin-bottom: 48px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title h2 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 29px;
+          line-height: 33px;
+          letter-spacing: -0.03em;
+          color: #191A19; }
+      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container img {
+          margin-bottom: 18px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card {
+          background: #33706B;
+          width: 350px;
+          border-radius: 32px;
+          margin-bottom: 32px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text {
+            padding: 0 32px; }
+            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text h3 {
+              font-family: 'Amithen';
+              font-weight: 400;
+              font-size: 32px;
+              color: #F28D00; }
+            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p.product {
+              font-family: 'Ubuntu';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              letter-spacing: -0.03em;
+              color: #FFFFFF;
+              margin-bottom: 16px; }
+            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p:last-child {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              color: #FFFFFF;
+              margin-bottom: 98px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-program {
+      margin-bottom: 112px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title {
+        margin-bottom: 48px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title h2 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 29px;
+          letter-spacing: -0.03em; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card {
+        width: 100%;
+        background: #D6E2E1;
+        border-radius: 24px;
+        padding: 52px 32px 32px 32px;
+        margin-bottom: 32px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card h2 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 24px;
+          letter-spacing: -0.03em;
+          color: #333333;
+          margin-bottom: 20px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card hr {
+          margin-bottom: 20px;
+          background-color: #5C8D89;
+          border-radius: 50%; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card h3 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: -0.03em;
+          color: #333333;
+          margin-bottom: 15px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card p {
+          font-family: 'Raleway';
+          font-weight: 500;
+          font-size: 13px;
+          color: #595959;
+          margin-bottom: 20px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-details {
+      margin-bottom: 88px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title {
+        margin-bottom: 48px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title h2 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 29px;
+          letter-spacing: -0.03em;
+          color: #191A19; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div h3 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: -0.03em;
+        color: #333333;
+        margin-bottom: 24px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div p {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 16px;
+        color: #595959;
+        margin-bottom: 24px; }
 
   footer {
     background-color: #36706B;

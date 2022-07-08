@@ -13,12 +13,12 @@ class Program
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\ManyToOne(targetEntity: circuit::class, inversedBy: 'program_id')]
-    #[ORM\JoinColumn(nullable: false)]
-    private $circuit;
-
     #[ORM\Column(type: 'text')]
     private $content;
+
+    #[ORM\ManyToOne(targetEntity: Circuit::class)]
+    #[ORM\JoinColumn(nullable: false)]
+    private $circuit;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
@@ -31,18 +31,6 @@ class Program
         return $this->id;
     }
 
-    public function getCircuit(): ?circuit
-    {
-        return $this->circuit;
-    }
-
-    public function setCircuit(?circuit $circuit): self
-    {
-        $this->circuit = $circuit;
-
-        return $this;
-    }
-
     public function getContent(): ?string
     {
         return $this->content;
@@ -51,6 +39,18 @@ class Program
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getCircuit(): ?Circuit
+    {
+        return $this->circuit;
+    }
+
+    public function setCircuit(?Circuit $circuit): self
+    {
+        $this->circuit = $circuit;
 
         return $this;
     }

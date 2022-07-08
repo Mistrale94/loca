@@ -3,44 +3,83 @@
 {% block title %}Circuit{% endblock %}
 
 {% block body %}
-    <h1>Circuit</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ circuit.id }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ circuit.image }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ circuit.title }}</td>
-            </tr>
-            <tr>
-                <th>Locality</th>
-                <td>{{ circuit.locality }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ circuit.content }}</td>
-            </tr>
-            <tr>
-                <th>Created_at</th>
-                <td>{{ circuit.createdAt ? circuit.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Modified_at</th>
-                <td>{{ circuit.modifiedAt ? circuit.modifiedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_circuit_index') }}">back to list</a>
-
-    <a href="{{ path('app_circuit_edit', {'id': circuit.id}) }}">edit</a>
-
-    {{ include('circuit/_delete_form.html.twig') }}
+    <section id="show-circuit">
+        <image src="/image/{{circuit.image}}" class="show-circuit-banner">
+        <div class="show-circuit-container">
+            <div class="show-circuit-title">
+                <h1>{{ circuit.title }}</h1>
+                <p>{{circuit.stage}}</p>
+            </div>
+            <div class="show-circuit-icone">
+                <div class="circuit-icone">
+                    <img src="/image/icone-circuit-1.png">
+                    <p>{{ circuit.relationship }}</p>
+                </div>
+                <div class="circuit-icone-down">
+                    <div class="circuit-icone">
+                        <img src="/image/icone-circuit-2.png">
+                        <p>{{ circuit.duration }}</p>
+                    </div>
+                    <div class="circuit-icone">
+                        <img src="/image/icone-circuit-2.png">
+                        <p>{{ circuit.price }}</p>
+                    </div>
+                </div>
+            </div>
+            <p class="show-circuit-fullcontent">{{ circuit.fullContent }}</p>
+            <div class="show-circuit-discover">
+                <h2>Vous découvrirez</h2>
+                <div class="show-circuit-discover-container">
+                    {% for d in circuit.discover %}
+                        <div class="show-circuit-discover-card">
+                            <div>
+                                <image src="/image/{{ d.image }}">
+                            </div>
+                            <p>{{ d.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="show-circuit-product">
+                <div class="show-circuit-product-title">
+                    <h2>Les producteurs partenaires de ce séjour</h2>
+                </div>
+                <div class="show-circuit-product-container">
+                    {% for p in circuit.producer %}
+                        <div class="show-circuit-product-card">
+                            <img src="/image/{{ p.image }}" alt="">
+                            <div class="show-circuit-card-text">
+                                <h3>{{ p.name }}</h3>
+                                <p class="product">{{ p.product }}</p>
+                                <p>{{ p.content }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="show-circuit-program">
+                <div class="show-circuit-program-title">
+                    <h2>Circuit jour par jour</h2>
+                </div>
+                {% for v in circuit.program %}
+                    <div class="show-circuit-program-card">
+                        {{v.content|raw}}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="show-circuit-details">
+                <div class="show-circuit-details-title">
+                    <h2>Détails pratiques</h2>
+                </div>
+                <div>
+                    <h3>Infos Covid - 19</h3>
+                    <p>Des mesures sanitaires relatives à la COVID-19 peuvent être exigées (vaccination, test PCR, formulaire, etc.)</p>
+                </div>
+                <div>
+                    <h3>La destination</h3>
+                    <p>{{circuit.destination}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
