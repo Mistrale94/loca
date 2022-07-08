@@ -962,6 +962,8 @@ footer {
         #topfive .container .slider .carousel-items {
           display: flex;
           overflow-x: scroll;
+          margin-left: 0px;
+          margin-right: 0px;
           scroll-snap-type: x mandatory; }
         #topfive .container .slider ::-webkit-scrollbar {
           display: none; }

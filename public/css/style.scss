@@ -121,7 +121,6 @@ header{
             
             figure{
                 width: 40%;
-                
                 img{
                     width: 100%;
                 }
@@ -1343,7 +1342,8 @@ header{
             .carousel-items {
                 display: flex;
                 overflow-x: scroll;
-                
+                margin-left: 0px;
+                margin-right: 0px;
                 scroll-snap-type: x mandatory;
 
             }
