@@ -3,10 +3,12 @@
 namespace App\Form;
 
 use App\Entity\Circuit;
+use App\Entity\Filter;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class CircuitType extends AbstractType
 {
@@ -17,7 +19,19 @@ class CircuitType extends AbstractType
             ->add('title')
             ->add('locality')
             ->add('content')
-            ->add('filter')
+            ->add('filter', EntityType::class, [
+                'class' => Filter::class,
+                'multiple' => true,
+                'choice_label' => 'name',
+                'query_builder' => function(EntityRepository $er){
+                    return $er->createQueryBuilder('f')
+                        ->orderBy('f.name', 'ASC');
+                },
+                'label' => 'Filtres',
+                'attr' => [
+                    'class' => 'select-filters'
+                ]
+            ])
             ->add('stage')
             ->add('relationship')
             ->add('duration')

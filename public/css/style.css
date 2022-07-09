@@ -1201,7 +1201,7 @@ footer {
       flex-direction: column;
       align-items: center;
       position: relative; }
-      section#circuits div.card-circuit-container svg {
+      section#circuits div.card-circuit-container svg:first-child {
         position: absolute;
         left: 0;
         top: 40px; }
@@ -1210,7 +1210,8 @@ footer {
         padding: 24px 27px;
         margin: 48px 0;
         width: 350px;
-        border-radius: 0 0 32px 32px; }
+        border-radius: 0 0 32px 32px;
+        z-index: 2; }
         section#circuits div.card-circuit-container div.card-circuit h3 {
           font-weight: 400;
           font-size: 24px;
@@ -1259,6 +1260,10 @@ footer {
             font-family: 'Raleway';
             text-decoration: none;
             color: #FFFFFF; }
+      section#circuits div.card-circuit-container svg:last-child {
+        position: absolute;
+        right: 0;
+        bottom: 0; }
 
   section#show-circuit img.show-circuit-banner {
     width: 100%;
@@ -1267,7 +1272,10 @@ footer {
   section#show-circuit div.show-circuit-container {
     padding: 0 32px; }
     section#show-circuit div.show-circuit-container div.show-circuit-title {
-      margin-bottom: 48px; }
+      margin-bottom: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
       section#show-circuit div.show-circuit-container div.show-circuit-title h1 {
         font-family: 'Ubuntu';
         font-weight: 400;
@@ -1312,13 +1320,16 @@ footer {
       color: #595959; }
     section#show-circuit div.show-circuit-container div.show-circuit-discover {
       margin-bottom: 80px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-discover h2 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 29px;
-        letter-spacing: -0.03em;
-        color: #191A19;
-        margin-bottom: 48px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title {
+        display: flex; }
+        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title h2 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 29px;
+          letter-spacing: -0.03em;
+          color: #191A19;
+          margin-bottom: 48px;
+          margin-right: 12px; }
       section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container {
         display: flex;
         flex-direction: column;
@@ -1338,7 +1349,8 @@ footer {
       margin-bottom: 112px; }
       section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title {
         width: 295px;
-        margin-bottom: 48px; }
+        margin-bottom: 48px;
+        position: relative; }
         section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title h2 {
           font-family: 'Ubuntu';
           font-weight: 400;
@@ -1346,6 +1358,10 @@ footer {
           line-height: 33px;
           letter-spacing: -0.03em;
           color: #191A19; }
+        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title svg {
+          top: -10px;
+          right: 28%;
+          position: absolute; }
       section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container {
         display: flex;
         flex-direction: column;
@@ -1421,13 +1437,20 @@ footer {
     section#show-circuit div.show-circuit-container div.show-circuit-details {
       margin-bottom: 88px; }
       section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title {
-        margin-bottom: 48px; }
+        margin-bottom: 48px;
+        display: flex;
+        position: relative;
+        width: fit-content; }
         section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title h2 {
           font-family: 'Ubuntu';
           font-weight: 400;
           font-size: 29px;
           letter-spacing: -0.03em;
           color: #191A19; }
+        section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg {
+          position: absolute;
+          top: -50px;
+          right: -25%; }
       section#show-circuit div.show-circuit-container div.show-circuit-details div h3 {
         font-family: 'Ubuntu';
         font-weight: 400;
@@ -1441,6 +1464,22 @@ footer {
         font-size: 16px;
         color: #595959;
         margin-bottom: 24px; }
+  section#show-circuit div.btn-fix-container {
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+    section#show-circuit div.btn-fix-container p.btn-fix {
+      position: fixed;
+      bottom: 50px;
+      width: 238px;
+      height: 56px;
+      background: #33706B;
+      border-radius: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      section#show-circuit div.btn-fix-container p.btn-fix a {
+        color: #FFFFFF; }
 
   footer {
     background-color: #36706B;
@@ -1658,7 +1697,7 @@ p:after {
   position: absolute;
   top: 270px;
   left: 0;
-  display: block;
+  display: none;
   content: "";
   width: 150px;
   height: 300px;
@@ -2269,47 +2308,45 @@ footer {
       section#concept div#rightconcept div#spacer svg#right {
         right: -30%; } }
 @media (max-width: 929px) {
-  header {
-    margin-bottom: 150px; }
-    header nav {
-      position: initial;
-      padding: 0 30px; }
-      header nav div.mobile-nav, header nav #burger {
-        display: block !important; }
-      header nav div.mobile-nav ul.mobile_link-group {
-        flex-direction: column;
-        align-items: flex-end;
-        border-radius: 0px 0px 40px 40px;
-        display: none; }
-      header nav .desktop_nav {
-        display: none; }
-    header h1 {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 36px; }
-    header div#concept-headcontainer:after {
+  header nav {
+    position: fixed;
+    padding: 0 30px; }
+    header nav div.mobile-nav, header nav #burger {
+      display: block !important; }
+    header nav div.mobile-nav ul.mobile_link-group {
+      flex-direction: column;
+      align-items: flex-end;
+      border-radius: 0px 0px 40px 40px;
       display: none; }
-    header #concept-headtitle {
-      width: 500px; }
-      header #concept-headtitle h1 svg:first-child {
-        top: -32px;
-        right: 11%;
-        width: 200px; }
-      header #concept-headtitle h1 svg:last-child {
-        width: 80px;
-        bottom: -5;
-        right: 26px; }
-    header p:after, header h1:after {
+    header nav .desktop_nav {
       display: none; }
-    header div#actions {
-      flex-direction: column; }
-      header div#actions a {
-        margin-top: 24px; }
-      header div#actions svg {
-        right: -8%;
-        top: 110px; }
-    header div#concept-headcontainer {
-      width: 80%; }
+  header h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px; }
+  header div#concept-headcontainer:after {
+    display: none; }
+  header #concept-headtitle {
+    width: 500px; }
+    header #concept-headtitle h1 svg:first-child {
+      top: -32px;
+      right: 11%;
+      width: 200px; }
+    header #concept-headtitle h1 svg:last-child {
+      width: 80px;
+      bottom: -5;
+      right: 26px; }
+  header p:after, header h1:after {
+    display: none; }
+  header div#actions {
+    flex-direction: column; }
+    header div#actions a {
+      margin-top: 24px; }
+    header div#actions svg {
+      right: -8%;
+      top: 110px; }
+  header div#concept-headcontainer {
+    width: 80%; }
 
   #who {
     flex-direction: column;

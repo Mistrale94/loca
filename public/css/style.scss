@@ -1676,7 +1676,7 @@ section#circuits{
         align-items: center;
         position: relative;
         
-        svg{
+        svg:first-child{
             position: absolute;
             left: 0;
             top: 40px;
@@ -1687,6 +1687,7 @@ section#circuits{
             margin: 48px 0;
             width: 350px;
             border-radius: 0 0 32px 32px;
+            z-index: 2;
 
             h3{
                 font-weight: 400;
@@ -1748,6 +1749,11 @@ section#circuits{
                 }
             }
         }
+        svg:last-child{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
     }
 }
 section#show-circuit{
@@ -1762,6 +1768,9 @@ section#show-circuit{
         
         div.show-circuit-title{
             margin-bottom: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
             h1{
                 font-family: 'Ubuntu';
@@ -1820,13 +1829,18 @@ section#show-circuit{
         div.show-circuit-discover{
             margin-bottom: 80px;
 
-            h2{
-                font-family: 'Ubuntu';
-                font-weight: 400;
-                font-size: 29px;
-                letter-spacing: -0.03em;
-                color: #191A19;
-                margin-bottom: 48px;
+            div.show-circuit-discover-title{
+                display: flex;
+
+                h2{
+                    font-family: 'Ubuntu';
+                    font-weight: 400;
+                    font-size: 29px;
+                    letter-spacing: -0.03em;
+                    color: #191A19;
+                    margin-bottom: 48px;
+                    margin-right: 12px;
+                }
             }
             div.show-circuit-discover-container{
                 display: flex;
@@ -1856,6 +1870,7 @@ section#show-circuit{
             div.show-circuit-product-title{
                 width: 295px;
                 margin-bottom: 48px;
+                position: relative;
 
                 h2{
                     font-family: 'Ubuntu';
@@ -1864,6 +1879,11 @@ section#show-circuit{
                     line-height: 33px;
                     letter-spacing: -0.03em;
                     color: #191A19;
+                }
+                svg{
+                    top: -10px;
+                    right: 28%;
+                    position: absolute;
                 }
             }
             div.show-circuit-product-container{
@@ -1965,6 +1985,9 @@ section#show-circuit{
             
             div.show-circuit-details-title{
                 margin-bottom: 48px;
+                display: flex;
+                position: relative;
+                width: fit-content;
 
                 h2{
                     font-family: 'Ubuntu';
@@ -1972,6 +1995,11 @@ section#show-circuit{
                     font-size: 29px;
                     letter-spacing: -0.03em;
                     color: #191A19;
+                }
+                svg{
+                    position: absolute;
+                    top: -50px;
+                    right: -25%;
                 }
             }
             div{
@@ -1993,8 +2021,28 @@ section#show-circuit{
             }
         }
     }
-}
+    div.btn-fix-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
 
+        p.btn-fix{
+            position: fixed;
+            bottom: 50px;
+            width: 238px;
+            height: 56px;
+            background: #33706B;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a{
+                color: #FFFFFF;
+            }
+        }
+    }
+}
 footer{
     background-color: #36706B;
     color: #FFFFFF;
@@ -2307,7 +2355,7 @@ body{
         position: absolute;
         top: 270px;
         left: 0;
-        display: block;
+        display: none;
         content: "";
         width: 150px;
         height: 300px;
@@ -3170,9 +3218,8 @@ footer{
 @media (max-width: 929px){
     
     header{
-        margin-bottom: 150px;
         nav{
-            position: initial;
+            position: fixed;
             padding: 0 30px;
 
             div.mobile-nav, #burger {

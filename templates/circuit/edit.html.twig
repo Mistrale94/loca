@@ -2,6 +2,16 @@
 
 {% block title %}Edit Circuit{% endblock %}
 
+{% block stylesheets %}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        input, textarea, select{
+            display: block;
+            width: 100%;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
     <h1>Edit Circuit</h1>
 
@@ -10,4 +20,14 @@
     <a href="{{ path('app_circuit_index') }}">back to list</a>
 
     {{ include('circuit/_delete_form.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(function(){
+            $('.select-filters').select2();
+        })
+    </script>
 {% endblock %}
