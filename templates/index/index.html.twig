@@ -70,7 +70,7 @@
                 <div class="slider">
                     <ul class="carousel-items">
                         <!-- for i 1->5 <li></li> -->
-                        {% for circuit in circuits %}
+                        {% for circuit in circuits|slice(0, 3)%}
                         <li class="carousel-item">
                             <article>
                                 <figure>

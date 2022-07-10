@@ -2674,11 +2674,36 @@ section#show-circuit{
                 width: 100%;
             }
         }
+        div.show-circuit-slider{
+            
+            div.show-circuit-slider-slide{
+                justify-content: space-between;
+                list-style:none;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+
+                .card-circuit{
+                    margin-left: 32px;
+                
+                    scroll-snap-align: start;
+                    min-width: 350px;
+
+                    h3{
+                    height: 59px;
+                    }
+                }
+            }
+
+        }
+        ::-webkit-scrollbar {
+            display: none;
+           }
     }
     div.btn-fix-container{
         display: flex;
         width: 100%;
         justify-content: center;
+        z-index: 999;
 
         p.btn-fix{
             position: fixed;
