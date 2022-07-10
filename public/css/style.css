@@ -191,11 +191,17 @@ header nav {
         list-style: none; }
       #topfive .container .slider article {
         width: 90%;
-        min-width: 323px;
+        width: 323px;
+        height: 440px;
         background-color: #FFFFFF;
         border-radius: 0px 0px 32px 32px; }
+        #topfive .container .slider article figure {
+          width: 323px;
+          height: 183px; }
         #topfive .container .slider article img {
-          width: 100%; }
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
         #topfive .container .slider article div {
           padding: 30px; }
           #topfive .container .slider article div a {
@@ -207,7 +213,9 @@ header nav {
             font-size: 24px;
             line-height: 28px;
             letter-spacing: -0.03em;
-            color: #191A19; }
+            color: #191A19;
+            height: 56px;
+            overflow: hidden; }
           #topfive .container .slider article div p:nth-child(2) {
             font-family: 'Raleway';
             font-style: normal;
@@ -215,7 +223,9 @@ header nav {
             font-size: 13px;
             line-height: 19px;
             margin-top: 16px;
-            color: #191A19; }
+            color: #191A19;
+            height: 38px;
+            overflow: hidden; }
           #topfive .container .slider article div p:nth-child(3) {
             font-family: 'Raleway';
             font-style: normal;
@@ -537,19 +547,19 @@ section#quiz {
       font-size: 16px;
       line-height: 24px;
       color: #333333; }
-    #aventure .container article form {
+    #aventure .container article #form_aventure {
       margin-top: 50px;
       display: flex;
       flex-direction: column;
       position: relative; }
-      #aventure .container article form h1 {
+      #aventure .container article #form_aventure h1 {
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
         line-height: 28px;
         letter-spacing: -0.03em; }
-      #aventure .container article form div {
+      #aventure .container article #form_aventure div {
         margin-top: 32px;
         background: #D6E2E1;
         border-radius: 16px;
@@ -557,7 +567,7 @@ section#quiz {
         width: 350px;
         display: flex;
         justify-content: space-between; }
-        #aventure .container article form div label {
+        #aventure .container article #form_aventure div label {
           padding: 20px 41px;
           border-radius: 16px;
           font-family: 'Raleway';
@@ -565,11 +575,12 @@ section#quiz {
           font-weight: 500;
           font-size: 16px;
           line-height: 24px;
-          color: #33706B; }
-        #aventure .container article form div .active {
+          color: #33706B;
+          cursor: pointer; }
+        #aventure .container article #form_aventure div .active {
           background: #33706B;
           color: #FFFFFF; }
-      #aventure .container article form input {
+      #aventure .container article #form_aventure input {
         width: 350px;
         margin-top: 20px;
         border-radius: 16px;
@@ -583,7 +594,7 @@ section#quiz {
         color: #B2B3B2;
         padding: 20px;
         border: 1px solid #8C8D8C; }
-      #aventure .container article form button {
+      #aventure .container article #form_aventure button {
         margin-top: 32px;
         margin-left: 174px;
         width: 174px;
@@ -599,9 +610,78 @@ section#quiz {
         border: none;
         cursor: pointer;
         text-align: right; }
-        #aventure .container article form button:hover {
+        #aventure .container article #form_aventure button:hover {
           background-color: #F8961E; }
-      #aventure .container article form svg {
+      #aventure .container article #form_aventure svg {
+        position: absolute;
+        top: -29px;
+        left: -204px; }
+    #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      position: relative; }
+      #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll h1 {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.03em; }
+      #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll div:nth-child(2) {
+        margin-top: 32px;
+        background: #D6E2E1;
+        border-radius: 16px;
+        padding: 10px;
+        width: 350px;
+        display: flex;
+        justify-content: space-between; }
+        #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll div:nth-child(2) label {
+          padding: 20px 41px;
+          border-radius: 16px;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #33706B;
+          cursor: pointer; }
+        #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll div:nth-child(2) .active {
+          background: #33706B;
+          color: #FFFFFF; }
+      #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll .mc-field-group input {
+        width: 350px;
+        margin-top: 20px;
+        border-radius: 16px;
+        border: none;
+        height: 76px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #B2B3B2;
+        padding: 20px;
+        border: 1px solid #8C8D8C; }
+      #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll .optionalParent .button {
+        margin-top: 32px;
+        margin-left: 174px;
+        width: 174px;
+        padding: 16px 56px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        background: #33706B;
+        color: #FFFFFF;
+        border-radius: 32px;
+        border: none;
+        cursor: pointer;
+        text-align: right; }
+        #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll .optionalParent .button:hover {
+          background-color: #F8961E; }
+      #aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll svg {
         position: absolute;
         top: -29px;
         left: -204px; }
@@ -745,6 +825,586 @@ footer {
     font-weight: 300;
     font-size: 16px; }
 
+#registration {
+  display: none;
+  position: fixed;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 41, 52, 0.75);
+  z-index: 999; }
+  #registration .container {
+    display: none;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    opacity: 1;
+    width: 820px;
+    height: 766px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 60px 105px; }
+    #registration .container .content {
+      display: flex;
+      flex-direction: column; }
+      #registration .container .content #registration_close {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        border: none;
+        background-color: transparent; }
+      #registration .container .content h1 {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 41px;
+        letter-spacing: -0.03em; }
+      #registration .container .content p {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px; }
+      #registration .container .content form {
+        display: flex;
+        flex-direction: column; }
+        #registration .container .content form p {
+          margin-top: 16px; }
+        #registration .container .content form #genre {
+          margin-top: 8px;
+          background: #D6E2E1;
+          border-radius: 16px;
+          padding: 10px;
+          width: 350px;
+          display: flex;
+          justify-content: space-between; }
+          #registration .container .content form #genre label {
+            padding: 20px 41px;
+            border-radius: 16px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #33706B; }
+          #registration .container .content form #genre input {
+            -webkit-appearance: none; }
+          #registration .container .content form #genre .active {
+            background: #33706B;
+            color: #FFFFFF; }
+        #registration .container .content form #name {
+          display: flex;
+          flex-direction: row;
+          margin-top: 16px; }
+          #registration .container .content form #name label {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 25px; }
+          #registration .container .content form #name input {
+            width: 297px;
+            height: 56px;
+            border-radius: 8px;
+            padding: 16px;
+            border: #8C8D8C 1px solid;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            color: #8C8D8C; }
+        #registration .container .content form select {
+          margin-top: 8px;
+          width: 130px;
+          height: 56px;
+          padding: 16px;
+          background: #33706B;
+          border-radius: 8px;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #D6E2E1;
+          border: none; }
+        #registration .container .content form > label {
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 25px;
+          margin-top: 16px; }
+        #registration .container .content form #mail {
+          margin-top: 8px;
+          height: 56px;
+          border-radius: 8px;
+          padding: 16px;
+          border: #8C8D8C 1px solid;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 24px;
+          color: #8C8D8C; }
+        #registration .container .content form #button_registration {
+          padding: 16px 56px;
+          margin-top: 16px;
+          width: 312px;
+          margin-left: 294px;
+          background: #33706B;
+          border-radius: 32px;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: #FFFFFF;
+          border: none; }
+  #registration .confirmation_container {
+    display: none;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 723px;
+    height: 441px;
+    opacity: 1;
+    background-color: white;
+    border-radius: 24px;
+    padding: 56px; }
+    #registration .confirmation_container .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #registration .confirmation_container .content #confirmation_close {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        border: none;
+        background-color: transparent; }
+      #registration .confirmation_container .content h1 {
+        margin-top: 24px;
+        text-align: center;
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 41px;
+        letter-spacing: -0.03em; }
+      #registration .confirmation_container .content p {
+        margin-top: 24px;
+        text-align: center;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        color: #595959; }
+      #registration .confirmation_container .content a {
+        margin-top: 24px;
+        background: #33706B;
+        border-radius: 32px;
+        padding: 16px 56px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF; }
+
+section#circuits {
+  padding-top: 150px; }
+  section#circuits div.title-circuit-container {
+    position: relative;
+    width: fit-content; }
+    section#circuits div.title-circuit-container svg:first-child {
+      position: absolute;
+      top: -40px;
+      right: 48%; }
+    section#circuits div.title-circuit-container h1 {
+      font-size: 56px;
+      font-family: 'Ubuntu';
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      color: #191A19;
+      margin-bottom: 48px;
+      margin-left: 32px; }
+    section#circuits div.title-circuit-container svg:last-child {
+      position: absolute;
+      top: 0;
+      right: -45%; }
+  section#circuits h2 {
+    font-size: 24px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: #333333;
+    margin-bottom: 24px;
+    margin-left: 32px; }
+  section#circuits div.select-container {
+    margin-left: 32px; }
+    section#circuits div.select-container select {
+      width: 130px;
+      height: 56px;
+      background-color: #33706b;
+      border: none;
+      border-radius: 8px;
+      color: #D6E2E1;
+      padding: 16px; }
+      section#circuits div.select-container select option {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 16px; }
+    section#circuits div.select-container select:first-child {
+      margin-right: 16px; }
+  section#circuits div.card-circuit-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 60px; }
+    section#circuits div.card-circuit-container svg:first-child {
+      position: absolute;
+      left: 0;
+      top: 40px; }
+    section#circuits div.card-circuit-container svg:last-child {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+
+div.card-circuit {
+  background-color: #D6E2E1;
+  padding: 24px 27px;
+  margin: 48px 0;
+  width: 350px;
+  border-radius: 0 0 32px 32px;
+  z-index: 2; }
+  div.card-circuit img {
+    width: 100%; }
+  div.card-circuit h3 {
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    letter-spacing: -0.03em;
+    margin: 8px 0;
+    color: #191A19; }
+  div.card-circuit p:first-of-type {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 13px;
+    font-style: normal;
+    margin-bottom: 16px;
+    color: #191A19; }
+  div.card-circuit div.filter-circuit-container {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap; }
+    div.card-circuit div.filter-circuit-container p.filter-label {
+      padding: 8px 16px;
+      margin-bottom: 8px;
+      margin-right: 8px;
+      width: fit-content;
+      background-color: #ADC6C4;
+      border-radius: 8px;
+      color: #333333;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: 'Raleway'; }
+  div.card-circuit div.discover-circuit {
+    margin-bottom: 19px; }
+    div.card-circuit div.discover-circuit p {
+      font-size: 16px;
+      font-family: 'Raleway';
+      font-weight: 500;
+      margin-bottom: 4px; }
+  div.card-circuit p:nth-child(6) {
+    background-color: #33706B;
+    padding: 16px 56px;
+    border-radius: 32px;
+    text-align: center; }
+    div.card-circuit p:nth-child(6) a {
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Raleway';
+      text-decoration: none;
+      color: #FFFFFF; }
+
+section#show-circuit {
+  padding: 203px 100px 112px 100px; }
+  section#show-circuit div.show-circuit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    section#show-circuit div.show-circuit-header img.show-circuit-banner {
+      width: 715px;
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 32px; }
+    section#show-circuit div.show-circuit-header div.show-circuit-title {
+      margin-bottom: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+      section#show-circuit div.show-circuit-header div.show-circuit-title h1 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 29px;
+        letter-spacing: -0.03em;
+        margin-bottom: 8px; }
+      section#show-circuit div.show-circuit-header div.show-circuit-title p {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: -0.03em; }
+    section#show-circuit div.show-circuit-header div.show-circuit-icone {
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone {
+        width: 136px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; }
+        section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone img {
+          margin-bottom: 16px; }
+        section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone p {
+          font-family: 'Raleway';
+          font-weight: 500;
+          font-size: 16px;
+          color: #333333; }
+      section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone:first-child {
+        margin-bottom: 36px; }
+      section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone-down {
+        display: flex;
+        width: 100%;
+        justify-content: space-around; }
+  section#show-circuit p.btn-fix {
+    width: 238px;
+    height: 56px;
+    background: #33706B;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    section#show-circuit p.btn-fix a {
+      color: #FFFFFF; }
+  section#show-circuit div.show-circuit-container p.show-circuit-fullcontent {
+    margin-bottom: 112px;
+    width: 715px;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 16px;
+    color: #595959; }
+  section#show-circuit div.show-circuit-container div.show-circuit-discover {
+    margin-bottom: 80px;
+    padding: 0 100px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title {
+      display: flex; }
+      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title h2 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 56px;
+        letter-spacing: -0.03em;
+        color: #191A19;
+        margin-bottom: 48px;
+        margin-right: 12px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title svg {
+        width: 86px;
+        height: 80px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card {
+        margin-bottom: 32px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card img {
+          margin-bottom: 16px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card p {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 23px;
+          letter-spacing: -0.03em;
+          color: #333333; }
+  section#show-circuit div.show-circuit-container div.show-circuit-product {
+    margin-bottom: 112px;
+    padding: 0 100px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title {
+      width: 607px;
+      margin-bottom: 48px;
+      position: relative; }
+      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title h2 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 56px;
+        letter-spacing: -0.03em;
+        color: #191A19; }
+      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title svg {
+        top: -20px;
+        right: 35%;
+        position: absolute;
+        width: 311px;
+        height: 102px;
+        z-index: -1; }
+    section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container {
+      display: flex;
+      justify-content: space-between; }
+      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container img {
+        margin-bottom: 18px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card {
+        background: #33706B;
+        width: 350px;
+        border-radius: 32px;
+        margin-bottom: 32px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text {
+          padding: 0 32px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text div:first-child {
+            position: relative; }
+            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text div:first-child h3 {
+              font-family: 'Amithen';
+              font-weight: 400;
+              font-size: 32px;
+              color: #F28D00; }
+            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text div:first-child svg {
+              position: absolute;
+              top: -15px;
+              right: 0; }
+          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p.product {
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: -0.03em;
+            color: #FFFFFF;
+            margin-bottom: 16px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p:last-child {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-bottom: 98px; }
+  section#show-circuit div.show-circuit-container div.show-circuit-program {
+    margin-bottom: 112px;
+    padding: 0 100px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title {
+      margin-bottom: 48px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title h2 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 56px;
+        letter-spacing: -0.03em; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title svg {
+        width: 145px;
+        height: 42px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card {
+        width: 923px;
+        background: #D6E2E1;
+        border-radius: 24px;
+        padding: 52px 100px 32px 100px;
+        margin-bottom: 32px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card h2 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 36px;
+          letter-spacing: -0.03em;
+          color: #333333;
+          margin-bottom: 20px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card hr {
+          margin-bottom: 20px;
+          background-color: #5C8D89;
+          border-radius: 50%; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card h3 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 24px;
+          letter-spacing: -0.03em;
+          color: #333333;
+          margin-bottom: 15px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card p {
+          font-family: 'Raleway';
+          font-weight: 500;
+          font-size: 13px;
+          color: #595959;
+          margin-bottom: 20px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container svg {
+        position: absolute;
+        top: 46%;
+        right: -15%; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.btn-program {
+        display: flex;
+        justify-content: flex-end;
+        width: 923px; }
+  section#show-circuit div.show-circuit-container div.show-circuit-details {
+    margin-bottom: 88px;
+    padding: 0 100px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title {
+      margin-bottom: 48px;
+      display: flex;
+      position: relative;
+      width: fit-content; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg:first-child {
+        position: absolute;
+        top: -70px;
+        left: -15%; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title h2 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 56px;
+        letter-spacing: -0.03em;
+        color: #191A19; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg:last-child {
+        position: absolute;
+        top: -40px;
+        right: -15%; }
+    section#show-circuit div.show-circuit-container div.show-circuit-details div {
+      width: 822px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div h3 {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: -0.03em;
+        color: #333333;
+        margin-bottom: 24px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details div p {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 16px;
+        color: #595959;
+        margin-bottom: 24px; }
+  section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title {
+    position: relative; }
+    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title h2 {
+      font-family: 'Ubuntu';
+      font-weight: 400;
+      font-size: 56px;
+      letter-spacing: -0.03em;
+      color: #191A19; }
+    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title svg {
+      position: absolute;
+      left: 16%; }
+  section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
+    display: flex;
+    justify-content: space-around; }
+  section#show-circuit div.btn-fix-container {
+    display: none; }
+
 @media (max-width: 1600px) {
   #topfive {
     padding: 100px 100px; } }
@@ -775,8 +1435,6 @@ footer {
       margin-left: -80px;
       margin-right: -100px;
       justify-content: space-between; }
-    #topfive .container .slider article {
-      width: 70%; }
 
   section#quiz {
     padding: 112px 300px; }
@@ -794,9 +1452,9 @@ footer {
           right: -8px; }
       #aventure .container article p {
         margin-top: 20px; }
-      #aventure .container article form {
+      #aventure .container article #mc_embed_signup_scroll {
         margin-top: 20px; }
-        #aventure .container article form svg {
+        #aventure .container article #mc_embed_signup_scroll svg {
           left: -151px; }
     #aventure > div svg {
       right: -100px; }
@@ -932,6 +1590,8 @@ footer {
     #topfive .container {
       width: 350px;
       margin: 0 auto; }
+      #topfive .container > svg {
+        display: none; }
       #topfive .container h1 {
         width: 224px;
         font-family: 'Ubuntu';
@@ -959,6 +1619,7 @@ footer {
         margin-bottom: 50px;
         margin-right: -150px; }
         #topfive .container .slider .carousel-items {
+          height: 500px;
           display: flex;
           overflow-x: scroll;
           margin-left: 0px;
@@ -1084,16 +1745,16 @@ footer {
         font-weight: 500;
         font-size: 16px;
         line-height: 24px; }
-      #aventure .container form {
+      #aventure .container #mc_embed_signup_scroll {
         margin-top: 50px; }
-        #aventure .container form h1 {
+        #aventure .container #mc_embed_signup_scroll h1 {
           font-family: 'Ubuntu';
           font-style: normal;
           font-weight: 400;
           font-size: 24px;
           line-height: 28px;
           letter-spacing: -0.03em; }
-        #aventure .container form div {
+        #aventure .container #mc_embed_signup_scroll div:nth-child(2) {
           margin-top: 32px;
           background: #D6E2E1;
           border-radius: 16px;
@@ -1101,7 +1762,7 @@ footer {
           width: 350px;
           display: flex;
           justify-content: space-between; }
-          #aventure .container form div label {
+          #aventure .container #mc_embed_signup_scroll div:nth-child(2) label {
             padding: 20px 41px;
             border-radius: 16px;
             font-family: 'Raleway';
@@ -1110,10 +1771,10 @@ footer {
             font-size: 16px;
             line-height: 24px;
             color: #33706B; }
-          #aventure .container form div .active {
+          #aventure .container #mc_embed_signup_scroll div:nth-child(2) .active {
             background: #33706B;
             color: #FFFFFF; }
-        #aventure .container form input {
+        #aventure .container #mc_embed_signup_scroll .mc-field-group input {
           margin-top: 20px;
           width: 100%;
           border-radius: 16px;
@@ -1127,7 +1788,7 @@ footer {
           color: #B2B3B2;
           padding: 20px;
           border: 1px solid #8C8D8C; }
-        #aventure .container form button {
+        #aventure .container #mc_embed_signup_scroll .optionalParent button {
           margin-top: 32px;
           padding: 16px 56px;
           font-family: 'Raleway';
@@ -1139,344 +1800,183 @@ footer {
           color: #FFFFFF;
           border-radius: 32px;
           border: none; }
-          #aventure .container form button:hover {
+          #aventure .container #mc_embed_signup_scroll .optionalParent button:hover {
             background-color: #F8961E;
             cursor: pointer; }
-        #aventure .container form svg {
+        #aventure .container #mc_embed_signup_scroll svg {
           display: none; }
       #aventure .container > div {
         display: none; }
         #aventure .container > div svg {
           display: none; }
 
-  section#circuits {
-    padding-top: 150px; }
-    section#circuits div.title-circuit-container {
-      position: relative;
-      width: fit-content; }
-      section#circuits div.title-circuit-container svg {
-        position: absolute;
-        position: absolute;
-        top: -40px;
-        right: 35%; }
-      section#circuits div.title-circuit-container h1 {
-        font-size: 29px;
-        font-family: 'Ubuntu';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: -0.03em;
-        color: #191A19;
-        margin-bottom: 48px;
-        margin-left: 32px; }
-    section#circuits h2 {
-      font-size: 24px;
-      font-family: 'Ubuntu';
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: -0.03em;
-      color: #333333;
-      margin-bottom: 24px;
-      margin-left: 32px; }
-    section#circuits div.select-container {
-      margin-left: 32px; }
-      section#circuits div.select-container select {
-        width: 130px;
-        height: 56px;
-        background-color: #33706b;
-        border: none;
-        border-radius: 8px;
-        color: #D6E2E1;
-        padding: 16px; }
-        section#circuits div.select-container select option {
-          font-family: 'Raleway';
-          font-weight: 500;
-          font-size: 16px; }
-      section#circuits div.select-container select:first-child {
-        margin-right: 16px; }
-    section#circuits div.card-circuit-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative; }
-      section#circuits div.card-circuit-container svg:first-child {
-        position: absolute;
-        left: 0;
-        top: 40px; }
-      section#circuits div.card-circuit-container div.card-circuit {
-        background-color: #D6E2E1;
-        padding: 24px 27px;
-        margin: 48px 0;
-        width: 350px;
-        border-radius: 0 0 32px 32px;
-        z-index: 2; }
-        section#circuits div.card-circuit-container div.card-circuit h3 {
-          font-weight: 400;
-          font-size: 24px;
-          font-family: 'Ubuntu';
-          font-style: normal;
-          letter-spacing: -0.03em;
-          margin: 8px 0;
-          color: #191A19; }
-        section#circuits div.card-circuit-container div.card-circuit p:first-of-type {
-          font-family: 'Raleway';
-          font-weight: 500;
-          font-size: 13px;
-          font-style: normal;
-          margin-bottom: 16px;
-          color: #191A19; }
-        section#circuits div.card-circuit-container div.card-circuit div.filter-circuit-container {
-          margin-bottom: 8px;
-          display: flex;
-          flex-wrap: wrap; }
-          section#circuits div.card-circuit-container div.card-circuit div.filter-circuit-container p.filter-label {
-            padding: 8px 16px;
-            margin-bottom: 8px;
-            margin-right: 8px;
-            width: fit-content;
-            background-color: #ADC6C4;
-            border-radius: 8px;
-            color: #333333;
-            font-size: 13px;
-            font-weight: 500;
-            font-family: 'Raleway'; }
-        section#circuits div.card-circuit-container div.card-circuit div.discover-circuit {
-          margin-bottom: 19px; }
-          section#circuits div.card-circuit-container div.card-circuit div.discover-circuit p {
-            font-size: 16px;
-            font-family: 'Raleway';
-            font-weight: 500;
-            margin-bottom: 4px; }
-        section#circuits div.card-circuit-container div.card-circuit p:nth-child(6) {
-          background-color: #33706B;
-          padding: 16px 56px;
-          border-radius: 32px;
-          text-align: center; }
-          section#circuits div.card-circuit-container div.card-circuit p:nth-child(6) a {
-            font-size: 16px;
-            font-weight: 700;
-            font-family: 'Raleway';
-            text-decoration: none;
-            color: #FFFFFF; }
-      section#circuits div.card-circuit-container svg:last-child {
-        position: absolute;
-        right: 0;
-        bottom: 0; }
+  section#circuits div.title-circuit-container svg:first-child {
+    right: 35%; }
+  section#circuits div.title-circuit-container h1 {
+    font-size: 29px; }
+  section#circuits div.title-circuit-container svg:last-child {
+    display: none; }
+  section#circuits div.card-circuit-container {
+    flex-direction: column;
+    align-items: center; }
 
-  section#show-circuit img.show-circuit-banner {
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    margin-bottom: 32px; }
-  section#show-circuit div.show-circuit-container {
-    padding: 0 32px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-title {
-      margin-bottom: 48px;
+  section#show-circuit {
+    padding: 0; }
+    section#show-circuit div.show-circuit-header {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start; }
-      section#show-circuit div.show-circuit-container div.show-circuit-title h1 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 29px;
-        letter-spacing: -0.03em;
-        margin-bottom: 8px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-title p {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 20px;
-        letter-spacing: -0.03em; }
-    section#show-circuit div.show-circuit-container div.show-circuit-icone {
-      margin-bottom: 32px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center; }
-      section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone {
-        width: 136px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center; }
-        section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone img {
-          margin-bottom: 16px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone p {
-          font-family: 'Raleway';
-          font-weight: 500;
-          font-size: 16px;
-          color: #333333; }
-      section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone:first-child {
-        margin-bottom: 36px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-icone div.circuit-icone-down {
-        display: flex;
-        width: 100%;
-        justify-content: space-around; }
-    section#show-circuit div.show-circuit-container p.show-circuit-fullcontent {
-      margin-bottom: 112px;
-      font-family: 'Raleway';
-      font-weight: 500;
-      font-size: 16px;
-      color: #595959; }
-    section#show-circuit div.show-circuit-container div.show-circuit-discover {
-      margin-bottom: 80px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title {
-        display: flex; }
-        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title h2 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 29px;
-          letter-spacing: -0.03em;
-          color: #191A19;
-          margin-bottom: 48px;
-          margin-right: 12px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card {
-          margin-bottom: 32px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card img {
-            margin-bottom: 16px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card p {
-            font-family: 'Ubuntu';
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 23px;
-            letter-spacing: -0.03em;
-            color: #333333; }
-    section#show-circuit div.show-circuit-container div.show-circuit-product {
-      margin-bottom: 112px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title {
-        width: 295px;
+      width: 100%;
+      flex-direction: column; }
+      section#show-circuit div.show-circuit-header div.show-circuit-title {
         margin-bottom: 48px;
-        position: relative; }
-        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title h2 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 29px;
-          line-height: 33px;
-          letter-spacing: -0.03em;
-          color: #191A19; }
-        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title svg {
-          top: -10px;
-          right: 28%;
-          position: absolute; }
-      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        width: 100%; }
+        section#show-circuit div.show-circuit-header div.show-circuit-title img.show-circuit-banner {
+          width: 100%; }
+        section#show-circuit div.show-circuit-header div.show-circuit-title h1 {
+          font-size: 29px;
+          margin-left: 32px; }
+        section#show-circuit div.show-circuit-header div.show-circuit-title p {
+          font-size: 20px;
+          margin-left: 32px; }
+      section#show-circuit div.show-circuit-header div.show-circuit-icone {
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         align-items: center; }
-        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container img {
-          margin-bottom: 18px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card {
-          background: #33706B;
-          width: 350px;
-          border-radius: 32px;
-          margin-bottom: 32px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text {
-            padding: 0 32px; }
-            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text h3 {
-              font-family: 'Amithen';
-              font-weight: 400;
-              font-size: 32px;
-              color: #F28D00; }
-            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p.product {
+        section#show-circuit div.show-circuit-header div.show-circuit-icone p.btn-fix {
+          display: none; }
+    section#show-circuit div.show-circuit-container {
+      padding: 0 32px; }
+      section#show-circuit div.show-circuit-container p.show-circuit-fullcontent {
+        width: 100%; }
+      section#show-circuit div.show-circuit-container div.show-circuit-discover {
+        padding: 0; }
+        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title h2 {
+          font-size: 29px;
+          margin-right: 12px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title svg {
+          width: 59px;
+          height: 55px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card {
+            margin-bottom: 32px; }
+            section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card img {
+              margin-bottom: 16px; }
+            section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card p {
               font-family: 'Ubuntu';
-              font-style: normal;
               font-weight: 400;
               font-size: 20px;
+              line-height: 23px;
               letter-spacing: -0.03em;
-              color: #FFFFFF;
-              margin-bottom: 16px; }
-            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p:last-child {
-              font-family: 'Raleway';
-              font-style: normal;
-              font-weight: 500;
-              font-size: 16px;
-              color: #FFFFFF;
-              margin-bottom: 98px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-program {
-      margin-bottom: 112px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title {
-        margin-bottom: 48px; }
+              color: #333333; }
+      section#show-circuit div.show-circuit-container div.show-circuit-product {
+        padding: 0; }
+        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title {
+          width: 295px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title h2 {
+            font-size: 29px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title svg {
+            top: -10px;
+            right: 28%;
+            width: 174px;
+            height: 51px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+      section#show-circuit div.show-circuit-container div.show-circuit-program {
+        padding: 0; }
         section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title h2 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 29px;
-          letter-spacing: -0.03em; }
-      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card {
-        width: 100%;
-        background: #D6E2E1;
-        border-radius: 24px;
-        padding: 52px 32px 32px 32px;
-        margin-bottom: 32px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card h2 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 24px;
-          letter-spacing: -0.03em;
-          color: #333333;
-          margin-bottom: 20px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card hr {
-          margin-bottom: 20px;
-          background-color: #5C8D89;
-          border-radius: 50%; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card h3 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 20px;
-          letter-spacing: -0.03em;
-          color: #333333;
-          margin-bottom: 15px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-card p {
-          font-family: 'Raleway';
-          font-weight: 500;
-          font-size: 13px;
-          color: #595959;
-          margin-bottom: 20px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-details {
-      margin-bottom: 88px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title {
-        margin-bottom: 48px;
-        display: flex;
-        position: relative;
-        width: fit-content; }
-        section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title h2 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 29px;
-          letter-spacing: -0.03em;
-          color: #191A19; }
-        section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg {
-          position: absolute;
-          top: -50px;
-          right: -25%; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div h3 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 20px;
-        letter-spacing: -0.03em;
-        color: #333333;
-        margin-bottom: 24px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div p {
-        font-family: 'Raleway';
-        font-weight: 500;
-        font-size: 16px;
-        color: #595959;
-        margin-bottom: 24px; }
-  section#show-circuit div.btn-fix-container {
-    display: flex;
-    width: 100%;
-    justify-content: center; }
-    section#show-circuit div.btn-fix-container p.btn-fix {
-      position: fixed;
-      bottom: 50px;
-      width: 238px;
-      height: 56px;
-      background: #33706B;
-      border-radius: 32px;
+          font-size: 29px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title svg {
+          width: 69px;
+          height: 20px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container {
+          width: 100%; }
+          section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card {
+            width: 100%;
+            background: #D6E2E1;
+            border-radius: 24px;
+            padding: 52px 32px 32px 32px;
+            margin-bottom: 32px; }
+            section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card h2 {
+              font-size: 24px; }
+            section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card h3 {
+              font-size: 20px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container svg {
+            display: none; }
+          section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.btn-program {
+            display: none; }
+      section#show-circuit div.show-circuit-container div.show-circuit-details {
+        padding: 0; }
+        section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title {
+          margin-bottom: 48px;
+          display: flex;
+          position: relative;
+          width: fit-content; }
+          section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg:first-child {
+            display: none; }
+          section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title h2 {
+            font-size: 29px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg:last-child {
+            top: -50px;
+            right: -25%; }
+        section#show-circuit div.show-circuit-container div.show-circuit-details div {
+          width: 100%; }
+    section#show-circuit div.btn-fix-container {
       display: flex;
-      align-items: center;
+      width: 100%;
       justify-content: center; }
-      section#show-circuit div.btn-fix-container p.btn-fix a {
-        color: #FFFFFF; }
+      section#show-circuit div.btn-fix-container p.btn-fix {
+        position: fixed;
+        bottom: 50px;
+        width: 238px;
+        height: 56px;
+        background: #33706B;
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        section#show-circuit div.btn-fix-container p.btn-fix a {
+          color: #FFFFFF; }
+
+  #registration {
+    align-items: initial; }
+    #registration .container {
+      width: 100%;
+      height: 800px;
+      padding: 60px 20px;
+      border-radius: 0px; }
+      #registration .container .content form #name {
+        display: flex;
+        flex-direction: column; }
+        #registration .container .content form #name div {
+          display: flex;
+          flex-direction: column; }
+          #registration .container .content form #name div input {
+            width: 100%; }
+        #registration .container .content form #name div:last-child {
+          margin-top: 16px; }
+      #registration .container .content form #button_registration {
+        margin-left: 0px;
+        margin: 34px auto; }
+    #registration .confirmation_container {
+      width: 100%;
+      height: 800px;
+      padding: 150px 32px;
+      border-radius: 0px; }
+      #registration .confirmation_container .content h1 {
+        margin-top: 64px; }
+      #registration .confirmation_container .content p {
+        margin-top: 32px; }
+      #registration .confirmation_container .content a {
+        margin-top: 64px; }
 
   footer {
     background-color: #36706B;
@@ -1643,6 +2143,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   height: 95vh; }
@@ -1651,7 +2152,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 50vh; }
+    flex-direction: column;
+    height: 70vh; }
   .concept-headmain h1 {
     text-align: center;
     font-size: 64px;
@@ -1818,9 +2320,11 @@ p:after {
   margin-bottom: 100px; }
   #explain2 #imgcontain2 {
     width: 70%;
-    height: 600px;
-    background: #adc6c4;
     border-radius: 16px; }
+    #explain2 #imgcontain2 img {
+      border-radius: 16px;
+      width: 100%;
+      text-align: center; }
 
 #value {
   background-color: #CBE6E4;
@@ -2008,7 +2512,7 @@ section#travel {
   position: relative;
   overflow: hidden; }
   #concept #splitconcept {
-    width: 20%;
+    width: 18%;
     height: 1800px;
     display: flex;
     flex-direction: column;
@@ -2184,7 +2688,12 @@ section#portraits {
     section#concept div#rightconcept {
       margin-right: 50px; }
       section#concept div#rightconcept div#spacer svg#right {
-        right: -30%; } }
+        right: -30%; }
+
+  #explain2 {
+    height: 500px; }
+    #explain2 #imgcontain2 {
+      width: 80%; } }
 @media (max-width: 929px) {
   header nav {
     position: fixed;
@@ -2198,32 +2707,33 @@ section#portraits {
       display: none; }
     header nav .desktop_nav {
       display: none; }
-  header h1 {
+
+  .concept-headmain h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 36px; }
-  header div#concept-headcontainer:after {
+  .concept-headmain div#concept-headcontainer:after {
     display: none; }
-  header #concept-headtitle {
+  .concept-headmain #concept-headtitle {
     width: 500px; }
-    header #concept-headtitle h1 svg:first-child {
+    .concept-headmain #concept-headtitle h1 svg:first-child {
       top: -32px;
       right: 11%;
       width: 200px; }
-    header #concept-headtitle h1 svg:last-child {
+    .concept-headmain #concept-headtitle h1 svg:last-child {
       width: 80px;
       bottom: -5;
       right: 26px; }
-  header p:after, header h1:after {
+  .concept-headmain p:after, .concept-headmain h1:after {
     display: none; }
-  header div#actions {
+  .concept-headmain div#actions {
     flex-direction: column; }
-    header div#actions a {
+    .concept-headmain div#actions a {
       margin-top: 24px; }
-    header div#actions svg {
+    .concept-headmain div#actions svg {
       right: -8%;
       top: 110px; }
-  header div#concept-headcontainer {
+  .concept-headmain div#concept-headcontainer {
     width: 80%; }
 
   #who {
@@ -2427,11 +2937,9 @@ section#portraits {
           display: none; }
 
   #explain2 {
-    height: 500px; }
+    height: 300px; }
     #explain2 #imgcontain2 {
-      height: 400px;
-      width: 100%;
-      border-radius: 0; } }
+      width: 100%; } }
 @media (max-width: 414px) {
   header div.concept-headmain div#concept-headcontainer div#concept-headtitle {
     margin-bottom: 56px; }

@@ -6,13 +6,16 @@ use App\Entity\Discover;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class DiscoverType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('image')
+            ->add('imageFile', VichImageType::class, [
+                'label' => 'Image',
+            ])
             ->add('content')
             ->add('created_at')
             ->add('modified_at')
