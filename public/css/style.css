@@ -1032,6 +1032,248 @@ footer > p:last-child {
   font-size: 16px;
 }
 
+#registration {
+  display: none;
+  position: fixed;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 41, 52, 0.75);
+  z-index: 999;
+}
+
+#registration .container {
+  display: none;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  opacity: 1;
+  width: 820px;
+  height: 766px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 60px 105px;
+}
+
+#registration .container .content {
+  display: flex;
+  flex-direction: column;
+}
+
+#registration .container .content #registration_close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: none;
+  background-color: transparent;
+}
+
+#registration .container .content h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.03em;
+}
+
+#registration .container .content p {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+#registration .container .content form {
+  display: flex;
+  flex-direction: column;
+}
+
+#registration .container .content form p {
+  margin-top: 16px;
+}
+
+#registration .container .content form #genre {
+  margin-top: 8px;
+  background: #D6E2E1;
+  border-radius: 16px;
+  padding: 10px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#registration .container .content form #genre label {
+  padding: 20px 41px;
+  border-radius: 16px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #33706B;
+}
+
+#registration .container .content form #genre input {
+  -webkit-appearance: none;
+}
+
+#registration .container .content form #genre .active {
+  background: #33706B;
+  color: #FFFFFF;
+}
+
+#registration .container .content form #name {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+#registration .container .content form #name label {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+#registration .container .content form #name input {
+  width: 297px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+  border: #8C8D8C 1px solid;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8C8D8C;
+}
+
+#registration .container .content form select {
+  margin-top: 8px;
+  width: 130px;
+  height: 56px;
+  padding: 16px;
+  background: #33706B;
+  border-radius: 8px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #D6E2E1;
+  border: none;
+}
+
+#registration .container .content form > label {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 16px;
+}
+
+#registration .container .content form #mail {
+  margin-top: 8px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+  border: #8C8D8C 1px solid;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8C8D8C;
+}
+
+#registration .container .content form #button_registration {
+  padding: 16px 56px;
+  margin-top: 16px;
+  width: 312px;
+  margin-left: 294px;
+  background: #33706B;
+  border-radius: 32px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  border: none;
+}
+
+#registration .confirmation_container {
+  display: none;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 723px;
+  height: 441px;
+  opacity: 1;
+  background-color: white;
+  border-radius: 24px;
+  padding: 56px;
+}
+
+#registration .confirmation_container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#registration .confirmation_container .content #confirmation_close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: none;
+  background-color: transparent;
+}
+
+#registration .confirmation_container .content h1 {
+  margin-top: 24px;
+  text-align: center;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.03em;
+}
+
+#registration .confirmation_container .content p {
+  margin-top: 24px;
+  text-align: center;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: #595959;
+}
+
+#registration .confirmation_container .content a {
+  margin-top: 24px;
+  background: #33706B;
+  border-radius: 32px;
+  padding: 16px 56px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
 @media (max-width: 1600px) {
   #topfive {
     padding: 100px 100px;
@@ -1926,6 +2168,48 @@ footer > p:last-child {
   }
   section#show-circuit div.btn-fix-container p.btn-fix a {
     color: #FFFFFF;
+  }
+  #registration {
+    align-items: initial;
+  }
+  #registration .container {
+    width: 100%;
+    height: 800px;
+    padding: 60px 20px;
+    border-radius: 0px;
+  }
+  #registration .container .content form #name {
+    display: flex;
+    flex-direction: column;
+  }
+  #registration .container .content form #name div {
+    display: flex;
+    flex-direction: column;
+  }
+  #registration .container .content form #name div input {
+    width: 100%;
+  }
+  #registration .container .content form #name div:last-child {
+    margin-top: 16px;
+  }
+  #registration .container .content form #button_registration {
+    margin-left: 0px;
+    margin: 34px auto;
+  }
+  #registration .confirmation_container {
+    width: 100%;
+    height: 800px;
+    padding: 150px 32px;
+    border-radius: 0px;
+  }
+  #registration .confirmation_container .content h1 {
+    margin-top: 64px;
+  }
+  #registration .confirmation_container .content p {
+    margin-top: 32px;
+  }
+  #registration .confirmation_container .content a {
+    margin-top: 64px;
   }
   footer {
     background-color: #36706B;

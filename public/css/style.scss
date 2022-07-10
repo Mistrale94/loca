@@ -1014,6 +1014,255 @@ footer{
     }
 
 }
+#registration{
+    display: none;
+    position: fixed;
+    //display: flex;
+    align-items:center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 41, 52, 0.75);
+    z-index: 999;
+
+    .container{
+        display: none;
+        position:relative;
+        align-items:center;
+        flex-direction: column;
+        margin: 0 auto;
+
+        opacity: 1;
+        width: 820px;
+        height: 766px;
+        background-color: white;
+        border-radius: 24px;
+        padding: 60px 105px;
+
+        .content{
+             //border: 2px solid red;
+             display: flex;
+             flex-direction: column;
+
+            #registration_close{
+                position: absolute;
+                top: 50px;
+                right: 50px;
+                border: none;
+                background-color:transparent;
+             }
+             h1{
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 41px;
+                letter-spacing: -0.03em;
+             }
+             p{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 25px;
+             }
+             form{
+                display: flex;
+                flex-direction: column;
+                p{
+                    margin-top: 16px;
+                }
+                #genre{
+                        margin-top: 8px;
+                        background: #D6E2E1;
+                        border-radius: 16px;
+                        padding: 10px;
+                        width: 350px;
+                        display: flex;
+                        justify-content: space-between;
+                        label{
+                            padding: 20px 41px;
+                            border-radius: 16px;
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #33706B;
+
+                            
+                        }
+                        input{
+                            -webkit-appearance:none;
+                        }
+                        .active{
+                            background: #33706B;
+                            color: #FFFFFF;
+                        }
+                 }
+                 #name{
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 16px;
+                    label{
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 25px;
+                    }
+                    input{
+                        width: 297px;
+                        height: 56px;
+                        border-radius: 8px;
+                        padding: 16px;
+                        border: #8C8D8C 1px solid;
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #8C8D8C;
+                    }
+                 }
+                 select{
+                    margin-top: 8px;
+                    width: 130px;
+                    height: 56px;
+                    padding: 16px;
+                    background: #33706B;
+                    border-radius: 8px;
+
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #D6E2E1;
+                    border: none;
+                 }
+                 >label{
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 25px;
+                    margin-top: 16px;
+                }
+                #mail{
+                    margin-top: 8px;
+                        height: 56px;
+                        border-radius: 8px;
+                        padding: 16px;
+                        border: #8C8D8C 1px solid;
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #8C8D8C;
+
+                }
+
+                 #button_registration{
+                    padding: 16px 56px;
+                    margin-top: 16px;
+                    width: 312px;
+                    margin-left: 294px;
+                    background: #33706B;
+                    border-radius: 32px;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    border: none;
+                    
+                }
+
+             }
+
+             
+
+        }
+
+        
+    }
+    .confirmation_container{
+
+        display: none;
+        position:relative;
+        align-items:center;
+        flex-direction: column;
+        margin: 0 auto;
+
+        width: 723px;
+        height: 441px;
+
+        opacity: 1;
+        background-color: white;
+        border-radius: 24px;
+        padding: 56px;
+        .content{
+            //border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+           #confirmation_close{
+               position: absolute;
+               top: 50px;
+               right: 50px;
+               border: none;
+               background-color:transparent;
+            }
+            h1{
+                margin-top: 24px;
+                text-align: center;
+
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 41px;
+                letter-spacing: -0.03em;
+
+            }
+            p{
+                margin-top: 24px;
+                text-align: center;
+
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 25px;
+                color: #595959;
+            }
+            a{
+                margin-top: 24px;
+                background: #33706B;
+                border-radius: 32px;
+                padding: 16px 56px;
+
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+
+        }
+
+    }
+
+}
+
+
 
 @media (max-width: 1600px){
     #topfive{
@@ -2043,6 +2292,66 @@ section#show-circuit{
         }
     }
 }
+#registration{
+    align-items: initial;
+
+    .container{
+        width: 100%;
+        height: 800px;
+        padding: 60px 20px;
+        border-radius: 0px;
+
+        .content{
+
+            form{
+                #name{
+                    display: flex;
+                    flex-direction: column;
+
+                    div{
+                       
+                        display: flex;
+                        flex-direction: column;
+                        input{
+                            width: 100%;
+                        }
+                    }
+                    div:last-child{
+                        margin-top: 16px;
+                    }
+                }
+
+                #button_registration{
+                    margin-left: 0px;
+                    margin: 34px auto;
+                }
+
+            }
+           
+
+        }
+        
+    }
+    .confirmation_container{
+        width: 100%;
+        height: 800px;
+        padding: 150px 32px;
+        border-radius: 0px;
+        .content{
+            h1{
+                margin-top: 64px;
+            }
+            p{
+                margin-top: 32px;
+            }
+            a{
+                margin-top: 64px;
+            }
+        }
+    }
+}
+
+
 footer{
     background-color: #36706B;
     color: #FFFFFF;
