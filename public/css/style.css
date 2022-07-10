@@ -768,14 +768,14 @@ section#quiz #popup #popup_newsletter strong div {
   color: #333333;
 }
 
-#aventure .container article form {
+#aventure .container article #form_aventure {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-#aventure .container article form h1 {
+#aventure .container article #form_aventure h1 {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
@@ -784,7 +784,7 @@ section#quiz #popup #popup_newsletter strong div {
   letter-spacing: -0.03em;
 }
 
-#aventure .container article form div {
+#aventure .container article #form_aventure div {
   margin-top: 32px;
   background: #D6E2E1;
   border-radius: 16px;
@@ -794,7 +794,7 @@ section#quiz #popup #popup_newsletter strong div {
   justify-content: space-between;
 }
 
-#aventure .container article form div label {
+#aventure .container article #form_aventure div label {
   padding: 20px 41px;
   border-radius: 16px;
   font-family: 'Raleway';
@@ -803,14 +803,15 @@ section#quiz #popup #popup_newsletter strong div {
   font-size: 16px;
   line-height: 24px;
   color: #33706B;
+  cursor: pointer;
 }
 
-#aventure .container article form div .active {
+#aventure .container article #form_aventure div .active {
   background: #33706B;
   color: #FFFFFF;
 }
 
-#aventure .container article form input {
+#aventure .container article #form_aventure input {
   width: 350px;
   margin-top: 20px;
   border-radius: 16px;
@@ -826,7 +827,7 @@ section#quiz #popup #popup_newsletter strong div {
   border: 1px solid #8C8D8C;
 }
 
-#aventure .container article form button {
+#aventure .container article #form_aventure button {
   margin-top: 32px;
   margin-left: 174px;
   width: 174px;
@@ -844,11 +845,98 @@ section#quiz #popup #popup_newsletter strong div {
   text-align: right;
 }
 
-#aventure .container article form button:hover {
+#aventure .container article #form_aventure button:hover {
   background-color: #F8961E;
 }
 
-#aventure .container article form svg {
+#aventure .container article #form_aventure svg {
+  position: absolute;
+  top: -29px;
+  left: -204px;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll div:nth-child(2) {
+  margin-top: 32px;
+  background: #D6E2E1;
+  border-radius: 16px;
+  padding: 10px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll div:nth-child(2) label {
+  padding: 20px 41px;
+  border-radius: 16px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #33706B;
+  cursor: pointer;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll div:nth-child(2) .active {
+  background: #33706B;
+  color: #FFFFFF;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll .mc-field-group input {
+  width: 350px;
+  margin-top: 20px;
+  border-radius: 16px;
+  border: none;
+  height: 76px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #B2B3B2;
+  padding: 20px;
+  border: 1px solid #8C8D8C;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll .optionalParent .button {
+  margin-top: 32px;
+  margin-left: 174px;
+  width: 174px;
+  padding: 16px 56px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  background: #33706B;
+  color: #FFFFFF;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll .optionalParent .button:hover {
+  background-color: #F8961E;
+}
+
+#aventure .container article #mc-embedded-subscribe-form #mc_embed_signup_scroll svg {
   position: absolute;
   top: -29px;
   left: -204px;
@@ -1874,10 +1962,10 @@ section#show-circuit div.btn-fix-container {
   #aventure .container article p {
     margin-top: 20px;
   }
-  #aventure .container article form {
+  #aventure .container article #mc_embed_signup_scroll {
     margin-top: 20px;
   }
-  #aventure .container article form svg {
+  #aventure .container article #mc_embed_signup_scroll svg {
     left: -151px;
   }
   #aventure > div svg {
@@ -2238,10 +2326,10 @@ section#show-circuit div.btn-fix-container {
     font-size: 16px;
     line-height: 24px;
   }
-  #aventure .container form {
+  #aventure .container #mc_embed_signup_scroll {
     margin-top: 50px;
   }
-  #aventure .container form h1 {
+  #aventure .container #mc_embed_signup_scroll h1 {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
@@ -2249,7 +2337,7 @@ section#show-circuit div.btn-fix-container {
     line-height: 28px;
     letter-spacing: -0.03em;
   }
-  #aventure .container form div {
+  #aventure .container #mc_embed_signup_scroll div:nth-child(2) {
     margin-top: 32px;
     background: #D6E2E1;
     border-radius: 16px;
@@ -2258,7 +2346,7 @@ section#show-circuit div.btn-fix-container {
     display: flex;
     justify-content: space-between;
   }
-  #aventure .container form div label {
+  #aventure .container #mc_embed_signup_scroll div:nth-child(2) label {
     padding: 20px 41px;
     border-radius: 16px;
     font-family: 'Raleway';
@@ -2268,11 +2356,11 @@ section#show-circuit div.btn-fix-container {
     line-height: 24px;
     color: #33706B;
   }
-  #aventure .container form div .active {
+  #aventure .container #mc_embed_signup_scroll div:nth-child(2) .active {
     background: #33706B;
     color: #FFFFFF;
   }
-  #aventure .container form input {
+  #aventure .container #mc_embed_signup_scroll .mc-field-group input {
     margin-top: 20px;
     width: 100%;
     border-radius: 16px;
@@ -2287,7 +2375,7 @@ section#show-circuit div.btn-fix-container {
     padding: 20px;
     border: 1px solid #8C8D8C;
   }
-  #aventure .container form button {
+  #aventure .container #mc_embed_signup_scroll .optionalParent button {
     margin-top: 32px;
     padding: 16px 56px;
     font-family: 'Raleway';
@@ -2300,11 +2388,11 @@ section#show-circuit div.btn-fix-container {
     border-radius: 32px;
     border: none;
   }
-  #aventure .container form button:hover {
+  #aventure .container #mc_embed_signup_scroll .optionalParent button:hover {
     background-color: #F8961E;
     cursor: pointer;
   }
-  #aventure .container form svg {
+  #aventure .container #mc_embed_signup_scroll svg {
     display: none;
   }
   #aventure .container > div {

@@ -298,7 +298,6 @@ function changerClass(){
 
   var option = document.getElementById("option").getElementsByTagName("div");
 
-
   for(let i=0; i<option.length;i++){
       if(dateList[alea[j]].value[i] == reponseList[j]){
         option[i].setAttribute("class","checked");
@@ -319,4 +318,31 @@ function changerClass(){
 }
 
 
+}
+
+
+
+aventure1();
+
+function aventure1(){
+    let option = document.querySelector("#choix").getElementsByTagName("label");
+    console.log(option);
+
+    
+    for(let i=0; i<option.length;i++){
+
+      option[i].addEventListener('click',function(){
+
+        for(let k=0; k<option.length; k++){
+          option[k].removeAttribute("class");
+        }
+  
+      
+        this.setAttribute("class","active");
+  
+  
+    })
+
+    }
+    
 }

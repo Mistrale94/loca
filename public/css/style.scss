@@ -755,7 +755,7 @@ section#quiz{
                 line-height: 24px;
                 color: #333333;
             }
-            form{
+            #form_aventure{
                 margin-top: 50px;
                 display: flex;
                 flex-direction: column;
@@ -777,6 +777,7 @@ section#quiz{
                     width: 350px;
                     display: flex;
                     justify-content: space-between;
+                    
                     label{
                         padding: 20px 41px;
                         border-radius: 16px;
@@ -787,6 +788,7 @@ section#quiz{
                         font-size: 16px;
                         line-height: 24px;
                         color: #33706B;
+                        cursor: pointer;
                     }
                     .active{
                         background: #33706B;
@@ -834,6 +836,102 @@ section#quiz{
                     position:absolute;
                     top: -29px;
                     left: -204px;
+                }
+            }
+
+
+            #mc-embedded-subscribe-form{
+
+                #mc_embed_signup_scroll{
+
+                    margin-top: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    h1{
+                        font-family: 'Ubuntu';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 28px;
+        
+                        letter-spacing: -0.03em;
+                    }
+                    div:nth-child(2){
+                        margin-top: 32px;
+                        background: #D6E2E1;
+                        border-radius: 16px;
+                        padding: 10px;
+                        width: 350px;
+                        display: flex;
+                        justify-content: space-between;
+                        
+                        label{
+                            padding: 20px 41px;
+                            border-radius: 16px;
+        
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #33706B;
+                            cursor: pointer;
+                        }
+                        .active{
+                            background: #33706B;
+                            color: #FFFFFF;
+                        }
+                    }
+                    .mc-field-group{
+                        input{
+                            width: 350px;
+                            margin-top: 20px;
+                            border-radius: 16px;
+                            border: none;
+                            height: 76px;
+        
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #B2B3B2;
+                            padding: 20px;
+                            border: 1px solid #8C8D8C;
+                        }
+                    }
+                    .optionalParent{
+
+                        .button{
+                            margin-top: 32px;
+                            margin-left: 174px;
+                            width: 174px;
+                            padding: 16px 56px;
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 24px;
+                            background: #33706B;
+                            color: #FFFFFF;
+                            border-radius: 32px;
+                            border: none;
+                            cursor: pointer;
+                            text-align: right;
+                            &:hover{
+                                background-color: #F8961E;
+                                
+                            }
+                        }
+
+                    }
+                    svg{
+                        position:absolute;
+                        top: -29px;
+                        left: -204px;
+                    }
+
                 }
             }
         }
@@ -1840,7 +1938,7 @@ section#show-circuit{
                 p{
                     margin-top: 20px;
                 }
-                form{
+                #mc_embed_signup_scroll{
                     margin-top: 20px;
 
                     svg{
@@ -2282,9 +2380,12 @@ section#quiz{
 
         }
         
+
         
-        form{
+        
+        #mc_embed_signup_scroll{
             margin-top: 50px;
+
             h1{
                 font-family: 'Ubuntu';
                 font-style: normal;
@@ -2294,7 +2395,7 @@ section#quiz{
     
                 letter-spacing: -0.03em;
             }
-            div{
+             div:nth-child(2){
                 margin-top: 32px;
                 background: #D6E2E1;
                 border-radius: 16px;
@@ -2318,6 +2419,7 @@ section#quiz{
                     color: #FFFFFF;
                 }
             }
+            .mc-field-group{
             input{
                 margin-top: 20px;
                 width: 100%;
@@ -2334,6 +2436,8 @@ section#quiz{
                 padding: 20px;
                 border: 1px solid #8C8D8C;
             }
+            }
+            .optionalParent{
             button{
                 margin-top: 32px;
                 padding: 16px 56px;
@@ -2351,6 +2455,8 @@ section#quiz{
                     cursor: pointer;
                 }
             }
+        }
+
             svg{
                 display: none;
             }
