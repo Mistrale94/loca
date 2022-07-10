@@ -6,7 +6,7 @@
     <section id="show-circuit">
         <div class="show-circuit-header">
             <div class="show-circuit-title">
-                <image src="/image/{{circuit.image}}" class="show-circuit-banner">
+                <image src="/image//uploads/circuits/{{circuit.image}}" class="show-circuit-banner">
                 <h1>{{ circuit.title }}</h1>
                 <p>{{circuit.stage}}</p>
             </div>
@@ -44,7 +44,7 @@
                     {% for d in circuit.discover %}
                         <div class="show-circuit-discover-card">
                             <div>
-                                <image src="/image/{{ d.image }}">
+                                <image src="/image/uploads/discovers/{{ d.image }}">
                             </div>
                             <p>{{ d.content }}</p>
                         </div>
@@ -62,7 +62,7 @@
                 <div class="show-circuit-product-container">
                     {% for p in circuit.producer %}
                         <div class="show-circuit-product-card">
-                            <img src="/image/{{ p.image }}" alt="">
+                            <img src="/image/uploads/producers/{{ p.image }}" alt="">
                             <div class="show-circuit-card-text">
                                 <div>
                                     <h3>{{ p.name }}</h3>
