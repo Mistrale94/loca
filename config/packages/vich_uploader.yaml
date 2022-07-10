@@ -1,0 +1,24 @@
+vich_uploader:
+    db_driver: orm
+    metadata:
+        type: attribute
+
+    mappings:
+        circuit_images:
+           uri_prefix: /image/uploads/circuits
+           upload_destination: '%kernel.project_dir%/public/image/uploads/circuits'
+           namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+           delete_on_update: true
+           delete_on_remove: true
+        discover_images:
+            uri_prefix: /image/uploads/discovers
+            upload_destination: '%kernel.project_dir%/public/image/uploads/discovers'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            delete_on_update: true
+            delete_on_remove: true
+        producer_images:
+            uri_prefix: /image/uploads/producers
+            upload_destination: '%kernel.project_dir%/public/image/uploads/producers'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            delete_on_update: true
+            delete_on_remove: true
