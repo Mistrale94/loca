@@ -1962,10 +1962,24 @@ section#show-circuit {
             right: -25%; }
         section#show-circuit div.show-circuit-container div.show-circuit-details div {
           width: 100%; }
+      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
+        justify-content: space-between;
+        list-style: none;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory; }
+        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide .card-circuit {
+          margin-left: 32px;
+          scroll-snap-align: start;
+          min-width: 350px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide .card-circuit h3 {
+            height: 59px; }
+      section#show-circuit div.show-circuit-container ::-webkit-scrollbar {
+        display: none; }
     section#show-circuit div.btn-fix-container {
       display: flex;
       width: 100%;
-      justify-content: center; }
+      justify-content: center;
+      z-index: 999; }
       section#show-circuit div.btn-fix-container p.btn-fix {
         position: fixed;
         bottom: 50px;
