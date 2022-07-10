@@ -29,18 +29,18 @@
             {% block header %}
             <header>
             <nav>
-                <a href="">
+                <a href="{{ path('app_index') }}">
                     <img src="/image/logo.png" alt="Logo" id="logo">
                 </a>
                 <ul class="desktop_nav">
                     <li>
-                        <a href="#">Accueil</a>
+                        <a href="{{ path('app_index') }}">Accueil</a>
                     </li>
                     <li>
-                        <a href="#">Concept</a>
+                        <a href="{{ path('app_concept') }}">Concept</a>
                     </li>
                     <li>
-                        <a href="#">Circuits</a>
+                        <a href="{{ path('app_circuit_index') }}">Circuits</a>
                     </li>
                 </ul>
                 <div class="mobile-nav">
@@ -52,13 +52,13 @@
                         <a onclick="menu()">
                         <img src="/image/close.png" alt=""></a>
                         <li class="mobile_link">
-                            <a href="#">Accueil</a>
+                            <a href="{{ path('app_index') }}">Accueil</a>
                         </li>
                         <li class="mobile_link">
-                            <a href="#">Concept</a>
+                            <a href="{{ path('app_concept') }}">Concept</a>
                         </li>
                         <li class="mobile_link">
-                            <a href="#">Circuits</a>
+                            <a href="{{ path('app_circuit_index') }}">Circuits</a>
                         </li>
                     </ul>
                     

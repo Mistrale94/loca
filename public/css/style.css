@@ -266,13 +266,21 @@ header nav div.mobile-nav ul.mobile_link-group li.mobile_link a {
 
 #topfive .container .slider article {
   width: 90%;
-  min-width: 323px;
+  width: 323px;
+  height: 440px;
   background-color: #FFFFFF;
   border-radius: 0px 0px 32px 32px;
 }
 
+#topfive .container .slider article figure {
+  width: 323px;
+  height: 183px;
+}
+
 #topfive .container .slider article img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #topfive .container .slider article div {
@@ -291,6 +299,8 @@ header nav div.mobile-nav ul.mobile_link-group li.mobile_link a {
   line-height: 28px;
   letter-spacing: -0.03em;
   color: #191A19;
+  height: 56px;
+  overflow: hidden;
 }
 
 #topfive .container .slider article div p:nth-child(2) {
@@ -301,6 +311,8 @@ header nav div.mobile-nav ul.mobile_link-group li.mobile_link a {
   line-height: 19px;
   margin-top: 16px;
   color: #191A19;
+  height: 38px;
+  overflow: hidden;
 }
 
 #topfive .container .slider article div p:nth-child(3) {
@@ -1841,9 +1853,6 @@ section#show-circuit div.btn-fix-container {
     margin-right: -100px;
     justify-content: space-between;
   }
-  #topfive .container .slider article {
-    width: 70%;
-  }
   section#quiz {
     padding: 112px 300px;
   }
@@ -2040,6 +2049,9 @@ section#show-circuit div.btn-fix-container {
     width: 350px;
     margin: 0 auto;
   }
+  #topfive .container > svg {
+    display: none;
+  }
   #topfive .container h1 {
     width: 224px;
     font-family: 'Ubuntu';
@@ -2071,6 +2083,7 @@ section#show-circuit div.btn-fix-container {
     margin-right: -150px;
   }
   #topfive .container .slider .carousel-items {
+    height: 500px;
     display: flex;
     overflow-x: scroll;
     margin-left: 0px;
