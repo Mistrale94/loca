@@ -41,10 +41,11 @@ class CircuitController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_circuit_show', methods: ['GET'])]
-    public function show(Circuit $circuit): Response
+    public function show(Circuit $circuit, CircuitRepository $circuitRepository): Response
     {
         return $this->render('circuit/show.html.twig', [
             'circuit' => $circuit,
+            'circuits' => $circuitRepository->findAll(),
         ]);
     }
 
