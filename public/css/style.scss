@@ -2876,30 +2876,35 @@ body{
 }
 
 
-    .concept-headmain{
+.concept-headmain{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 95vh;
+
+    #concept-headcontainer{
+
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        width: 100%;
-        height: 95vh;
-
-        #concept-headcontainer{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            height: 50vh;
-        }
-
-        h1{
-            text-align: center;
-            font-size: 64px;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: -0.03em;
-        }
+        flex-direction: column;
+        height: 70vh;
     }
+
+    h1{
+        text-align: center;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+    }
+    
+}
 
     
 
@@ -3123,9 +3128,14 @@ body{
 
         #imgcontain2{
             width: 70%;
-            height: 600px;
-            background: #adc6c4;
+            //height: 600px;
+            //background: #adc6c4;
             border-radius: 16px;
+            img{
+                border-radius: 16px;
+                width: 100%;
+                text-align: center;
+            }
         }
 
     }
@@ -3374,7 +3384,7 @@ section#travel{
     overflow: hidden;
     
     #splitconcept{
-        width: 20%;
+        width: 18%;
         height: 1800px;
         display: flex;
         flex-direction: column;
@@ -3625,6 +3635,13 @@ section#portraits{
             }
         }
     }
+    #explain2{
+        height: 500px;
+        #imgcontain2{
+            width: 80%;
+            
+        }
+    }
 }
 
 @media (max-width: 929px){
@@ -3648,7 +3665,9 @@ section#portraits{
             .desktop_nav {
                 display: none;
             }
-        } 
+        }
+    }
+    .concept-headmain{
         h1{
             font-style: normal;
             font-weight: 400;
@@ -3692,8 +3711,9 @@ section#portraits{
         div#concept-headcontainer{
             width: 80%;
         }
-        
+    
     }
+    
 
     #who{
         flex-direction: column;
@@ -4040,11 +4060,9 @@ section#portraits{
 
     }
     #explain2{
-        height: 500px;
+        height: 300px;
         #imgcontain2{
-            height: 400px;
             width: 100%;
-            border-radius: 0;
 
         }
        
