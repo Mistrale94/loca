@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ProducerRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: ProducerRepository::class)]
