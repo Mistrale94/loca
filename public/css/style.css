@@ -2976,9 +2976,13 @@ p:after {
 
 #explain2 #imgcontain2 {
   width: 70%;
-  height: 600px;
-  background: #adc6c4;
   border-radius: 16px;
+}
+
+#explain2 #imgcontain2 img {
+  border-radius: 16px;
+  width: 100%;
+  text-align: center;
 }
 
 #value {
@@ -3239,7 +3243,7 @@ section#travel div.travel-container div.travel-text div:nth-child(8) a:hover {
 }
 
 #concept #splitconcept {
-  width: 20%;
+  width: 18%;
   height: 1800px;
   display: flex;
   flex-direction: column;
@@ -3484,6 +3488,12 @@ section#portraits div.farmer-container svg.circle-right {
   }
   section#concept div#rightconcept div#spacer svg#right {
     right: -30%;
+  }
+  #explain2 {
+    height: 500px;
+  }
+  #explain2 #imgcontain2 {
+    width: 80%;
   }
 }
 
@@ -3799,12 +3809,10 @@ section#portraits div.farmer-container svg.circle-right {
     display: none;
   }
   #explain2 {
-    height: 500px;
+    height: 300px;
   }
   #explain2 #imgcontain2 {
-    height: 400px;
     width: 100%;
-    border-radius: 0;
   }
 }
 
