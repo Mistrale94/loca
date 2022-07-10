@@ -2876,30 +2876,35 @@ body{
 }
 
 
-    .concept-headmain{
+.concept-headmain{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 95vh;
+
+    #concept-headcontainer{
+
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        width: 100%;
-        height: 95vh;
-
-        #concept-headcontainer{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            height: 50vh;
-        }
-
-        h1{
-            text-align: center;
-            font-size: 64px;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: -0.03em;
-        }
+        flex-direction: column;
+        height: 70vh;
     }
+
+    h1{
+        text-align: center;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+    }
+    
+}
 
     
 
@@ -3648,7 +3653,9 @@ section#portraits{
             .desktop_nav {
                 display: none;
             }
-        } 
+        }
+    }
+    .concept-headmain{
         h1{
             font-style: normal;
             font-weight: 400;
@@ -3692,8 +3699,9 @@ section#portraits{
         div#concept-headcontainer{
             width: 80%;
         }
-        
+    
     }
+    
 
     #who{
         flex-direction: column;
