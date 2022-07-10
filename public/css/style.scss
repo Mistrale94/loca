@@ -1264,6 +1264,493 @@ footer{
 
 
 
+section#circuits{
+    padding-top: 150px;
+
+    div.title-circuit-container{
+        position: relative;
+        width: fit-content;
+
+        svg:first-child{
+            position: absolute;
+            top: -40px;
+            right: 48%;
+        }
+        h1{
+            font-size: 56px;
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            color: #191A19;
+            margin-bottom: 48px;
+            margin-left: 32px;
+        }
+        svg:last-child{
+            position: absolute;
+            top: 0;
+            right: -45%;
+        }
+    }
+    
+    h2{
+        font-size: 24px;
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        color: #333333;
+        margin-bottom: 24px;
+        margin-left: 32px;
+    }
+    div.select-container{
+        margin-left: 32px;
+
+        select{
+            width: 130px;
+            height: 56px;
+            background-color: #33706b;
+            border: none;
+            border-radius: 8px;
+            color: #D6E2E1;
+            padding: 16px;
+
+            option{
+                font-family: 'Raleway';
+                font-weight: 500;
+                font-size: 16px;
+            }
+            
+        }
+        select:first-child{
+            margin-right: 16px;
+        }
+    }
+    div.card-circuit-container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 0 60px;
+        
+        svg:first-child{
+            position: absolute;
+            left: 0;
+            top: 40px;
+        }
+        div.card-circuit{
+            background-color: #D6E2E1;
+            padding: 24px 27px;
+            margin: 48px 0;
+            width: 350px;
+            border-radius: 0 0 32px 32px;
+            z-index: 2;
+
+            h3{
+                font-weight: 400;
+                font-size: 24px;
+                font-family: 'Ubuntu';
+                font-style: normal;
+                letter-spacing: -0.03em;
+                margin: 8px 0;
+                color: #191A19;
+            }
+            p:first-of-type{
+                font-family: 'Raleway';
+                font-weight: 500;
+                font-size: 13px;
+                font-style: normal;
+                margin-bottom: 16px;
+                color: #191A19;
+            }
+            div.filter-circuit-container{
+                margin-bottom: 8px;
+                display: flex;
+                flex-wrap: wrap;
+
+                p.filter-label{
+                    padding: 8px 16px;
+                    margin-bottom: 8px;
+                    margin-right: 8px;
+                    width: fit-content;
+                    background-color: #ADC6C4;
+                    border-radius: 8px;
+                    color: #333333;
+                    font-size: 13px;
+                    font-weight: 500;
+                    font-family: 'Raleway';
+                }
+            }
+            div.discover-circuit{
+                margin-bottom: 19px;
+
+                p{
+                    font-size: 16px;
+                    font-family: 'Raleway';
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                }
+            }
+            p:nth-child(6){
+                background-color: #33706B;
+                padding: 16px 56px;
+                border-radius: 32px;
+                text-align: center;
+                
+                a{
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-family: 'Raleway';
+                    text-decoration: none;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        svg:last-child{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+section#show-circuit{
+    padding: 203px 100px 112px 100px;
+
+    div.show-circuit-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img.show-circuit-banner{
+            width: 715px;
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 32px;
+        }
+        div.show-circuit-title{
+            margin-bottom: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1{
+                font-family: 'Ubuntu';
+                font-weight: 400;
+                font-size: 29px;
+                letter-spacing: -0.03em;
+                margin-bottom: 8px;
+            }
+            p{
+                font-family: 'Ubuntu';
+                font-weight: 400;
+                font-size: 20px;
+                letter-spacing: -0.03em;
+            }
+            
+        }
+        div.show-circuit-icone{
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            div.circuit-icone{
+                width: 136px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                img{
+                    margin-bottom: 16px;
+                }
+                p{
+                    font-family: 'Raleway';
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #333333;
+                }
+            }
+            div.circuit-icone:first-child{
+                margin-bottom: 36px;
+            }
+            div.circuit-icone-down{
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    }
+    p.btn-fix{
+        width: 238px;
+        height: 56px;
+        background: #33706B;
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            color: #FFFFFF;
+        }
+    }
+    div.show-circuit-container{
+        
+        p.show-circuit-fullcontent{
+            margin-bottom: 112px;
+            width: 715px;
+            font-family: 'Raleway';
+            font-weight: 500;
+            font-size: 16px;
+            color: #595959;
+        }
+        div.show-circuit-discover{
+            margin-bottom: 80px;
+            padding: 0 100px;
+
+            div.show-circuit-discover-title{
+                display: flex;
+
+                h2{
+                    font-family: 'Ubuntu';
+                    font-weight: 400;
+                    font-size: 56px;
+                    letter-spacing: -0.03em;
+                    color: #191A19;
+                    margin-bottom: 48px;
+                    margin-right: 12px;
+                }
+                svg{
+                    width: 86px;
+                    height: 80px;
+                }
+            }
+            div.show-circuit-discover-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                div.show-circuit-discover-card{
+                    margin-bottom: 32px;
+
+                    img{
+                        margin-bottom: 16px;
+                    }
+                    p{
+                        font-family: 'Ubuntu';
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        letter-spacing: -0.03em;
+                        color: #333333;
+                    }
+                }
+            }
+        }
+        div.show-circuit-product{
+            margin-bottom: 112px;
+            padding: 0 100px;
+
+            div.show-circuit-product-title{
+                width: 607px;
+                margin-bottom: 48px;
+                position: relative;
+
+                h2{
+                    font-family: 'Ubuntu';
+                    font-weight: 400;
+                    font-size: 56px;
+                    letter-spacing: -0.03em;
+                    color: #191A19;
+                }
+                svg{
+                    top: -20px;
+                    right: 35%;
+                    position: absolute;
+                    width: 311px;
+                    height: 102px;
+                    z-index: -1;
+                }
+            }
+            div.show-circuit-product-container{
+                display: flex;
+                justify-content: space-between;
+
+                img{
+                    margin-bottom: 18px;
+                }
+                div.show-circuit-product-card{
+                    background: #33706B;
+                    width: 350px;
+                    border-radius: 32px;
+                    margin-bottom: 32px;
+
+                    div.show-circuit-card-text{
+                        padding: 0 32px;
+                        div:first-child{
+                            position: relative;
+
+                            h3{
+                                font-family: 'Amithen';
+                                font-weight: 400;
+                                font-size: 32px;
+                                color: #F28D00;
+                            }
+                            svg{
+                                position: absolute;
+                                top: -15px;
+                                right: 0;
+                            }
+                        }
+                        
+                        p.product{
+                            font-family: 'Ubuntu';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            letter-spacing: -0.03em;
+                            color: #FFFFFF;
+                            margin-bottom: 16px;
+                        }
+                        p:last-child{
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            margin-bottom: 98px;
+                        }
+                    }
+                }
+            }
+        }
+        div.show-circuit-program{
+            margin-bottom: 112px;
+            padding: 0 100px;
+
+            div.show-circuit-program-title{
+                margin-bottom: 48px;
+
+                h2{
+                    font-family: 'Ubuntu';
+                    font-weight: 400;
+                    font-size: 56px;
+                    letter-spacing: -0.03em;
+                }
+                svg{
+                    width: 145px;
+                    height: 42px;
+                }
+            }
+            div.show-circuit-program-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+
+                div.show-circuit-program-card{
+                    width: 923px;
+                    background: #D6E2E1;
+                    border-radius: 24px;
+                    padding: 52px 100px 32px 100px;
+                    margin-bottom: 32px;
+
+                    h2{
+                        font-family: 'Ubuntu';
+                        font-weight: 400;
+                        font-size: 36px;
+                        letter-spacing: -0.03em;
+                        color: #333333;
+                        margin-bottom: 20px;
+                    }
+                    hr{
+                        margin-bottom: 20px;
+                        background-color: #5C8D89;
+                        border-radius: 50%;
+                    }
+                    h3{
+                        font-family: 'Ubuntu';
+                        font-weight: 400;
+                        font-size: 24px;
+                        letter-spacing: -0.03em;
+                        color: #333333;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        font-family: 'Raleway';
+                        font-weight: 500;
+                        font-size: 13px;
+                        color: #595959;
+                        margin-bottom: 20px;
+                    }
+                }
+                svg{
+                    position: absolute;
+                    top: 46%;
+                    right: -15%;
+                }
+                div.btn-program{
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 923px;
+                }
+            }
+            
+        }
+        div.show-circuit-details{
+            margin-bottom: 88px;
+            padding: 0 100px;
+            
+            div.show-circuit-details-title{
+                margin-bottom: 48px;
+                display: flex;
+                position: relative;
+                width: fit-content;
+
+                svg:first-child{
+                    position: absolute;
+                    top: -70px;
+                    left: -15%;
+                }
+                h2{
+                    font-family: 'Ubuntu';
+                    font-weight: 400;
+                    font-size: 56px;
+                    letter-spacing: -0.03em;
+                    color: #191A19;
+                }
+                svg:last-child{
+                    position: absolute;
+                    top: -40px;
+                    right: -15%;
+                }
+            }
+            div{
+                width: 822px;
+
+                h3{
+                    font-family: 'Ubuntu';
+                    font-weight: 400;
+                    font-size: 20px;
+                    letter-spacing: -0.03em;
+                    color: #333333;
+                    margin-bottom: 24px;
+                }
+                p{
+                    font-family: 'Raleway';
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #595959;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    div.btn-fix-container{
+        display: none;
+    }
+}
+
 @media (max-width: 1600px){
     #topfive{
         padding: 100px 100px;
@@ -1862,177 +2349,49 @@ section#quiz{
 }
 
 section#circuits{
-    padding-top: 150px;
 
     div.title-circuit-container{
-        position: relative;
-        width: fit-content;
 
-        svg{
-            position: absolute;
-            position: absolute;
-            top: -40px;
+        svg:first-child{
             right: 35%;
         }
         h1{
             font-size: 29px;
-            font-family: 'Ubuntu';
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: -0.03em;
-            color: #191A19;
-            margin-bottom: 48px;
-            margin-left: 32px;
         }
-    }
-    
-    h2{
-        font-size: 24px;
-        font-family: 'Ubuntu';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: -0.03em;
-        color: #333333;
-        margin-bottom: 24px;
-        margin-left: 32px;
-    }
-    div.select-container{
-        margin-left: 32px;
-
-        select{
-            width: 130px;
-            height: 56px;
-            background-color: #33706b;
-            border: none;
-            border-radius: 8px;
-            color: #D6E2E1;
-            padding: 16px;
-
-            option{
-                font-family: 'Raleway';
-                font-weight: 500;
-                font-size: 16px;
-            }
-            
-        }
-        select:first-child{
-            margin-right: 16px;
+        svg:last-child{
+            display: none;
         }
     }
     div.card-circuit-container{
-        display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;
-        
-        svg:first-child{
-            position: absolute;
-            left: 0;
-            top: 40px;
-        }
-        div.card-circuit{
-            background-color: #D6E2E1;
-            padding: 24px 27px;
-            margin: 48px 0;
-            width: 350px;
-            border-radius: 0 0 32px 32px;
-            z-index: 2;
-
-            h3{
-                font-weight: 400;
-                font-size: 24px;
-                font-family: 'Ubuntu';
-                font-style: normal;
-                letter-spacing: -0.03em;
-                margin: 8px 0;
-                color: #191A19;
-            }
-            p:first-of-type{
-                font-family: 'Raleway';
-                font-weight: 500;
-                font-size: 13px;
-                font-style: normal;
-                margin-bottom: 16px;
-                color: #191A19;
-            }
-            div.filter-circuit-container{
-                margin-bottom: 8px;
-                display: flex;
-                flex-wrap: wrap;
-
-                p.filter-label{
-                    padding: 8px 16px;
-                    margin-bottom: 8px;
-                    margin-right: 8px;
-                    width: fit-content;
-                    background-color: #ADC6C4;
-                    border-radius: 8px;
-                    color: #333333;
-                    font-size: 13px;
-                    font-weight: 500;
-                    font-family: 'Raleway';
-                }
-            }
-            div.discover-circuit{
-                margin-bottom: 19px;
-
-                p{
-                    font-size: 16px;
-                    font-family: 'Raleway';
-                    font-weight: 500;
-                    margin-bottom: 4px;
-                }
-            }
-            p:nth-child(6){
-                background-color: #33706B;
-                padding: 16px 56px;
-                border-radius: 32px;
-                text-align: center;
-                
-                a{
-                    font-size: 16px;
-                    font-weight: 700;
-                    font-family: 'Raleway';
-                    text-decoration: none;
-                    color: #FFFFFF;
-                }
-            }
-        }
-        svg:last-child{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-        }
     }
 }
 section#show-circuit{
+    padding: 0;
 
-    img.show-circuit-banner{
+    div.show-circuit-header{
+        display: flex;
         width: 100%;
-        border-radius: 0 0 10px 10px;
-        margin-bottom: 32px;
-    }
-    div.show-circuit-container{
-        padding: 0 32px;
-        
+        flex-direction: column;
+     
         div.show-circuit-title{
             margin-bottom: 48px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            width: 100%;
 
+            img.show-circuit-banner{
+                width: 100%;
+            }
             h1{
-                font-family: 'Ubuntu';
-                font-weight: 400;
                 font-size: 29px;
-                letter-spacing: -0.03em;
-                margin-bottom: 8px;
+                margin-left: 32px;
             }
             p{
-                font-family: 'Ubuntu';
-                font-weight: 400;
                 font-size: 20px;
-                letter-spacing: -0.03em;
+                margin-left: 32px;
             }
         }
         div.show-circuit-icone{
@@ -2042,53 +2401,28 @@ section#show-circuit{
             flex-direction: column;
             align-items: center;
 
-            div.circuit-icone{
-                width: 136px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-
-                img{
-                    margin-bottom: 16px;
-                }
-                p{
-                    font-family: 'Raleway';
-                    font-weight: 500;
-                    font-size: 16px;
-                    color: #333333;
-                }
-            }
-            div.circuit-icone:first-child{
-                margin-bottom: 36px;
-            }
-            div.circuit-icone-down{
-                display: flex;
-                width: 100%;
-                justify-content: space-around;
+            p.btn-fix{
+                display: none;
             }
         }
+    }
+    div.show-circuit-container{
+        padding: 0 32px;
+    
         p.show-circuit-fullcontent{
-            margin-bottom: 112px;
-            font-family: 'Raleway';
-            font-weight: 500;
-            font-size: 16px;
-            color: #595959;
+            width: 100%;
         }
         div.show-circuit-discover{
-            margin-bottom: 80px;
+            padding: 0;
 
             div.show-circuit-discover-title{
-                display: flex;
-
                 h2{
-                    font-family: 'Ubuntu';
-                    font-weight: 400;
                     font-size: 29px;
-                    letter-spacing: -0.03em;
-                    color: #191A19;
-                    margin-bottom: 48px;
                     margin-right: 12px;
+                }
+                svg{
+                    width: 59px;
+                    height: 55px;
                 }
             }
             div.show-circuit-discover-container{
@@ -2114,159 +2448,86 @@ section#show-circuit{
             }
         }
         div.show-circuit-product{
-            margin-bottom: 112px;
+            padding: 0;
 
             div.show-circuit-product-title{
                 width: 295px;
-                margin-bottom: 48px;
-                position: relative;
 
                 h2{
-                    font-family: 'Ubuntu';
-                    font-weight: 400;
                     font-size: 29px;
-                    line-height: 33px;
-                    letter-spacing: -0.03em;
-                    color: #191A19;
                 }
                 svg{
                     top: -10px;
                     right: 28%;
-                    position: absolute;
+                    width: 174px;
+                    height: 51px;
                 }
             }
             div.show-circuit-product-container{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
-                img{
-                    margin-bottom: 18px;
-                }
-                div.show-circuit-product-card{
-                    background: #33706B;
-                    width: 350px;
-                    border-radius: 32px;
-                    margin-bottom: 32px;
-
-                    div.show-circuit-card-text{
-                        padding: 0 32px;
-
-                        h3{
-                            font-family: 'Amithen';
-                            font-weight: 400;
-                            font-size: 32px;
-                            color: #F28D00;
-                        }
-                        p.product{
-                            font-family: 'Ubuntu';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 20px;
-                            letter-spacing: -0.03em;
-                            color: #FFFFFF;
-                            margin-bottom: 16px;
-                        }
-                        p:last-child{
-                            font-family: 'Raleway';
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 16px;
-                            color: #FFFFFF;
-                            margin-bottom: 98px;
-                        }
-                    }
-                }
             }
         }
         div.show-circuit-program{
-            margin-bottom: 112px;
+            padding: 0;
 
             div.show-circuit-program-title{
-                margin-bottom: 48px;
-
                 h2{
-                    font-family: 'Ubuntu';
-                    font-weight: 400;
                     font-size: 29px;
-                    letter-spacing: -0.03em;
+                }
+                svg{
+                    width: 69px;
+                    height: 20px;
                 }
             }
-            div.show-circuit-program-card{
+            div.show-circuit-program-container{
                 width: 100%;
-                background: #D6E2E1;
-                border-radius: 24px;
-                padding: 52px 32px 32px 32px;
-                margin-bottom: 32px;
 
-                h2{
-                    font-family: 'Ubuntu';
-                    font-weight: 400;
-                    font-size: 24px;
-                    letter-spacing: -0.03em;
-                    color: #333333;
-                    margin-bottom: 20px;
+                div.show-circuit-program-card{
+                    width: 100%;
+                    background: #D6E2E1;
+                    border-radius: 24px;
+                    padding: 52px 32px 32px 32px;
+                    margin-bottom: 32px;
+
+                    h2{
+                        font-size: 24px;
+                    }
+                    h3{
+                        font-size: 20px;
+                    }
                 }
-                hr{
-                    margin-bottom: 20px;
-                    background-color: #5C8D89;
-                    border-radius: 50%;
+                svg{
+                    display: none;
                 }
-                h3{
-                    font-family: 'Ubuntu';
-                    font-weight: 400;
-                    font-size: 20px;
-                    letter-spacing: -0.03em;
-                    color: #333333;
-                    margin-bottom: 15px;
-                }
-                p{
-                    font-family: 'Raleway';
-                    font-weight: 500;
-                    font-size: 13px;
-                    color: #595959;
-                    margin-bottom: 20px;
+                div.btn-program{
+                    display: none;
                 }
             }
         }
         div.show-circuit-details{
-            margin-bottom: 88px;
-            
+            padding: 0;
+
             div.show-circuit-details-title{
                 margin-bottom: 48px;
                 display: flex;
                 position: relative;
                 width: fit-content;
 
-                h2{
-                    font-family: 'Ubuntu';
-                    font-weight: 400;
-                    font-size: 29px;
-                    letter-spacing: -0.03em;
-                    color: #191A19;
+                svg:first-child{
+                    display: none;
                 }
-                svg{
-                    position: absolute;
+                h2{
+                    font-size: 29px;
+                }
+                svg:last-child{
                     top: -50px;
                     right: -25%;
                 }
             }
             div{
-                h3{
-                    font-family: 'Ubuntu';
-                    font-weight: 400;
-                    font-size: 20px;
-                    letter-spacing: -0.03em;
-                    color: #333333;
-                    margin-bottom: 24px;
-                }
-                p{
-                    font-family: 'Raleway';
-                    font-weight: 500;
-                    font-size: 16px;
-                    color: #595959;
-                    margin-bottom: 24px;
-                }
+                width: 100%;
             }
         }
     }
