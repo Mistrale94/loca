@@ -11,7 +11,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class CircuitType extends AbstractType
 {
@@ -24,18 +23,12 @@ class CircuitType extends AbstractType
                 'data_class' => null,
                 'empty_data' => '',
             ])
-<<<<<<< HEAD
-            ->add('title',TextType::class,['label'=>'Titre',])
-            ->add('locality',TextType::class,['label'=>'Lieu',])
-            ->add('content',TextType::class,['label'=>'Contenu',])
-=======
             ->add('title',TextType::class, [
                 'label' => 'Titre',
                 ]
             )
             ->add('locality')
             ->add('content')
->>>>>>> 15e92d354e738cc289e3d766520baf3fc4b246fc
             ->add('filter', EntityType::class, [
                 'class' => Filter::class,
                 'multiple' => true,
