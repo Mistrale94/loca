@@ -366,7 +366,7 @@ header{
 
 section#quiz{
     background-color:#D6E2E1;
-    padding: 112px 500px;
+    padding: 112px 200px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1880,7 +1880,7 @@ section#show-circuit{
             }
             div.show-circuit-slider-slide{
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-evenly;
 
                 div.show-card-circuit-slider{
                     border-radius: 0px 0px 32px 32px;
@@ -1975,7 +1975,7 @@ section#show-circuit{
                 .carousel-items {
                     margin-left:-80px;
                     margin-right:-100px;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                 }
             }
 
@@ -2151,13 +2151,14 @@ header{
         padding: 100px 50px;
         #headcontainer{
             flex-direction: column;
-            width: 350px;
+            align-items: center;
+            width: 100%;
             margin: 0 auto;
             figure{
-                width: 100%;
+                width: 50%;
             }
             article{
-                width: 350px;
+                width: 70%;
                 
                 h1{
                     font-size: 36px;
@@ -2350,6 +2351,15 @@ section#quiz{
             display: none;
         }
     }
+    div#question{
+        width: 100%;
+
+        form#option{
+            width: 100%;
+            padding: 0 100px;
+        }
+    }
+    
     div#button{
         align-items: center;
         flex-direction: column;
@@ -2410,13 +2420,15 @@ section#quiz{
 #aventure{
     padding: 100px 50px;
     .container{
-        width: 350px;
+        width: 100%;
         margin: 0 auto;
         flex-direction: column;
         figure{
             margin-bottom: 50px;
         }
         article{
+            width: 70%;
+
             h1{
                 font-family: 'Ubuntu';
                 font-style: normal;
@@ -2430,12 +2442,12 @@ section#quiz{
                     position: absolute;
                     width: 150px;
                     top: -7px;
-                    right: 83px;
+                    left: 18%;
                 }
             }
             p{
                 margin-top:30px;
-                width: 285px;
+                width: 100%;
                 font-family: 'Raleway';
                 font-style: normal;
                 font-weight: 500;
@@ -2487,7 +2499,7 @@ section#quiz{
             .mc-field-group{
             input{
                 margin-top: 20px;
-                width: 100%;
+                width: 100% !important;
                 border-radius: 16px;
                 border: none;
                 height: 76px;
@@ -4207,8 +4219,6 @@ section#portraits{
         
 
     }
-
-    
 }
 
 @media (max-width: 620px){
