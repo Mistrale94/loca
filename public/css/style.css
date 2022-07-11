@@ -523,7 +523,7 @@ section#quiz {
       vertical-align: middle;
       margin-left: 20px; }
       #aventure .container figure img {
-        height: 100%; }
+        width: 474px; }
     #aventure .container article h1 {
       font-family: 'Ubuntu';
       font-style: normal;
@@ -1093,7 +1093,7 @@ section#circuits {
     section#circuits div.title-circuit-container svg:first-child {
       position: absolute;
       top: -40px;
-      right: 48%; }
+      right: 40%; }
     section#circuits div.title-circuit-container h1 {
       font-size: 56px;
       font-family: 'Ubuntu';
@@ -1102,7 +1102,7 @@ section#circuits {
       letter-spacing: -0.03em;
       color: #191A19;
       margin-bottom: 48px;
-      margin-left: 32px; }
+      margin-left: 100px; }
     section#circuits div.title-circuit-container svg:last-child {
       position: absolute;
       top: 0;
@@ -1115,9 +1115,9 @@ section#circuits {
     letter-spacing: -0.03em;
     color: #333333;
     margin-bottom: 24px;
-    margin-left: 32px; }
+    margin-left: 100px; }
   section#circuits div.select-container {
-    margin-left: 32px; }
+    margin-left: 100px; }
     section#circuits div.select-container select {
       width: 130px;
       height: 56px;
@@ -1844,9 +1844,12 @@ section#travel {
   section#travel div.travel-container {
     width: 100%;
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    align-items: center; }
     section#travel div.travel-container div.travel-screen {
       position: relative; }
+      section#travel div.travel-container div.travel-screen img {
+        width: 458px; }
       section#travel div.travel-container div.travel-screen div:first-child {
         width: 684px;
         height: 459px;
@@ -1921,7 +1924,7 @@ section#travel {
 #concept {
   width: 100%;
   height: 2000px;
-  padding: 100px;
+  padding: 100px 100px 0 100px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -2001,7 +2004,7 @@ section#travel {
     #concept #leftconcept svg#right, #concept #rightconcept svg#right {
       position: absolute;
       top: 450px;
-      right: -20%;
+      right: -35%;
       width: 200px;
       height: 400px; }
     #concept #leftconcept #rightconcept, #concept #rightconcept #rightconcept {
@@ -2017,7 +2020,7 @@ section#travel {
         height: 200px; }
 
 section#portraits {
-  padding: 140px 0;
+  padding: 98px 0;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -2499,7 +2502,7 @@ section#portraits {
     margin-top: 0px;
     padding-top: 128px; }
     section#circuits div.title-circuit-container svg:first-child {
-      right: 35%; }
+      right: 25%; }
     section#circuits div.title-circuit-container h1 {
       font-size: 29px; }
     section#circuits div.title-circuit-container svg:last-child {

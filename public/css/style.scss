@@ -720,7 +720,7 @@ section#quiz{
             vertical-align:middle;
             margin-left: 20px;
             img{
-                height: 100%;
+                width: 474px;
             }
         }
         article{
@@ -1463,7 +1463,7 @@ section#circuits{
         svg:first-child{
             position: absolute;
             top: -40px;
-            right: 48%;
+            right: 40%;
         }
         h1{
             font-size: 56px;
@@ -1473,7 +1473,7 @@ section#circuits{
             letter-spacing: -0.03em;
             color: #191A19;
             margin-bottom: 48px;
-            margin-left: 32px;
+            margin-left: 100px;
         }
         svg:last-child{
             position: absolute;
@@ -1490,10 +1490,10 @@ section#circuits{
         letter-spacing: -0.03em;
         color: #333333;
         margin-bottom: 24px;
-        margin-left: 32px;
+        margin-left: 100px;
     }
     div.select-container{
-        margin-left: 32px;
+        margin-left: 100px;
 
         select{
             width: 130px;
@@ -2499,10 +2499,14 @@ section#travel{
         width: 100%;
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
 
         div.travel-screen{
             position: relative;
 
+            img{
+                width: 458px;
+            }
             div:first-child{
                 width: 684px;
                 height: 459px;
@@ -2598,7 +2602,7 @@ section#travel{
 #concept{
     width: 100%;
     height: 2000px;
-    padding: 100px;
+    padding: 100px 100px 0 100px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -2704,7 +2708,7 @@ section#travel{
     svg#right{
         position: absolute;
         top: 450px;
-        right: -20%;
+        right: -35%;
         width: 200px;
         height: 400px;
     }
@@ -2727,7 +2731,7 @@ section#travel{
 }
 
 section#portraits{
-    padding: 140px 0;
+    padding: 98px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3444,7 +3448,7 @@ section#circuits{
     div.title-circuit-container{
 
         svg:first-child{
-            right: 35%;
+            right: 25%;
         }
         h1{
             font-size: 29px;
