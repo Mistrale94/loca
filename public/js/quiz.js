@@ -194,9 +194,9 @@ for(let i=0; i<option.length;i++){
   document.querySelector('#resultat img').src= `/image/${reponsesFinales[num].image}.svg`;
   document.querySelector('#resultat img').alt= `${reponsesFinales[num].image}`;
 
-  document.querySelector('.lien p #pinterest').href =`https://pinterest.com/pin/create/button/?url=https://suricate.vercel.app/&media=https://suricate.vercel.app/asset/image/${reponsesFinales[num].image}.png`;
+  document.querySelector('.lien p #pinterest').href =`https://pinterest.com/pin/create/button/?url=https://loca-local.fr/&media=https://loca-local.fr/asset/image/${reponsesFinales[num].image}.png`;
 
-  document.querySelector('.lien p #email').href = `mailto:info@example.com?&subject=Quiz - Quels métiers pour moi &cc=&bcc=&body=${reponsesFinales[num].title}%0Atrouver votre métiers sur le site https://suricate.vercel.app/`;
+  document.querySelector('.lien p #email').href = `mailto:info@example.com?&subject=Quiz - Quels métiers pour moi &cc=&bcc=&body=${reponsesFinales[num].title}%0Atrouver votre métiers sur le site https://loca-local.fr/`;
 }
 
 function refaire(){

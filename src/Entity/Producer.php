@@ -9,6 +9,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: ProducerRepository::class)]
 #[Vich\Uploadable]
+#[ORM\HasLifecycleCallbacks]
 class Producer
 {
     #[ORM\Id]
@@ -16,11 +17,11 @@ class Producer
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 50)]
-    private $image;
+    #[ORM\Column(type: 'string', nullable: true)]
+    private ?string $image = null;
 
     #[Vich\UploadableField(mapping: "producer_images", fileNameProperty: "image")]
-    private $imageFile;
+    private ?File $imageFile = null;
 
     #[ORM\Column(type: 'string', length: 50)]
     private $name;
@@ -51,7 +52,7 @@ class Producer
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 

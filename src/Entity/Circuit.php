@@ -20,11 +20,11 @@ class Circuit
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string')]
-    private $image;
+    #[ORM\Column(type: 'string', nullable: true)]
+    private ?string $image = null;
 
     #[Vich\UploadableField(mapping: "circuit_images", fileNameProperty: "image")]
-    private $imageFile;
+    private ?File $imageFile = null;
 
     #[ORM\Column(type: 'string', length: 50)]
     private $title;
@@ -89,7 +89,7 @@ class Circuit
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 

@@ -12,16 +12,16 @@
             </div>
             <div class="show-circuit-icone">
                 <div class="circuit-icone">
-                    <img src="/image/icone-circuit-1.png">
+                    <img src="/image/relationship-icone.svg" loading="lazy" alt="">
                     <p>{{ circuit.relationship }}</p>
                 </div>
                 <div class="circuit-icone-down">
                     <div class="circuit-icone">
-                        <img src="/image/icone-circuit-2.png">
+                        <img src="/image/duration-icone.svg" loading="lazy" alt="">
                         <p>{{ circuit.duration }}</p>
                     </div>
                     <div class="circuit-icone">
-                        <img src="/image/icone-circuit-2.png">
+                        <img src="/image/price-icone.svg" loading="lazy" alt="">
                         <p>{{ circuit.price }}</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="show-circuit-product-container">
                     {% for p in circuit.producer %}
                         <div class="show-circuit-product-card">
-                            <img src="/image/uploads/producers/{{ p.image }}" alt="">
+                            <img src="/image/uploads/producers/{{ p.image }}" loading="lazy" alt="">
                             <div class="show-circuit-card-text">
                                 <div>
                                     <h3>{{ p.name }}</h3>
@@ -138,7 +138,7 @@
                 <div class="show-circuit-slider-slide">
                     {% for circuit in circuits|slice(0, 3) %}
                     <div class="show-card-circuit-slider">
-                        <img src="/image/uploads/circuits/{{circuit.image}}" alt="">
+                        <img src="/image/uploads/circuits/{{circuit.image}}" loading="lazy" alt="">
                         <h3>{{circuit.title}}</h3>
                         <div class="show-card-discover-circuit">
                             <p>{{circuit.content}}</p>

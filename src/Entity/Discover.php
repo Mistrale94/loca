@@ -11,6 +11,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: DiscoverRepository::class)]
 #[Vich\Uploadable]
+#[ORM\HasLifecycleCallbacks]
 class Discover
 {
     #[ORM\Id]
@@ -18,11 +19,11 @@ class Discover
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 50)]
-    private $image;
+    #[ORM\Column(type: 'string', nullable: true)]
+    private ?string $image = null;
 
     #[Vich\UploadableField(mapping: "discover_images", fileNameProperty: "image")]
-    private $imageFile;
+    private ?File $imageFile = null;
 
     #[ORM\Column(type: 'string', length: 100)]
     private $content;
@@ -51,7 +52,7 @@ class Discover
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
