@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Data\SearchData;
+use App\Form\SearchForm;
 use App\Entity\Circuit;
 use App\Form\CircuitType;
 use App\Repository\CircuitRepository;
@@ -16,8 +18,19 @@ class CircuitController extends AbstractController
     #[Route('/', name: 'app_circuit_index', methods: ['GET'])]
     public function index(CircuitRepository $circuitRepository): Response
     {
+        $data = new SearchData();
+        $form = $this->createForm(SearchForm::class, $data);
         return $this->render('circuit/index.html.twig', [
             'circuits' => $circuitRepository->findAll(),
+            'form' => $form->createView()
+        ]);
+    }
+
+    #[Route('/list', name: 'app_circuit_list', methods: ['GET'])]
+    public function list(CircuitRepository $circuitRepository): Response
+    {
+        return $this->render('circuit/list.html.twig', [
+            'listCircuits' => $circuitRepository->findAll(),
         ]);
     }
 
@@ -31,7 +44,7 @@ class CircuitController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $circuitRepository->add($circuit, true);
 
-            return $this->redirectToRoute('app_circuit_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_program_new', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('circuit/new.html.twig', [
@@ -41,10 +54,11 @@ class CircuitController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_circuit_show', methods: ['GET'])]
-    public function show(Circuit $circuit): Response
+    public function show(Circuit $circuit, CircuitRepository $circuitRepository): Response
     {
         return $this->render('circuit/show.html.twig', [
             'circuit' => $circuit,
+            'circuits' => $circuitRepository->findAll(),
         ]);
     }
 
@@ -57,7 +71,7 @@ class CircuitController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $circuitRepository->add($circuit, true);
 
-            return $this->redirectToRoute('app_circuit_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_circuit_list', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('circuit/edit.html.twig', [
@@ -66,13 +80,13 @@ class CircuitController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_circuit_delete', methods: ['POST'])]
+    #[Route('/{id}/', name: 'app_circuit_delete', methods: ['POST'])]
     public function delete(Request $request, Circuit $circuit, CircuitRepository $circuitRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$circuit->getId(), $request->request->get('_token'))) {
             $circuitRepository->remove($circuit, true);
         }
 
-        return $this->redirectToRoute('app_circuit_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_circuit_list', [], Response::HTTP_SEE_OTHER);
     }
 }

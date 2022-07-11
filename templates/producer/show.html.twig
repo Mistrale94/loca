@@ -1,0 +1,52 @@
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
+
+    {% block title %}
+        <title>Producteur</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
+
+{% block body %}
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ producer.id }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ producer.image }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ producer.name }}</td>
+            </tr>
+            <tr>
+                <th>Product</th>
+                <td>{{ producer.product }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ producer.content }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ producer.createdAt ? producer.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Modified_at</th>
+                <td>{{ producer.modifiedAt ? producer.modifiedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_producer_index') }}">back to list</a>
+
+    <a href="{{ path('app_producer_edit', {'id': producer.id}) }}">edit</a>
+
+    {{ include('producer/_delete_form.html.twig') }}
+{% endblock %}

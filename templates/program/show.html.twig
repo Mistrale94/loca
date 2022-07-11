@@ -1,0 +1,40 @@
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
+
+    {% block title %}
+        <title>Programme</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
+
+{% block body %}
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ program.id }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ program.content }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ program.createdAt ? program.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Modified_at</th>
+                <td>{{ program.modifiedAt ? program.modifiedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_program_index') }}">back to list</a>
+
+    <a href="{{ path('app_program_edit', {'id': program.id}) }}">edit</a>
+
+    {{ include('program/_delete_form.html.twig') }}
+{% endblock %}

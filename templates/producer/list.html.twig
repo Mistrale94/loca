@@ -1,0 +1,60 @@
+
+
+{% block stylesheets %}
+            <link rel="stylesheet" href="/css/style.css" />
+{% endblock %}
+
+
+{% block body %}
+<section id="body-circuit-list">
+
+    <aside>
+        <div id="logoaside">
+            <img src="/image/logo-white.png" alt="">
+        </div>
+
+
+        <div id="links-aside">
+                    <a href="{{ path('app_circuit_list') }}">Liste des circuits</a>
+                    <a href="{{ path('app_filter_list') }}">Liste des filtres</a>
+                    <a href="{{ path('app_producer_list') }}">Liste des producteurs</a>
+                    <a href="{{ path('app_circuit_new') }}">Nouveau circuit</a>
+                    <a href="{{ path('app_filter_new') }}">Nouveau filtre</a>
+                    <a href="{{ path('app_producer_new') }}">Nouveau producteur</a>
+        </div>
+        <div id="logout-aside">
+        <a href="{{ path('app_logout') }}">Déconnexion</a>
+        </div>
+    </aside>
+            
+
+        <section id="main-circuit-list">
+        
+        
+                <div class="admin-card-circuit-container">
+               <div class="acc-new">
+               <h1>Liste des producteurs</h1>
+                    <a href="{{ path('app_producer_new') }}">Nouveau Producteur</a>
+                </div>
+                {% for producer in listProducers %}
+                    <div class="admin-card-circuit">
+                    <img src="/image/uploads/producers/{{producer.image}}" loading="lazy" alt="">
+                        <div class="acc-content">
+                            <h3> {{producer.name}}</h3>
+                            <p> {{producer.content}}</p>
+
+                         </div>
+                        <div class="acc-actions">
+                            <p>
+                                <a href="{{ path('app_producer_edit', {'id': producer.id}) }}">Modifier</a>
+                            </p>
+                            <p>
+                            {{ include('producer/_delete_form.html.twig') }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>    
+        <section>
+<section>
+{% endblock %}

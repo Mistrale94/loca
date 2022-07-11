@@ -1,0 +1,17 @@
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
+
+    {% block title %}
+        <title>Ajouter un producteur</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
+
+{% block body %}
+    {{ include('producer/_form.html.twig') }}
+
+    <a href="{{ path('app_producer_index') }}">back to list</a>
+{% endblock %}

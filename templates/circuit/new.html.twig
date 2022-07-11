@@ -1,11 +1,35 @@
-{% extends 'base.html.twig' %}
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
 
-{% block title %}New Circuit{% endblock %}
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <style>
+            input, textarea, select{
+                display: block;
+                width: 100%;
+            }
+        </style>
+    {% endblock %}
+
+    {% block title %}
+        <title>Editer un circuits</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
 
 {% block body %}
-    <h1>Create new Circuit</h1>
-
     {{ include('circuit/_form.html.twig') }}
 
     <a href="{{ path('app_circuit_index') }}">back to list</a>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(function(){
+            $('.select-filters').select2();
+        })
+    </script>
 {% endblock %}

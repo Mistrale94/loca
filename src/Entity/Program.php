@@ -2,22 +2,23 @@
 
 namespace App\Entity;
 
-use App\Repository\AdminRepository;
+use App\Repository\ProgramRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: AdminRepository::class)]
-class Admin
+#[ORM\Entity(repositoryClass: ProgramRepository::class)]
+class Program
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 50)]
-    private $mail;
+    #[ORM\Column(type: 'text')]
+    private $content;
 
-    #[ORM\Column(type: 'string', length: 500)]
-    private $password;
+    #[ORM\ManyToOne(targetEntity: Circuit::class)]
+    #[ORM\JoinColumn(nullable: false)]
+    private $circuit;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
@@ -30,26 +31,26 @@ class Admin
         return $this->id;
     }
 
-    public function getMail(): ?string
+    public function getContent(): ?string
     {
-        return $this->mail;
+        return $this->content;
     }
 
-    public function setMail(string $mail): self
+    public function setContent(string $content): self
     {
-        $this->mail = $mail;
+        $this->content = $content;
 
         return $this;
     }
 
-    public function getPassword(): ?string
+    public function getCircuit(): ?Circuit
     {
-        return $this->password;
+        return $this->circuit;
     }
 
-    public function setPassword(string $password): self
+    public function setCircuit(?Circuit $circuit): self
     {
-        $this->password = $password;
+        $this->circuit = $circuit;
 
         return $this;
     }
@@ -77,4 +78,5 @@ class Admin
 
         return $this;
     }
+
 }

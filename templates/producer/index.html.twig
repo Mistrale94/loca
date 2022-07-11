@@ -1,0 +1,51 @@
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
+
+    {% block title %}
+        <title>Liste des producteurs</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
+
+{% block body %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Product</th>
+                <th>Content</th>
+                <th>Created_at</th>
+                <th>Modified_at</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for producer in producers %}
+            <tr>
+                <td>{{ producer.id }}</td>
+                <td>{{ producer.image }}</td>
+                <td>{{ producer.name }}</td>
+                <td>{{ producer.product }}</td>
+                <td>{{ producer.content }}</td>
+                <td>{{ producer.createdAt ? producer.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ producer.modifiedAt ? producer.modifiedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_producer_show', {'id': producer.id}) }}">show</a>
+                    <a href="{{ path('app_producer_edit', {'id': producer.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_producer_new') }}">Create new</a>
+{% endblock %}
