@@ -1,10 +1,15 @@
-{% extends 'base.html.twig' %}
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
 
-{% block title %}Edit Discover{% endblock %}
+    {% block title %}
+        <title>Editer un découvrir</title>
+    {% endblock %}
 
+    <link rel="icon" href="/image/favicon.png">
+</head>
 {% block body %}
-    <h1>Edit Discover</h1>
-
     {{ include('discover/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href="{{ path('app_discover_index') }}">back to list</a>

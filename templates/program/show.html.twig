@@ -1,10 +1,16 @@
-{% extends 'base.html.twig' %}
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
 
-{% block title %}Program{% endblock %}
+    {% block title %}
+        <title>Programme</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
 
 {% block body %}
-    <h1>Program</h1>
-
     <table class="table">
         <tbody>
             <tr>

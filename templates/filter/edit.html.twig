@@ -1,10 +1,15 @@
-{% extends 'base.html.twig' %}
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
 
-{% block title %}Edit Filter{% endblock %}
+    {% block title %}
+        <title>Editer un filtre</title>
+    {% endblock %}
 
+    <link rel="icon" href="/image/favicon.png">
+</head>
 {% block body %}
-    <h1>Edit Filter</h1>
-
     {{ include('filter/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href="{{ path('app_filter_index') }}">back to list</a>

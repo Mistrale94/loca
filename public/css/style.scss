@@ -66,6 +66,16 @@ header{
                 }
             }
         }
+        li.logout_desktop{
+            list-style: none;
+
+            a{
+                color: #F28D00;
+            }
+            a:hover{
+                color: #36706B;
+            }
+        }
         div.mobile-nav, a#burger, .mobile_link-group{
             display: none;
         }
@@ -89,7 +99,13 @@ header{
                 cursor: pointer;
             }
         }
+        li.logout{
+            list-style: none;
 
+            a{
+                color: #F28D00;
+            }
+        }
         .mobile_link-group li {
             text-align: right;
             padding: 25px 20px;
@@ -2107,6 +2123,7 @@ body{
     flex-wrap: wrap;
     width: 100%;
     height: 95vh;
+    position: relative;
 
     #concept-headcontainer{
 
@@ -2124,6 +2141,12 @@ body{
         font-style: normal;
         font-weight: 400;
         letter-spacing: -0.03em;
+    }
+
+    svg.left-cycle{
+        position: absolute;
+        left: 0;
+        top: 25%;
     }
     
 }
@@ -2451,25 +2474,7 @@ body{
                 }
             }
         }
-
-        &:after{
-            position: absolute;
-            top: 950px;
-            left: -60px;
-            display: block;
-            content: "";
-            width: 120px;
-            height: 400px;
-             background-image: url(/image/deco.svg);
-             background-repeat:no-repeat;
-             background-size: contain;
-
-        }
     }
-
-
-
-
 
 section#travel{
     margin-bottom: 112px;
@@ -2816,9 +2821,9 @@ section#portraits{
             z-index: -1 !important;
         }
         svg.circle-right{
-        position: absolute;
-        right: 0;
-        bottom: 30px;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
 }
@@ -3035,6 +3040,9 @@ header{
             }
         }
         .desktop_nav {
+            display: none;
+        }
+        li.logout_desktop{
             display: none;
         }
     }

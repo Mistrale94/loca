@@ -14,7 +14,10 @@ class ProgramType extends AbstractType
     {
         $builder
             ->add('content', CKEditorType::class, [
-                'config' => array('uiColor' => '#FFFFFF'),
+                'config' => array(
+                    'uiColor' => '#FFFFFF',
+                    'toolbar' => 'standard',
+                ),
             ])
             ->add('created_at')
             ->add('modified_at')

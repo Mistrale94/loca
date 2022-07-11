@@ -1,10 +1,16 @@
-{% extends 'base.html.twig' %}
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
 
-{% block title %}Producer index{% endblock %}
+    {% block title %}
+        <title>Liste des producteurs</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
 
 {% block body %}
-    <h1>Producer index</h1>
-
     <table class="table">
         <thead>
             <tr>

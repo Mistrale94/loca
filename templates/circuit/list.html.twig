@@ -1,16 +1,21 @@
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
 
+    {% block title %}
+        <title>Liste des circuits</title>
+    {% endblock %}
 
-{% block stylesheets %}
-            <link rel="stylesheet" href="/css/style.css" />
-{% endblock %}
-
+    <link rel="icon" href="/image/favicon.png">
+</head>
 
 {% block body %}
 <section id="body-circuit-list">
 
     <aside>
         <div id="logoaside">
-            <img src="/image/logo-white.png" alt="">
+            <img src="/image/logo-white.png" alt="Logo">
         </div>
 
 
@@ -38,7 +43,7 @@
                 </div>
                 {% for circuit in listCircuits %}
                     <div class="admin-card-circuit">
-                        <img src="/image/uploads/circuits/{{circuit.image}}" alt="">
+                        <img src="/image/uploads/circuits/{{circuit.image}}" alt="Illustration circuit">
                         <div class="acc-content">
                             <h3>{{circuit.title}}</h3>
                             <p>{{circuit.locality}}</p>
