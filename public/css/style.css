@@ -2901,6 +2901,11 @@ Page concept
           width: 195px;
           height: 192px; }
 
+  section#value div.value-title-container div.value-title svg:first-child {
+    right: -36%;
+    top: -45px; }
+  section#value div.value-title-container div.value-title h1 {
+    font-size: 29px; }
   section#value div:first-child p {
     width: 300px; }
   section#value div:last-child {
@@ -2913,16 +2918,17 @@ Page concept
   section#value:after {
     display: none; }
 
+  section#travel div.travel-title svg:first-child {
+    right: 45px; }
+  section#travel div.travel-title h1 {
+    font-size: 29px; }
   section#travel div.travel-container {
     flex-direction: column;
     align-items: center; }
-    section#travel div.travel-container div.travel-screen div:first-child {
-      width: 434px;
-      height: 324px; }
-    section#travel div.travel-container div.travel-screen div:last-child {
-      width: 150px;
-      height: 262px;
-      right: -20px; }
+    section#travel div.travel-container div.travel-screen {
+      text-align: center; }
+      section#travel div.travel-container div.travel-screen img {
+        width: 80%; }
     section#travel div.travel-container div.travel-text {
       margin-top: 130px;
       display: flex;
@@ -2936,7 +2942,8 @@ Page concept
 
   #ccm {
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    font-size: 29px; }
 
   div.container-title-concept svg:first-child {
     display: none; }
@@ -2961,7 +2968,8 @@ Page concept
         top: -80px;
         left: 14%; }
       section#concept div#leftconcept article, section#concept div#rightconcept article {
-        margin-bottom: 32px; }
+        margin-bottom: 32px;
+        width: 430px; }
       section#concept div#leftconcept #spacer, section#concept div#rightconcept #spacer {
         display: none; }
     section#concept #splitconcept {
@@ -3010,6 +3018,8 @@ Page concept
 
   section#portraits {
     padding: 112px 0 64px 0; }
+    section#portraits div.title-farmer h1 {
+      font-size: 29px; }
     section#portraits div.farmer-container {
       flex-direction: column;
       align-items: center; }
