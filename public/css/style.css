@@ -2416,6 +2416,8 @@ section#portraits {
       flex-direction: column; }
       #aventure .container figure {
         margin-bottom: 50px; }
+        #aventure .container figure img {
+          width: 350px; }
       #aventure .container article {
         width: 88%; }
         #aventure .container article h1 {
@@ -3099,7 +3101,11 @@ Page concept
   #explain2 {
     height: 300px; }
     #explain2 #imgcontain2 {
-      width: 100%; } }
+      width: 100%; }
+
+  #aventure .container article h1 svg {
+    left: 32%;
+    z-index: -1; } }
 @media (max-width: 414px) {
   header div.concept-headmain div#concept-headcontainer div#concept-headtitle {
     margin-bottom: 56px; }
