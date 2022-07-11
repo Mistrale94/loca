@@ -824,6 +824,72 @@ footer {
     font-weight: 300;
     font-size: 16px; }
 
+#login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D6E2E1; }
+  #login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #login form figure {
+      width: 166px;
+      margin-bottom: 48px; }
+      #login form figure img {
+        width: 100%; }
+    #login form div.login-container {
+      display: flex;
+      flex-direction: column;
+      width: 610px; }
+      #login form div.login-container hr {
+        margin-bottom: 48px;
+        height: 2px;
+        background-color: #85A9A6;
+        border: none; }
+      #login form div.login-container label {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 16px;
+        color: #595959;
+        margin-bottom: 8px; }
+      #login form div.login-container input {
+        height: 56px;
+        padding: 0 33px;
+        background-color: #FFFFFF;
+        border: 1px solid #8C8D8C;
+        border-radius: 8px;
+        margin-bottom: 18px; }
+      #login form div.login-container div.login-button {
+        margin-top: 51px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; }
+        #login form div.login-container div.login-button a {
+          margin-right: 80px;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          color: #33706B;
+          border-bottom: 2px solid;
+          padding-bottom: 4px; }
+        #login form div.login-container div.login-button button {
+          width: 214px;
+          height: 56px;
+          background: #33706B;
+          border-radius: 32px;
+          border: none;
+          color: #FFFFFF;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          cursor: pointer; }
+
 #registration {
   display: none;
   position: fixed;
@@ -1069,7 +1135,7 @@ section#circuits {
     justify-content: space-evenly;
     flex-wrap: wrap;
     position: relative;
-    padding: 0 60px; }
+    padding: 0 70px; }
     section#circuits div.card-circuit-container div.card-circuit {
       background-color: #D6E2E1;
       padding: 24px 27px;
@@ -1721,7 +1787,7 @@ section#show-circuit {
       width: 100%; }
       section#quiz div#question form#option {
         width: 100%;
-        padding: 0 100px; }
+        padding: 0 20px; }
     section#quiz div#button {
       align-items: center;
       flex-direction: column; }

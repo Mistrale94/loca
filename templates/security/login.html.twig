@@ -1,42 +1,78 @@
-{% extends 'base.html.twig' %}
+<head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Se connecter{% endblock %}</title>
+        <link rel="icon" href="/image/favicon.png">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="/css/style.css" />
+        {% endblock %}
 
-{% block title %}Log in!{% endblock %}
+        {% block javascripts %}
+            <script src="/js/script.js"></script>
+        {% endblock %}
+        <script src="https://unpkg.com/typebot-js@2.2"></script>
+        <script>
+        var typebotCommands = Typebot.initBubble({
+            url: "https://viewer.typebot.io/my-typebot-0y30071",
+            proactiveMessage: {
+            avatarUrl:
+                "https://s3.fr-par.scw.cloud/typebot/public/typebots/cl5bhn4jo266209men0y30071/Logo Loca responsive VF.png",
+            textContent: "J'ai une question ! ",
+            delay: 0,
+            },
+            button: { color: "#33706B" },
+        });
+        </script>
+    </head>
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+<section id="login">
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+
+        <figure>
+            <img src="/image/logo.png"/>
+        </figure>
+        <div class="login-container">
+            <hr>
+            <label for="inputEmail">Adresse e-mail</label>
+            <input type="email" value="{{ last_username }}" placeholder="Adresse Mail" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+            <label for="inputPassword">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+            <div class="login-button">
+                <a href="/">Quitter</a>
+                <button class="btn btn-lg btn-primary" type="submit">
+                    Sign in
+                </button>
+            </div>
         </div>
-    {% endif %}
+        
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+        <input type="hidden" name="_csrf_token"
+            value="{{ csrf_token('authenticate') }}"
+        >
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+        {#
+            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+            See https://symfony.com/doc/current/security/remember_me.html
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+        #}
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
+        
+    </form>
+</section>
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
 {% endblock %}
