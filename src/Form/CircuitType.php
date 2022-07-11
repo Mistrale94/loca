@@ -18,6 +18,7 @@ class CircuitType extends AbstractType
         $builder
             ->add('imageFile', VichImageType::class, [
                 'label' => 'Image',
+                //'empty_data' => ''
             ])
             ->add('title')
             ->add('locality')

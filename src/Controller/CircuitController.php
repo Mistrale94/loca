@@ -21,6 +21,14 @@ class CircuitController extends AbstractController
         ]);
     }
 
+    #[Route('/list', name: 'app_circuit_list', methods: ['GET'])]
+    public function list(CircuitRepository $circuitRepository): Response
+    {
+        return $this->render('circuit/list.html.twig', [
+            'listCircuits' => $circuitRepository->findAll(),
+        ]);
+    }
+
     #[Route('/new', name: 'app_circuit_new', methods: ['GET', 'POST'])]
     public function new(Request $request, CircuitRepository $circuitRepository): Response
     {
@@ -66,8 +74,8 @@ class CircuitController extends AbstractController
             'form' => $form,
         ]);
     }
-
-    #[Route('/{id}', name: 'app_circuit_delete', methods: ['POST'])]
+    
+    #[Route('/{id}/', name: 'app_circuit_delete', methods: ['POST'])]
     public function delete(Request $request, Circuit $circuit, CircuitRepository $circuitRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$circuit->getId(), $request->request->get('_token'))) {

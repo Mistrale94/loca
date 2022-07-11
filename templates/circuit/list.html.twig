@@ -1,0 +1,57 @@
+
+
+{% block stylesheets %}
+            <link rel="stylesheet" href="/css/style.css" />
+{% endblock %}
+
+
+{% block body %}
+<section id="body-circuit-list">
+
+    <aside>
+        <div id="logoaside">
+            <img src="/image/logo-white.png" alt="">
+        </div>
+
+
+        <div id="links-aside">
+                    <a href="#">Liste des circuits</a>
+                    <a href="#">Liste des filres</a>
+                    <a href="#">Nouveau circuit</a>
+                    <a href="#">Nouveau filtre</a>
+        </div>
+        <div id="logout-aside">
+        <a href="#quiz">Déconnexion</a>
+        </div>
+    </aside>
+            
+
+        <section id="main-circuit-list">
+        
+        
+                <div class="admin-card-circuit-container">
+               <div class="acc-new">
+               <h1>Liste des circuits</h1>
+                    <a href="{{ path('app_circuit_new') }}">Nouveau Circuit</a>
+                </div>
+                {% for circuit in listCircuits %}
+                    <div class="admin-card-circuit">
+                        <img src="/image/uploads/circuits/{{circuit.image}}" alt="">
+                        <div class="acc-content">
+                            <h3>{{circuit.title}}</h3>
+                            <p>{{circuit.locality}}</p>
+                         </div>
+                        <div class="acc-actions">
+                            <p>
+                                <a href="{{ path('app_circuit_edit', {'id': circuit.id}) }}">Modifier</a>
+                            </p>
+                            <p>
+                            {{ include('circuit/_delete_form.html.twig') }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>    
+        <section>
+<section>
+{% endblock %}

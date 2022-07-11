@@ -3183,5 +3183,253 @@ section#portraits {
     font-size: 29px; }
   section#portraits div.farmer-container div.card-farmer {
     width: 350px; } }
+/*--------------------------------------------------------
+admin list circuits
+---------------------------------------------------------*/
+#body-circuit-list {
+  background: #85A9A6;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; }
+  #body-circuit-list aside {
+    position: fixed;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    height: 100vh;
+    background: #33706B;
+    color: white;
+    border-radius: 0 0 40px 0; }
+    #body-circuit-list aside a {
+      text-decoration: none;
+      color: white; }
+    #body-circuit-list aside #links-aside {
+      display: flex;
+      flex-direction: column; }
+      #body-circuit-list aside #links-aside a {
+        padding: 10px; }
+  #body-circuit-list #main-circuit-list {
+    width: 100%;
+    padding-left: 15%;
+    background: #D6E2E1; }
+    #body-circuit-list #main-circuit-list h1 {
+      font-size: 56px;
+      font-weight: 400; }
+    #body-circuit-list #main-circuit-list .acc-new {
+      margin: 15px 0px;
+      padding: 30px;
+      width: 80%;
+      display: flex;
+      justify-content: space-between; }
+      #body-circuit-list #main-circuit-list .acc-new a {
+        color: white;
+        width: 218px;
+        height: 56px;
+        border-radius: 32px;
+        background: #36706B;
+        transition: 300ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px; }
+  #body-circuit-list .admin-card-circuit-container {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    #body-circuit-list .admin-card-circuit-container .admin-card-circuit {
+      margin: 15px 0px;
+      padding: 30px;
+      background: #ADC6C4;
+      width: 80%;
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 17px; }
+      #body-circuit-list .admin-card-circuit-container .admin-card-circuit img {
+        border-radius: 17px; }
+      #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-content {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap; }
+        #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-content h3 {
+          width: 100%;
+          font-weight: 400;
+          width: 100%;
+          font-size: 24px; }
+      #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 20%; }
+        #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-actions a {
+          color: white;
+          width: 218px;
+          height: 56px;
+          border-radius: 32px;
+          background: #36706B;
+          transition: 300ms;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px; }
+        #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-actions .btn {
+          color: #36706B;
+          width: 218px;
+          height: 56px;
+          border-radius: 32px;
+          background: white;
+          transition: 300ms;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          border: none;
+          cursor: pointer; }
+
+@media (max-width: 414px), (max-width: 929px) {
+  #body-circuit-list {
+    margin-top: 200px; }
+    #body-circuit-list aside {
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 200px;
+      background: #33706B;
+      color: white;
+      border-radius: 0 0 40px 0; }
+      #body-circuit-list aside #logo-aside {
+        width: 50%; }
+      #body-circuit-list aside #links-aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        #body-circuit-list aside #links-aside a {
+          width: 50%;
+          padding: 5px;
+          text-align: center;
+          text-decoration: underline; }
+    #body-circuit-list #main-circuit-list {
+      width: 100%;
+      min-height: 100vh;
+      background: #D6E2E1;
+      padding: 0;
+      margin: 0; }
+      #body-circuit-list #main-circuit-list h1 {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+        padding: 10px 0px; }
+      #body-circuit-list #main-circuit-list .acc-new {
+        margin: 0;
+        padding: 10px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        #body-circuit-list #main-circuit-list .acc-new a {
+          color: white;
+          width: 218px;
+          height: 56px;
+          border-radius: 32px;
+          background: #36706B;
+          transition: 300ms;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px; }
+    #body-circuit-list .admin-card-circuit-container {
+      padding: 0; }
+      #body-circuit-list .admin-card-circuit-container .admin-card-circuit {
+        margin: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 500px;
+        padding: 15px;
+        margin-bottom: 10px; }
+        #body-circuit-list .admin-card-circuit-container .admin-card-circuit img {
+          border-radius: 17px;
+          width: 90%; }
+        #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-content {
+          width: 80%;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap; }
+          #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-content h3 {
+            width: 100%;
+            font-weight: 400;
+            width: 100%;
+            font-size: 24px; }
+        #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          width: 90%; }
+          #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-actions a {
+            color: white;
+            width: 218px;
+            height: 56px;
+            border-radius: 32px;
+            background: #36706B;
+            transition: 300ms;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 5px; }
+          #body-circuit-list .admin-card-circuit-container .admin-card-circuit .acc-actions .btn {
+            color: #36706B;
+            width: 218px;
+            height: 56px;
+            border-radius: 32px;
+            background: white;
+            transition: 300ms;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            border: none;
+            cursor: pointer; } }
 
 /*# sourceMappingURL=style.css.map */
