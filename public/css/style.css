@@ -21,7 +21,7 @@ header nav {
   align-items: center;
   width: 100%;
   background-color: #FFFFFF;
-<<<<<<< HEAD
+  top: 0;
 }
 
 header nav a img {
@@ -104,64 +104,6 @@ header nav .mobile_link-group .social {
 header nav div.mobile-nav ul.mobile_link-group li.mobile_link a {
   color: #FFFFFF;
 }
-=======
-  top: 0; }
-  header nav a img {
-    height: 27px; }
-  header nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    margin: 0 auto; }
-    header nav ul li {
-      padding: 0 15px 0 15px; }
-      header nav ul li a {
-        text-decoration: none;
-        color: #191A19;
-        font-family: 'Ubuntu';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 18px;
-        text-align: center;
-        letter-spacing: -0.03em; }
-      header nav ul li a:hover::after {
-        width: 50%;
-        background: #36706B; }
-      header nav ul li a::after {
-        content: '';
-        display: block;
-        margin: auto;
-        margin-top: 2px;
-        height: 1px;
-        width: 0;
-        background: transparent;
-        transition: width .5s ease, background-color .5s ease; }
-  header nav div.mobile-nav, header nav a#burger, header nav .mobile_link-group {
-    display: none; }
-  header nav #burger {
-    cursor: pointer; }
-  header nav .mobile_link-group {
-    position: absolute;
-    z-index: 4;
-    right: 0;
-    top: 0px;
-    background: #36706b;
-    width: 320px;
-    height: 700px;
-    display: block; }
-    header nav .mobile_link-group > a {
-      padding: 73px 32px 95px 15px;
-      cursor: pointer; }
-  header nav .mobile_link-group li {
-    text-align: right;
-    padding: 25px 20px;
-    cursor: pointer; }
-  header nav .mobile_link-group .social {
-    cursor: auto; }
-  header nav div.mobile-nav ul.mobile_link-group li.mobile_link a {
-    color: #FFFFFF; }
->>>>>>> 333f7c9650c581fd772e52ece4dddf88810e3cca
 
 .headmain {
   padding: 120px 100px;
@@ -1197,65 +1139,86 @@ footer > p:last-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #D6E2E1; }
-  #login form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%; }
-    #login form figure {
-      width: 166px;
-      margin-bottom: 48px; }
-      #login form figure img {
-        width: 100%; }
-    #login form div.login-container {
-      display: flex;
-      flex-direction: column;
-      width: 100%; }
-      #login form div.login-container hr {
-        margin-bottom: 48px;
-        height: 2px;
-        background-color: #85A9A6;
-        border: none; }
-      #login form div.login-container label {
-        font-family: 'Raleway';
-        font-weight: 500;
-        font-size: 16px;
-        color: #595959;
-        margin-bottom: 8px; }
-      #login form div.login-container input {
-        height: 56px;
-        padding: 0 33px;
-        background-color: #FFFFFF;
-        border: 1px solid #8C8D8C;
-        border-radius: 8px;
-        margin-bottom: 18px; }
-      #login form div.login-container div.login-button {
-        margin-top: 51px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center; }
-        #login form div.login-container div.login-button a {
-          margin-right: 80px;
-          font-family: 'Raleway';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          color: #33706B;
-          border-bottom: 2px solid;
-          padding-bottom: 4px; }
-        #login form div.login-container div.login-button button {
-          width: 214px;
-          height: 56px;
-          background: #33706B;
-          border-radius: 32px;
-          border: none;
-          color: #FFFFFF;
-          font-family: 'Raleway';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          cursor: pointer; }
+  background-color: #D6E2E1;
+}
+
+#login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#login form figure {
+  width: 166px;
+  margin-bottom: 48px;
+}
+
+#login form figure img {
+  width: 100%;
+}
+
+#login form div.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#login form div.login-container hr {
+  margin-bottom: 48px;
+  height: 2px;
+  background-color: #85A9A6;
+  border: none;
+}
+
+#login form div.login-container label {
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 16px;
+  color: #595959;
+  margin-bottom: 8px;
+}
+
+#login form div.login-container input {
+  height: 56px;
+  padding: 0 33px;
+  background-color: #FFFFFF;
+  border: 1px solid #8C8D8C;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+#login form div.login-container div.login-button {
+  margin-top: 51px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#login form div.login-container div.login-button a {
+  margin-right: 80px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #33706B;
+  border-bottom: 2px solid;
+  padding-bottom: 4px;
+}
+
+#login form div.login-container div.login-button button {
+  width: 214px;
+  height: 56px;
+  background: #33706B;
+  border-radius: 32px;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 #registration {
   display: none;
@@ -1500,7 +1463,6 @@ footer > p:last-child {
 }
 
 section#circuits {
-<<<<<<< HEAD
   margin-top: 129px;
 }
 
@@ -1572,7 +1534,7 @@ section#circuits div.card-circuit-container {
   justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
-  padding: 0 60px;
+  padding: 0 70px;
 }
 
 section#circuits div.card-circuit-container div.card-circuit {
@@ -2059,7 +2021,7 @@ section#show-circuit div.show-circuit-container div.show-circuit-slider div.show
 
 section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider {
@@ -2114,427 +2076,6 @@ section#show-circuit div.show-circuit-container div.show-circuit-slider div.show
 section#show-circuit div.btn-fix-container {
   display: none;
 }
-=======
-  margin-top: 129px; }
-  section#circuits div.title-circuit-container {
-    position: relative;
-    width: fit-content; }
-    section#circuits div.title-circuit-container svg:first-child {
-      position: absolute;
-      top: -40px;
-      right: 48%; }
-    section#circuits div.title-circuit-container h1 {
-      font-size: 56px;
-      font-family: 'Ubuntu';
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: -0.03em;
-      color: #191A19;
-      margin-bottom: 48px;
-      margin-left: 32px; }
-    section#circuits div.title-circuit-container svg:last-child {
-      position: absolute;
-      top: 0;
-      right: -45%; }
-  section#circuits h2 {
-    font-size: 24px;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: -0.03em;
-    color: #333333;
-    margin-bottom: 24px;
-    margin-left: 32px; }
-  section#circuits div.select-container {
-    margin-left: 32px; }
-    section#circuits div.select-container select {
-      width: 130px;
-      height: 56px;
-      background-color: #33706b;
-      border: none;
-      border-radius: 8px;
-      color: #D6E2E1;
-      padding: 16px; }
-      section#circuits div.select-container select option {
-        font-family: 'Raleway';
-        font-weight: 500;
-        font-size: 16px; }
-    section#circuits div.select-container select:first-child {
-      margin-right: 16px; }
-  section#circuits div.card-circuit-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 0 70px; }
-    section#circuits div.card-circuit-container div.card-circuit {
-      background-color: #D6E2E1;
-      padding: 24px 27px;
-      margin: 48px 0;
-      width: 350px;
-      border-radius: 0 0 32px 32px;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; }
-      section#circuits div.card-circuit-container div.card-circuit img {
-        width: 100%; }
-      section#circuits div.card-circuit-container div.card-circuit h3 {
-        font-weight: 400;
-        font-size: 24px;
-        font-family: 'Ubuntu';
-        font-style: normal;
-        letter-spacing: -0.03em;
-        margin: 8px 0;
-        color: #191A19; }
-      section#circuits div.card-circuit-container div.card-circuit p:first-of-type {
-        font-family: 'Raleway';
-        font-weight: 500;
-        font-size: 13px;
-        font-style: normal;
-        margin-bottom: 16px;
-        color: #191A19; }
-      section#circuits div.card-circuit-container div.card-circuit div.filter-circuit-container {
-        margin-bottom: 8px;
-        display: flex;
-        flex-wrap: wrap; }
-        section#circuits div.card-circuit-container div.card-circuit div.filter-circuit-container p.filter-label {
-          padding: 8px 16px;
-          margin-bottom: 8px;
-          margin-right: 8px;
-          width: fit-content;
-          background-color: #ADC6C4;
-          border-radius: 8px;
-          color: #333333;
-          font-size: 13px;
-          font-weight: 500;
-          font-family: 'Raleway'; }
-      section#circuits div.card-circuit-container div.card-circuit div.discover-circuit {
-        margin-bottom: 19px; }
-        section#circuits div.card-circuit-container div.card-circuit div.discover-circuit p {
-          font-size: 16px;
-          font-family: 'Raleway';
-          font-weight: 500;
-          margin-bottom: 4px; }
-      section#circuits div.card-circuit-container div.card-circuit p:nth-child(6) {
-        background-color: #33706B;
-        padding: 16px 56px;
-        border-radius: 32px;
-        text-align: center; }
-        section#circuits div.card-circuit-container div.card-circuit p:nth-child(6) a {
-          font-size: 16px;
-          font-weight: 700;
-          font-family: 'Raleway';
-          text-decoration: none;
-          color: #FFFFFF; }
-    section#circuits div.card-circuit-container svg:first-child {
-      position: absolute;
-      left: 0;
-      top: 40px; }
-    section#circuits div.card-circuit-container svg:last-child {
-      position: absolute;
-      right: 0;
-      bottom: 0; }
-
-section#show-circuit {
-  padding: 203px 100px 112px 100px; }
-  section#show-circuit div.show-circuit-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    section#show-circuit div.show-circuit-header img.show-circuit-banner {
-      width: 715px;
-      border-radius: 0 0 10px 10px;
-      margin-bottom: 32px; }
-    section#show-circuit div.show-circuit-header div.show-circuit-title {
-      margin-bottom: 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; }
-      section#show-circuit div.show-circuit-header div.show-circuit-title h1 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 29px;
-        letter-spacing: -0.03em;
-        margin-bottom: 8px; }
-      section#show-circuit div.show-circuit-header div.show-circuit-title p {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 20px;
-        letter-spacing: -0.03em; }
-    section#show-circuit div.show-circuit-header div.show-circuit-icone {
-      margin-bottom: 32px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center; }
-      section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone {
-        width: 136px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center; }
-        section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone img {
-          margin-bottom: 16px; }
-        section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone p {
-          font-family: 'Raleway';
-          font-weight: 500;
-          font-size: 16px;
-          color: #333333; }
-      section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone:first-child {
-        margin-bottom: 36px; }
-      section#show-circuit div.show-circuit-header div.show-circuit-icone div.circuit-icone-down {
-        display: flex;
-        width: 100%;
-        justify-content: space-around; }
-  section#show-circuit p.btn-fix {
-    width: 238px;
-    height: 56px;
-    background: #33706B;
-    border-radius: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    section#show-circuit p.btn-fix a {
-      color: #FFFFFF; }
-  section#show-circuit div.show-circuit-container p.show-circuit-fullcontent {
-    margin-bottom: 112px;
-    width: 715px;
-    font-family: 'Raleway';
-    font-weight: 500;
-    font-size: 16px;
-    color: #595959; }
-  section#show-circuit div.show-circuit-container div.show-circuit-discover {
-    margin-bottom: 80px;
-    padding: 0 100px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title {
-      display: flex; }
-      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title h2 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 56px;
-        letter-spacing: -0.03em;
-        color: #191A19;
-        margin-bottom: 48px;
-        margin-right: 12px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-title svg {
-        width: 86px;
-        height: 80px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; }
-      section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card {
-        margin-bottom: 32px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card img {
-          margin-bottom: 16px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-discover div.show-circuit-discover-container div.show-circuit-discover-card p {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 23px;
-          letter-spacing: -0.03em;
-          color: #333333; }
-  section#show-circuit div.show-circuit-container div.show-circuit-product {
-    margin-bottom: 112px;
-    padding: 0 100px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title {
-      width: 607px;
-      margin-bottom: 48px;
-      position: relative; }
-      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title h2 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 56px;
-        letter-spacing: -0.03em;
-        color: #191A19; }
-      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-title svg {
-        top: -20px;
-        right: 35%;
-        position: absolute;
-        width: 311px;
-        height: 102px;
-        z-index: -1; }
-    section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container {
-      display: flex;
-      justify-content: space-between; }
-      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container img {
-        margin-bottom: 18px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card {
-        background: #33706B;
-        width: 350px;
-        border-radius: 32px;
-        margin-bottom: 32px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text {
-          padding: 0 32px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text div:first-child {
-            position: relative; }
-            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text div:first-child h3 {
-              font-family: 'Amithen';
-              font-weight: 400;
-              font-size: 32px;
-              color: #F28D00; }
-            section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text div:first-child svg {
-              position: absolute;
-              top: -15px;
-              right: 0; }
-          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p.product {
-            font-family: 'Ubuntu';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            letter-spacing: -0.03em;
-            color: #FFFFFF;
-            margin-bottom: 16px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card div.show-circuit-card-text p:last-child {
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            color: #FFFFFF;
-            margin-bottom: 98px; }
-  section#show-circuit div.show-circuit-container div.show-circuit-program {
-    margin-bottom: 112px;
-    padding: 0 100px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title {
-      margin-bottom: 48px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title h2 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 56px;
-        letter-spacing: -0.03em; }
-      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-title svg {
-        width: 145px;
-        height: 42px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative; }
-      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card {
-        width: 923px;
-        background: #D6E2E1;
-        border-radius: 24px;
-        padding: 52px 100px 32px 100px;
-        margin-bottom: 32px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card h2 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 36px;
-          letter-spacing: -0.03em;
-          color: #333333;
-          margin-bottom: 20px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card hr {
-          margin-bottom: 20px;
-          background-color: #5C8D89;
-          border-radius: 50%; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card h3 {
-          font-family: 'Ubuntu';
-          font-weight: 400;
-          font-size: 24px;
-          letter-spacing: -0.03em;
-          color: #333333;
-          margin-bottom: 15px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.show-circuit-program-card p {
-          font-family: 'Raleway';
-          font-weight: 500;
-          font-size: 13px;
-          color: #595959;
-          margin-bottom: 20px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container svg {
-        position: absolute;
-        top: 46%;
-        right: -15%; }
-      section#show-circuit div.show-circuit-container div.show-circuit-program div.show-circuit-program-container div.btn-program {
-        display: flex;
-        justify-content: flex-end;
-        width: 923px; }
-  section#show-circuit div.show-circuit-container div.show-circuit-details {
-    margin-bottom: 88px;
-    padding: 0 100px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title {
-      margin-bottom: 48px;
-      display: flex;
-      position: relative;
-      width: fit-content; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg:first-child {
-        position: absolute;
-        top: -70px;
-        left: -15%; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title h2 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 56px;
-        letter-spacing: -0.03em;
-        color: #191A19; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div.show-circuit-details-title svg:last-child {
-        position: absolute;
-        top: -40px;
-        right: -15%; }
-    section#show-circuit div.show-circuit-container div.show-circuit-details div {
-      width: 822px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div h3 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 20px;
-        letter-spacing: -0.03em;
-        color: #333333;
-        margin-bottom: 24px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-details div p {
-        font-family: 'Raleway';
-        font-weight: 500;
-        font-size: 16px;
-        color: #595959;
-        margin-bottom: 24px; }
-  section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title {
-    position: relative;
-    margin-bottom: 64px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title h2 {
-      font-family: 'Ubuntu';
-      font-weight: 400;
-      font-size: 56px;
-      letter-spacing: -0.03em;
-      color: #191A19; }
-    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title svg {
-      position: absolute;
-      left: 16%; }
-  section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
-    display: flex;
-    justify-content: space-evenly; }
-    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider {
-      border-radius: 0px 0px 32px 32px;
-      background: #D6E2E1;
-      width: 323px;
-      padding: 0 0 43px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider img {
-        width: 100%;
-        margin-bottom: 30px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider h3 {
-        font-family: 'Ubuntu';
-        font-weight: 400;
-        font-size: 24px;
-        letter-spacing: -0.03em;
-        padding: 0 16px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-card-discover-circuit {
-        padding: 16px 0 32px 16px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding-right: 37px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p {
-          margin: 0 8px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p a {
-            font-family: 'Raleway';
-            font-weight: 700;
-            font-size: 16px;
-            color: #33706B; }
-  section#show-circuit div.btn-fix-container {
-    display: none; }
->>>>>>> 333f7c9650c581fd772e52ece4dddf88810e3cca
 
 @media (max-width: 1600px) {
   #topfive {
@@ -2565,7 +2106,6 @@ section#show-circuit {
     width: 50px;
   }
   #topfive {
-<<<<<<< HEAD
     padding: 100px 100px;
   }
   #topfive .container > svg {
@@ -2576,20 +2116,8 @@ section#show-circuit {
   #topfive .container .slider .carousel-items {
     margin-left: -80px;
     margin-right: -100px;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
-=======
-    padding: 100px 100px; }
-    #topfive .container > svg {
-      position: absolute;
-      top: 184px;
-      left: 750px; }
-    #topfive .container .slider .carousel-items {
-      margin-left: -80px;
-      margin-right: -100px;
-      justify-content: space-evenly; }
-
->>>>>>> 333f7c9650c581fd772e52ece4dddf88810e3cca
   section#quiz {
     padding: 112px 300px;
   }
@@ -2722,19 +2250,19 @@ section#show-circuit {
     display: none;
   }
   .headmain {
-<<<<<<< HEAD
     padding: 100px 50px;
   }
   .headmain #headcontainer {
     flex-direction: column;
-    width: 350px;
+    align-items: center;
+    width: 100%;
     margin: 0 auto;
   }
   .headmain #headcontainer figure {
-    width: 100%;
+    width: 50%;
   }
   .headmain #headcontainer article {
-    width: 350px;
+    width: 70%;
   }
   .headmain #headcontainer article h1 {
     font-size: 36px;
@@ -2778,61 +2306,11 @@ section#show-circuit {
   .headmain:after {
     width: 0px;
   }
-=======
-    padding: 100px 50px; }
-    .headmain #headcontainer {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin: 0 auto; }
-      .headmain #headcontainer figure {
-        width: 50%; }
-      .headmain #headcontainer article {
-        width: 70%; }
-        .headmain #headcontainer article h1 {
-          font-size: 36px;
-          line-height: 41px;
-          width: 100%;
-          position: relative; }
-          .headmain #headcontainer article h1 svg {
-            position: absolute;
-            bottom: -5px;
-            left: 42px;
-            width: 150px; }
-        .headmain #headcontainer article #headsubtitle {
-          margin-top: 48px; }
-          .headmain #headcontainer article #headsubtitle p {
-            width: 100%;
-            font-size: 16px;
-            line-height: 24px; }
-        .headmain #headcontainer article #actions #button {
-          color: white;
-          width: 218px;
-          height: 56px;
-          border-radius: 32px;
-          background: #36706B;
-          transition: 300ms;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-family: 'Raleway';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 24px; }
-        .headmain #headcontainer article #actions #button:hover {
-          background: #F8961E; }
-    .headmain:after {
-      width: 0px; }
-
->>>>>>> 333f7c9650c581fd772e52ece4dddf88810e3cca
   #topfive {
     padding: 100px 50px;
     background-color: #D6E2E1;
-    overflow: hidden;
   }
   #topfive .container {
-    width: 350px;
     margin: 0 auto;
   }
   #topfive .container > svg {
@@ -2866,14 +2344,15 @@ section#show-circuit {
   #topfive .container .slider {
     margin-top: 30px;
     margin-bottom: 50px;
-    margin-right: -150px;
+    margin-right: -50px;
   }
   #topfive .container .slider .carousel-items {
     height: 500px;
     display: flex;
     overflow-x: scroll;
     margin-left: 0px;
-    margin-right: 0px;
+    justify-content: space-between;
+    width: 100%;
     scroll-snap-type: x mandatory;
   }
   #topfive .container .slider ::-webkit-scrollbar {
@@ -2885,7 +2364,6 @@ section#show-circuit {
     scroll-snap-align: start;
   }
   #topfive .container .slider article {
-    width: 323px;
     background-color: #FFFFFF;
     border-radius: 0px 0px 32px 32px;
   }
@@ -2939,7 +2417,6 @@ section#show-circuit {
   }
   section#quiz {
     align-items: center;
-<<<<<<< HEAD
     padding: 100px 0;
   }
   section#quiz div#quizdeco {
@@ -2947,6 +2424,13 @@ section#show-circuit {
   }
   section#quiz strong div {
     display: none;
+  }
+  section#quiz div#question {
+    width: 100%;
+  }
+  section#quiz div#question form#option {
+    width: 100%;
+    padding: 0 20px;
   }
   section#quiz div#button {
     align-items: center;
@@ -2994,12 +2478,15 @@ section#show-circuit {
     padding: 100px 50px;
   }
   #aventure .container {
-    width: 350px;
+    width: 100%;
     margin: 0 auto;
     flex-direction: column;
   }
   #aventure .container figure {
     margin-bottom: 50px;
+  }
+  #aventure .container article {
+    width: 88%;
   }
   #aventure .container article h1 {
     font-family: 'Ubuntu';
@@ -3014,11 +2501,11 @@ section#show-circuit {
     position: absolute;
     width: 150px;
     top: -7px;
-    right: 83px;
+    left: 18%;
   }
   #aventure .container article p {
     margin-top: 30px;
-    width: 285px;
+    width: 100%;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
@@ -3061,7 +2548,7 @@ section#show-circuit {
   }
   #aventure .container #mc_embed_signup_scroll .mc-field-group input {
     margin-top: 20px;
-    width: 100%;
+    width: 100% !important;
     border-radius: 16px;
     border: none;
     height: 76px;
@@ -3104,147 +2591,6 @@ section#show-circuit {
     margin-top: 0px;
     padding-top: 128px;
   }
-=======
-    padding: 100px 0; }
-    section#quiz div#quizdeco {
-      display: none; }
-    section#quiz strong div {
-      display: none; }
-    section#quiz div#question {
-      width: 100%; }
-      section#quiz div#question form#option {
-        width: 100%;
-        padding: 0 20px; }
-    section#quiz div#button {
-      align-items: center;
-      flex-direction: column; }
-      section#quiz div#button button#last, section#quiz div#button #finir, section#quiz div#button #newsletter {
-        margin-left: 0;
-        margin-bottom: 48px; }
-      section#quiz div#button button#next, section#quiz div#button #partage {
-        margin-left: 0; }
-    section#quiz article {
-      flex-direction: column; }
-    section#quiz #popup #popup_partager, section#quiz #popup #popup_newsletter {
-      width: 500px;
-      height: 527px;
-      margin: 0 auto;
-      padding: 100px 100px; }
-      section#quiz #popup #popup_partager h1, section#quiz #popup #popup_newsletter h1 {
-        font-size: 20px; }
-      section#quiz #popup #popup_partager .lien, section#quiz #popup #popup_newsletter .lien {
-        padding: 0 60px; }
-        section#quiz #popup #popup_partager .lien a, section#quiz #popup #popup_newsletter .lien a {
-          color: black; }
-      section#quiz #popup #popup_partager #close, section#quiz #popup #popup_newsletter #close {
-        position: absolute;
-        top: 40px;
-        right: 40px;
-        border: none; }
-      section#quiz #popup #popup_partager #copie, section#quiz #popup #popup_newsletter #copie {
-        margin-top: 40px;
-        padding: 5px;
-        border-radius: 8px;
-        width: 400px;
-        display: flex; }
-
-  #aventure {
-    padding: 100px 50px; }
-    #aventure .container {
-      width: 100%;
-      margin: 0 auto;
-      flex-direction: column; }
-      #aventure .container figure {
-        margin-bottom: 50px; }
-      #aventure .container article {
-        width: 88%; }
-        #aventure .container article h1 {
-          font-family: 'Ubuntu';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 29px;
-          line-height: 33px;
-          letter-spacing: -0.03em;
-          position: relative; }
-          #aventure .container article h1 svg {
-            position: absolute;
-            width: 150px;
-            top: -7px;
-            left: 18%; }
-        #aventure .container article p {
-          margin-top: 30px;
-          width: 100%;
-          font-family: 'Raleway';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px; }
-      #aventure .container #mc_embed_signup_scroll {
-        margin-top: 50px; }
-        #aventure .container #mc_embed_signup_scroll h1 {
-          font-family: 'Ubuntu';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 28px;
-          letter-spacing: -0.03em; }
-        #aventure .container #mc_embed_signup_scroll div:nth-child(2) {
-          margin-top: 32px;
-          background: #D6E2E1;
-          border-radius: 16px;
-          padding: 10px;
-          width: 350px;
-          display: flex;
-          justify-content: space-between; }
-          #aventure .container #mc_embed_signup_scroll div:nth-child(2) label {
-            padding: 20px 41px;
-            border-radius: 16px;
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #33706B; }
-          #aventure .container #mc_embed_signup_scroll div:nth-child(2) .active {
-            background: #33706B;
-            color: #FFFFFF; }
-        #aventure .container #mc_embed_signup_scroll .mc-field-group input {
-          margin-top: 20px;
-          width: 100% !important;
-          border-radius: 16px;
-          border: none;
-          height: 76px;
-          font-family: 'Raleway';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px;
-          color: #B2B3B2;
-          padding: 20px;
-          border: 1px solid #8C8D8C; }
-        #aventure .container #mc_embed_signup_scroll .optionalParent button {
-          margin-top: 32px;
-          padding: 16px 56px;
-          font-family: 'Raleway';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 24px;
-          background: #33706B;
-          color: #FFFFFF;
-          border-radius: 32px;
-          border: none; }
-          #aventure .container #mc_embed_signup_scroll .optionalParent button:hover {
-            background-color: #F8961E;
-            cursor: pointer; }
-        #aventure .container #mc_embed_signup_scroll svg {
-          display: none; }
-      #aventure .container > div {
-        display: none; }
-        #aventure .container > div svg {
-          display: none; }
-
->>>>>>> 333f7c9650c581fd772e52ece4dddf88810e3cca
   section#circuits div.title-circuit-container svg:first-child {
     right: 35%;
   }
@@ -4688,11 +4034,13 @@ section#portraits div.farmer-container svg.circle-right {
     display: block;
   }
   section#quiz {
-<<<<<<< HEAD
-    padding: 185px 100px;
+    padding: 185px 50px;
   }
   section#quiz #question, section#quiz #resultat {
     text-align: center;
+  }
+  section#quiz #question form#option {
+    padding: 0px;
   }
   section#quiz #button {
     flex-direction: column;
@@ -4725,35 +4073,6 @@ section#portraits div.farmer-container svg.circle-right {
   }
 }
 
-=======
-    padding: 185px 50px; }
-    section#quiz #question, section#quiz #resultat {
-      text-align: center; }
-    section#quiz #question form#option {
-      padding: 0px; }
-    section#quiz #button {
-      flex-direction: column; }
-      section#quiz #button #next, section#quiz #button #finir {
-        text-align: center; }
-      section#quiz #button #last {
-        text-align: center;
-        display: none;
-        margin-bottom: 50px; }
-    section#quiz #popup #popup_partager strong {
-      position: relative; }
-      section#quiz #popup #popup_partager strong div {
-        position: absolute;
-        top: -50px;
-        left: 43px;
-        display: inline-block; }
-    section#quiz #popup #popup_newsletter strong {
-      position: relative; }
-      section#quiz #popup #popup_newsletter strong div {
-        position: absolute;
-        top: -45px;
-        left: 7px;
-        display: inline-block; } }
->>>>>>> 333f7c9650c581fd772e52ece4dddf88810e3cca
 @media (max-width: 620px) {
   header #concept-headcontainer:after {
     display: none !important;

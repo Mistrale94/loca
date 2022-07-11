@@ -2314,9 +2314,9 @@ header{
 #topfive{
     padding: 100px 50px;
     background-color: #D6E2E1;
-    overflow: hidden;
+    //@at-root: hidden;
     .container{
-        width: 350px;
+        //width: 350px;
         margin: 0 auto;
         >svg{
             display: none;
@@ -2350,16 +2350,17 @@ header{
         .slider{
             margin-top: 30px;
             margin-bottom: 50px;
-            margin-right: -150px;
-            
+            margin-right: -50px;
+
             .carousel-items {
                 height: 500px;
                 display: flex;
                 overflow-x: scroll;
                 margin-left: 0px;
-                margin-right: 0px;
+                justify-content: space-between;
+                //margin-right: 0px;
+                width: 100%;
                 scroll-snap-type: x mandatory;
-
             }
              ::-webkit-scrollbar {
                 display: none;
@@ -2367,11 +2368,10 @@ header{
             .carousel-item {
                 flex-grow: 1;
                 margin-left: 32px;
-                
                 scroll-snap-align: start;
             }
             article{
-                width: 323px;
+                //width: 323px;
                 background-color: #FFFFFF;
                 border-radius: 0px 0px 32px 32px;
                 img{
