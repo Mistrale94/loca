@@ -264,7 +264,7 @@ header nav {
 
 section#quiz {
   background-color: #D6E2E1;
-  padding: 112px 500px;
+  padding: 112px 200px;
   display: flex;
   flex-direction: column;
   position: relative; }
@@ -825,6 +825,73 @@ footer {
     font-weight: 300;
     font-size: 16px; }
 
+#login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D6E2E1; }
+  #login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; }
+    #login form figure {
+      width: 166px;
+      margin-bottom: 48px; }
+      #login form figure img {
+        width: 100%; }
+    #login form div.login-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      #login form div.login-container hr {
+        margin-bottom: 48px;
+        height: 2px;
+        background-color: #85A9A6;
+        border: none; }
+      #login form div.login-container label {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 16px;
+        color: #595959;
+        margin-bottom: 8px; }
+      #login form div.login-container input {
+        height: 56px;
+        padding: 0 33px;
+        background-color: #FFFFFF;
+        border: 1px solid #8C8D8C;
+        border-radius: 8px;
+        margin-bottom: 18px; }
+      #login form div.login-container div.login-button {
+        margin-top: 51px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; }
+        #login form div.login-container div.login-button a {
+          margin-right: 80px;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          color: #33706B;
+          border-bottom: 2px solid;
+          padding-bottom: 4px; }
+        #login form div.login-container div.login-button button {
+          width: 214px;
+          height: 56px;
+          background: #33706B;
+          border-radius: 32px;
+          border: none;
+          color: #FFFFFF;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          cursor: pointer; }
+
 #registration {
   display: none;
   position: fixed;
@@ -1070,7 +1137,7 @@ section#circuits {
     justify-content: space-evenly;
     flex-wrap: wrap;
     position: relative;
-    padding: 0 60px; }
+    padding: 0 70px; }
     section#circuits div.card-circuit-container div.card-circuit {
       background-color: #D6E2E1;
       padding: 24px 27px;
@@ -1404,7 +1471,7 @@ section#show-circuit {
       left: 16%; }
   section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-evenly; }
     section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider {
       border-radius: 0px 0px 32px 32px;
       background: #D6E2E1;
@@ -1468,7 +1535,7 @@ section#show-circuit {
     #topfive .container .slider .carousel-items {
       margin-left: -80px;
       margin-right: -100px;
-      justify-content: space-between; }
+      justify-content: space-evenly; }
 
   section#quiz {
     padding: 112px 300px; }
@@ -1575,12 +1642,13 @@ section#show-circuit {
     padding: 100px 50px; }
     .headmain #headcontainer {
       flex-direction: column;
-      width: 350px;
+      align-items: center;
+      width: 100%;
       margin: 0 auto; }
       .headmain #headcontainer figure {
-        width: 100%; }
+        width: 50%; }
       .headmain #headcontainer article {
-        width: 350px; }
+        width: 70%; }
         .headmain #headcontainer article h1 {
           font-size: 36px;
           line-height: 41px;
@@ -1717,6 +1785,11 @@ section#show-circuit {
       display: none; }
     section#quiz strong div {
       display: none; }
+    section#quiz div#question {
+      width: 100%; }
+      section#quiz div#question form#option {
+        width: 100%;
+        padding: 0 20px; }
     section#quiz div#button {
       align-items: center;
       flex-direction: column; }
@@ -1753,32 +1826,34 @@ section#show-circuit {
   #aventure {
     padding: 100px 50px; }
     #aventure .container {
-      width: 350px;
+      width: 100%;
       margin: 0 auto;
       flex-direction: column; }
       #aventure .container figure {
         margin-bottom: 50px; }
-      #aventure .container article h1 {
-        font-family: 'Ubuntu';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 29px;
-        line-height: 33px;
-        letter-spacing: -0.03em;
-        position: relative; }
-        #aventure .container article h1 svg {
-          position: absolute;
-          width: 150px;
-          top: -7px;
-          right: 83px; }
-      #aventure .container article p {
-        margin-top: 30px;
-        width: 285px;
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px; }
+      #aventure .container article {
+        width: 88%; }
+        #aventure .container article h1 {
+          font-family: 'Ubuntu';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 29px;
+          line-height: 33px;
+          letter-spacing: -0.03em;
+          position: relative; }
+          #aventure .container article h1 svg {
+            position: absolute;
+            width: 150px;
+            top: -7px;
+            left: 18%; }
+        #aventure .container article p {
+          margin-top: 30px;
+          width: 100%;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px; }
       #aventure .container #mc_embed_signup_scroll {
         margin-top: 50px; }
         #aventure .container #mc_embed_signup_scroll h1 {
@@ -1810,7 +1885,7 @@ section#show-circuit {
             color: #FFFFFF; }
         #aventure .container #mc_embed_signup_scroll .mc-field-group input {
           margin-top: 20px;
-          width: 100%;
+          width: 100% !important;
           border-radius: 16px;
           border: none;
           height: 76px;
@@ -2933,9 +3008,11 @@ section#portraits {
           display: block; }
 
   section#quiz {
-    padding: 185px 100px; }
+    padding: 185px 50px; }
     section#quiz #question, section#quiz #resultat {
       text-align: center; }
+    section#quiz #question form#option {
+      padding: 0px; }
     section#quiz #button {
       flex-direction: column; }
       section#quiz #button #next, section#quiz #button #finir {

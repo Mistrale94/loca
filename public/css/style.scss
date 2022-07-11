@@ -367,7 +367,7 @@ header{
 
 section#quiz{
     background-color:#D6E2E1;
-    padding: 112px 500px;
+    padding: 112px 200px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1125,6 +1125,88 @@ footer{
     }
 
 }
+#login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #D6E2E1;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+
+        figure{
+            width: 166px;
+            margin-bottom: 48px;
+
+            img{
+                width: 100%;
+            }
+        }
+        div.login-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            hr{
+                margin-bottom: 48px;
+                height: 2px;
+                background-color: #85A9A6;
+                border: none;
+            }
+            label{
+                font-family: 'Raleway';
+                font-weight: 500;
+                font-size: 16px;
+                color: #595959;
+                margin-bottom: 8px;
+            }
+            input{
+                height: 56px;
+                padding: 0 33px;
+                background-color: #FFFFFF;
+                border: 1px solid #8C8D8C;
+                border-radius: 8px;
+                margin-bottom: 18px;
+            }
+            div.login-button{
+                margin-top: 51px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                a{
+                    margin-right: 80px;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: #33706B;
+                    border-bottom: 2px solid;
+                    padding-bottom: 4px;
+                }
+                button{
+                    width: 214px;
+                    height: 56px;
+                    background: #33706B;
+                    border-radius: 32px;
+                    border: none;
+                    color: #FFFFFF;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
 #registration{
     display: none;
     position: fixed;
@@ -1441,7 +1523,7 @@ section#circuits{
         justify-content: space-evenly;
         flex-wrap: wrap;
         position: relative;
-        padding: 0 60px;
+        padding: 0 70px;
 
         div.card-circuit{
             background-color: #D6E2E1;
@@ -1880,7 +1962,7 @@ section#show-circuit{
             }
             div.show-circuit-slider-slide{
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-evenly;
 
                 div.show-card-circuit-slider{
                     border-radius: 0px 0px 32px 32px;
@@ -1975,7 +2057,7 @@ section#show-circuit{
                 .carousel-items {
                     margin-left:-80px;
                     margin-right:-100px;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                 }
             }
 
@@ -2151,13 +2233,14 @@ header{
         padding: 100px 50px;
         #headcontainer{
             flex-direction: column;
-            width: 350px;
+            align-items: center;
+            width: 100%;
             margin: 0 auto;
             figure{
-                width: 100%;
+                width: 50%;
             }
             article{
-                width: 350px;
+                width: 70%;
                 
                 h1{
                     font-size: 36px;
@@ -2350,6 +2433,15 @@ section#quiz{
             display: none;
         }
     }
+    div#question{
+        width: 100%;
+
+        form#option{
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    
     div#button{
         align-items: center;
         flex-direction: column;
@@ -2410,13 +2502,15 @@ section#quiz{
 #aventure{
     padding: 100px 50px;
     .container{
-        width: 350px;
+        width: 100%;
         margin: 0 auto;
         flex-direction: column;
         figure{
             margin-bottom: 50px;
         }
         article{
+            width: 88%;
+
             h1{
                 font-family: 'Ubuntu';
                 font-style: normal;
@@ -2430,12 +2524,12 @@ section#quiz{
                     position: absolute;
                     width: 150px;
                     top: -7px;
-                    right: 83px;
+                    left: 18%;
                 }
             }
             p{
                 margin-top:30px;
-                width: 285px;
+                width: 100%;
                 font-family: 'Raleway';
                 font-style: normal;
                 font-weight: 500;
@@ -2487,7 +2581,7 @@ section#quiz{
             .mc-field-group{
             input{
                 margin-top: 20px;
-                width: 100%;
+                width: 100% !important;
                 border-radius: 16px;
                 border: none;
                 height: 76px;
@@ -4156,9 +4250,14 @@ section#portraits{
 
 
     section#quiz{
-        padding: 185px 100px;
+        padding: 185px 50px;
         #question,#resultat{
             text-align: center;
+        }
+        #question{
+            form#option{
+                padding: 0px;
+            }
         }
         #button{
             flex-direction: column;
@@ -4207,8 +4306,6 @@ section#portraits{
         
 
     }
-
-    
 }
 
 @media (max-width: 620px){

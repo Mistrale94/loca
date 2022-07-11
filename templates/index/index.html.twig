@@ -70,11 +70,11 @@
                 <div class="slider">
                     <ul class="carousel-items">
                         <!-- for i 1->5 <li></li> -->
-                        {% for circuit in circuits|slice(0, 3)%}
+                        {% for circuit in circuits|slice(0, 3) %}
                         <li class="carousel-item">
                             <article>
                                 <figure>
-                                    <img src="/image/{{circuit.image}}" alt="">
+                                    <img src="/image/uploads/circuits/{{circuit.image}}" alt="">
                                 </figure>
                                 
                                 <div>
