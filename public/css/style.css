@@ -1764,7 +1764,7 @@ section#show-circuit {
       #aventure .container figure {
         margin-bottom: 50px; }
       #aventure .container article {
-        width: 70%; }
+        width: 88%; }
         #aventure .container article h1 {
           font-family: 'Ubuntu';
           font-style: normal;
@@ -2940,9 +2940,11 @@ section#portraits {
           display: block; }
 
   section#quiz {
-    padding: 185px 100px; }
+    padding: 185px 50px; }
     section#quiz #question, section#quiz #resultat {
       text-align: center; }
+    section#quiz #question form#option {
+      padding: 0px; }
     section#quiz #button {
       flex-direction: column; }
       section#quiz #button #next, section#quiz #button #finir {

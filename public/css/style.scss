@@ -2427,7 +2427,7 @@ section#quiz{
             margin-bottom: 50px;
         }
         article{
-            width: 70%;
+            width: 88%;
 
             h1{
                 font-family: 'Ubuntu';
@@ -4168,9 +4168,14 @@ section#portraits{
 
 
     section#quiz{
-        padding: 185px 100px;
+        padding: 185px 50px;
         #question,#resultat{
             text-align: center;
+        }
+        #question{
+            form#option{
+                padding: 0px;
+            }
         }
         #button{
             flex-direction: column;
