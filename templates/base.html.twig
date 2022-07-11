@@ -42,6 +42,11 @@
                     <li>
                         <a href="{{ path('app_circuit_index') }}">Circuits</a>
                     </li>
+                    {% if app.user %}
+                        <li>
+                            <a href="{{path('app_circuit_list')}}">Liste des circuits</a>
+                        </li>
+                    {% endif %}
                 </ul>
                 {% if app.user %}
                     <li class="logout_desktop">
