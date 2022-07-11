@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 08 juil. 2022 à 23:41
+-- Généré le : lun. 11 juil. 2022 à 22:08
 -- Version du serveur : 5.7.36
 -- Version de PHP : 8.0.13
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `circuit`;
 CREATE TABLE IF NOT EXISTS `circuit` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `image` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `locality` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -43,15 +43,15 @@ CREATE TABLE IF NOT EXISTS `circuit` (
   `stage` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `destination` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `circuit`
 --
 
 INSERT INTO `circuit` (`id`, `image`, `title`, `locality`, `content`, `relationship`, `duration`, `price`, `fullcontent`, `created_at`, `modified_at`, `stage`, `destination`) VALUES
-(1, 'circuit1.png', 'Dijon, de la moutarde au Cassis', 'Weekend à Dijon, Bourgogne-Franche-Comté', 'Circuit en 8 étapes sur deux jours,', 'Idéal en amoureux ou en solitaire', 'Un bon week-end suffira !', '250 ~ 350€', 'Découvrez la gastronomie dijonnaise à travers des produits emblématiques, car oui, il n’y a pas que de la moutarde dont les dyjonnais sont fiers !   Un séjour qui promet d’être riche en découvertes et moins en calories ! Entre la moutarde, la crème de cassis, le pain d’épices, l’époisses et toute sa gastronomie, Dijon n’aura plus de secrets pour vous.', NULL, NULL, 'Circuit en 7 étapes sur deux jours.', 'Dijon est à environ 4h de route de Paris et 2h30 en train. Il est possible de visiter entièrement la ville à pieds, et le réseau de transports en commun incluant des bus, des trams, des vélos à la location libre, permettent de délaisser totalement la voiture et de vivre à la bourguignonne.'),
-(2, 'circuit2.png', 'Secret du Finistère', 'Weekend à Dijon, Bourgogne-Franche-Comté', 'Circuit en 8 étapes sur deux jours.', 'Idéal en amoureux ou en solitaire', 'Un bon week-end suffira !', '250 ~ 350€', 'Découvrez les paysages et la gastronomie du Finistère à travers la visite de villages emblématiques et historiques. Que ce soit en vélo, à pieds ou en kayak, ce séjour promet  de belles balades et de bons plats régionaux.', NULL, NULL, '', '');
+(43, 'circuit1-62cc6e40ef689209229536.png', 'test', 'test', 'test', 'test', 'test', 'ets', 'test', NULL, NULL, 'test', 'test'),
+(44, 'circuit1-62cc9af8d0032480574335.png', 'test', 'test', 'test', 'test', 'test', 'test', 'test', NULL, NULL, 'test', 'test');
 
 -- --------------------------------------------------------
 
@@ -73,8 +73,8 @@ CREATE TABLE IF NOT EXISTS `circuit_filter` (
 --
 
 INSERT INTO `circuit_filter` (`circuit_id`, `filter_id`) VALUES
-(1, 1),
-(2, 2);
+(43, 4),
+(44, 3);
 
 -- --------------------------------------------------------
 
@@ -85,21 +85,19 @@ INSERT INTO `circuit_filter` (`circuit_id`, `filter_id`) VALUES
 DROP TABLE IF EXISTS `discover`;
 CREATE TABLE IF NOT EXISTS `discover` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `image` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `content` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `discover`
 --
 
 INSERT INTO `discover` (`id`, `image`, `content`, `created_at`, `modified_at`) VALUES
-(1, 'discover-1.png', 'La gastronomie', '2022-07-08 14:50:52', '2022-07-08 14:50:52'),
-(2, 'discover-2.png', 'Les producteurs', '2017-01-01 00:00:00', '2017-01-01 00:00:00'),
-(3, 'discover-3.png', 'Le vin', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
+(6, 'circuit-3-62cc9b2741c03755683163.png', 'test', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -121,9 +119,7 @@ CREATE TABLE IF NOT EXISTS `discover_circuit` (
 --
 
 INSERT INTO `discover_circuit` (`discover_id`, `circuit_id`) VALUES
-(1, 1),
-(2, 1),
-(3, 1);
+(6, 44);
 
 -- --------------------------------------------------------
 
@@ -160,7 +156,16 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 ('DoctrineMigrations\\Version20220708121208', '2022-07-08 12:12:28', 252),
 ('DoctrineMigrations\\Version20220708124102', '2022-07-08 12:41:16', 466),
 ('DoctrineMigrations\\Version20220708195019', '2022-07-08 19:52:06', 88),
-('DoctrineMigrations\\Version20220708212232', '2022-07-08 21:24:02', 87);
+('DoctrineMigrations\\Version20220708212232', '2022-07-08 21:24:02', 87),
+('DoctrineMigrations\\Version20220710150832', '2022-07-10 15:09:18', 140),
+('DoctrineMigrations\\Version20220710154943', '2022-07-10 16:33:53', 139),
+('DoctrineMigrations\\Version20220710155133', '2022-07-10 16:33:53', 9),
+('DoctrineMigrations\\Version20220710155519', '2022-07-10 16:33:53', 10),
+('DoctrineMigrations\\Version20220710155616', '2022-07-10 16:33:53', 10),
+('DoctrineMigrations\\Version20220710164008', '2022-07-10 16:42:04', 103),
+('DoctrineMigrations\\Version20220711171511', '2022-07-11 17:15:57', 111),
+('DoctrineMigrations\\Version20220711181532', '2022-07-11 18:16:09', 191),
+('DoctrineMigrations\\Version20220711181914', '2022-07-11 18:20:05', 137);
 
 -- --------------------------------------------------------
 
@@ -176,14 +181,14 @@ CREATE TABLE IF NOT EXISTS `editor` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_CCF1F1BAE7927C74` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `editor`
 --
 
 INSERT INTO `editor` (`id`, `email`, `roles`, `password`) VALUES
-(1, 'quat94@gmail.com', '[\"ROLE_USER\"]', '$2y$13$OcJ3jwqHIBczIZONQl85w.9laSPl3kYg00sfri5JOjQbjLba2BZNa');
+(1, 'admin@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$OcJ3jwqHIBczIZONQl85w.9laSPl3kYg00sfri5JOjQbjLba2BZNa');
 
 -- --------------------------------------------------------
 
@@ -243,7 +248,7 @@ DROP TABLE IF EXISTS `producer`;
 CREATE TABLE IF NOT EXISTS `producer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `circuit_id` int(11) NOT NULL,
-  `image` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `product` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -258,8 +263,7 @@ CREATE TABLE IF NOT EXISTS `producer` (
 --
 
 INSERT INTO `producer` (`id`, `circuit_id`, `image`, `name`, `product`, `content`, `created_at`, `modified_at`) VALUES
-(1, 1, 'producer-1.png', 'Quentin Pavard', 'Producteur de fraises  de Plougastel', 'Basé en Bretagne à Plousgastel dans le Finistère, Julio est un producteurs de fraises qui organise \r\ndes ateliers pour présenter aux écoles les récoltes eco-responsables. En fonction des saisons, il sème de nouvelles récoltes pour respecter le cycle de la nature.', '2017-01-01 00:00:00', '2017-01-01 00:00:00'),
-(2, 1, 'producer-2.png', 'Béatrice Petit', 'Productrice de camembert de Normandie', 'Béatrice est une super maman qui réussit à combiner l’élevage de ses vaches, la production de ses fromages, et l’éducation de ses enfants. Elle a à coeur de sensibiliser ses enfants sur les produits locaux et de leur faire découvrir la nature pour la protéger.', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
+(2, 44, 'circuit-3-62cc9b1723df4137610497.png', 'test', 'test', 'test', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -276,15 +280,14 @@ CREATE TABLE IF NOT EXISTS `program` (
   `modified_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`),
   KEY `IDX_92ED7784CF2182C8` (`circuit_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `program`
 --
 
 INSERT INTO `program` (`id`, `circuit_id`, `content`, `created_at`, `modified_at`) VALUES
-(1, 1, '<h2>Jour 1</h2>\r\n\r\n<hr />\r\n<h3>Matin&eacute;e</h3>\r\n\r\n<p>Fl&acirc;ner dans le march&eacute; des Halles de Dijon pour d&eacute;couvrir les sp&eacute;cialit&eacute;s dijonnaises et une multitude de produits locaux. Des dizaines de producteurs seront ravis de partager avec vous leurs produits frais.</p>\r\n\r\n<h3>Dejeuner</h3>\r\n\r\n<p>La Menuiserie, c&rsquo;est un caf&eacute; restaurant locavore sous les Halles de Dijon o&ugrave; est servie une cuisine savoureuse et engag&eacute;e. Qu&rsquo;ils soient &agrave; boire ou &agrave; manger, les produits sont locaux, les l&eacute;gumes de saison et bio dans la mesure du possible, et les plats enti&egrave;rement &eacute;labor&eacute;s sur place.</p>\r\n\r\n<h3>Apr&egrave;s-midi</h3>\r\n\r\n<p>D&eacute;buter l&rsquo;itin&eacute;raire du parcours de la Chouette depuis la place Darcy pour d&eacute;couvrir 22 lieux qui sont les principaux points d&rsquo;int&eacute;r&ecirc;t patrimoniaux de la capitale bourguigonne. Suivre le parcours, c&rsquo;est l&rsquo;assurance de ne manquer aucun des lieux et monuments les plus remarquables de la ville.</p>\r\n\r\n<h3>Soir&eacute;e</h3>\r\n\r\n<p>Nuit en chambre d&rsquo;h&ocirc;tes Le petit Tertre &agrave; 300 m&egrave;tres du centre ville de Dijon avec petit d&eacute;jeuner compris.</p>\r\n\r\n<h3>H&eacute;bergement</h3>\r\n\r\n<p>Nuit en chambre d&rsquo;h&ocirc;tes Le petit Tertre &agrave; 300 m&egrave;tres du centre ville de Dijon avec petit d&eacute;jeuner compris.</p>', '2017-01-01 00:00:00', '2017-01-01 00:00:00'),
-(2, 1, '<h2>Jour 2</h2>\r\n\r\n<hr />\r\n<h3>Matin&eacute;</h3>\r\n\r\n<p>Quoi de plus agr&eacute;able que de visiter le vignoble en deux-roues ? D&eacute;couvrez la route des Grands Crus de Dijon &agrave; v&eacute;lo et sillonnez la c&ocirc;te de Beaune en admirant ses paysages vallon&eacute;s.</p>\r\n\r\n<h3>Dejeuner</h3>\r\n\r\n<p>D&eacute;guster des vins dijonnais dans le ch&acirc;teau Marsannay, autour de planches &eacute;labor&eacute;es par les viticulteurs qui souhaitent vous faire d&eacute;couvrir leur univers.</p>\r\n\r\n<h3>Apr&egrave;s-midi</h3>\r\n\r\n<p>D&eacute;couverte du domaine du ch&acirc;teau Marsannay et visite des caves &agrave; double vo&ucirc;te de style cistercien qui vous plongent dans le XIX&egrave;me si&egrave;cle.</p>', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
+(1, 44, '<p>lziufhzosegfpeifgz</p>', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
 
 -- --------------------------------------------------------
 
