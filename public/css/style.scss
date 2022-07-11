@@ -66,6 +66,16 @@ header{
                 }
             }
         }
+        li.logout_desktop{
+            list-style: none;
+
+            a{
+                color: #F28D00;
+            }
+            a:hover{
+                color: #36706B;
+            }
+        }
         div.mobile-nav, a#burger, .mobile_link-group{
             display: none;
         }
@@ -89,7 +99,13 @@ header{
                 cursor: pointer;
             }
         }
+        li.logout{
+            list-style: none;
 
+            a{
+                color: #F28D00;
+            }
+        }
         .mobile_link-group li {
             text-align: right;
             padding: 25px 20px;
@@ -2805,9 +2821,9 @@ section#portraits{
             z-index: -1 !important;
         }
         svg.circle-right{
-        position: absolute;
-        right: 0;
-        top: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
 }
@@ -3024,6 +3040,9 @@ header{
             }
         }
         .desktop_nav {
+            display: none;
+        }
+        li.logout_desktop{
             display: none;
         }
     }

@@ -1,10 +1,16 @@
-{% extends 'base.html.twig' %}
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
 
-{% block title %}New Filter{% endblock %}
+    {% block title %}
+        <title>Ajouter un filtre</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
 
 {% block body %}
-    <h1>Create new Filter</h1>
-
     {{ include('filter/_form.html.twig') }}
 
     <a href="{{ path('app_filter_index') }}">back to list</a>

@@ -1,10 +1,16 @@
-{% extends 'base.html.twig' %}
+<head>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/style.css" />
+    {% endblock %}
 
-{% block title %}New Discover{% endblock %}
+    {% block title %}
+        <title>Ajouter un découvrir</title>
+    {% endblock %}
+
+    <link rel="icon" href="/image/favicon.png">
+</head>
 
 {% block body %}
-    <h1>Create new Discover</h1>
-
     {{ include('discover/_form.html.twig') }}
 
     <a href="{{ path('app_discover_index') }}">back to list</a>

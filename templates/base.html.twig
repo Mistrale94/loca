@@ -43,14 +43,19 @@
                         <a href="{{ path('app_circuit_index') }}">Circuits</a>
                     </li>
                 </ul>
+                {% if app.user %}
+                    <li class="logout_desktop">
+                        <a href="{{ path('app_logout') }}" class="logout">Se déconnecter</a>
+                    </li>
+                {% endif %}
                 <div class="mobile-nav">
                     <a id="burger" onClick="menu();">
-                    <img src="/image/Menu.png" alt="Icone burger" id="img-burger">
+                        <img src="/image/Menu.webp" alt="Icone burger" id="img-burger">
                     </a>
     
                     <ul class="mobile_link-group">
                         <a onclick="menu()">
-                        <img src="/image/close.png" alt="Icone croix"></a>
+                        <img src="/image/Close.webp" alt="Icone croix"></a>
                         <li class="mobile_link">
                             <a href="{{ path('app_index') }}">Accueil</a>
                         </li>
@@ -60,8 +65,12 @@
                         <li class="mobile_link">
                             <a href="{{ path('app_circuit_index') }}">Circuits</a>
                         </li>
+                        {% if app.user %}
+                            <li class="logout">
+                                <a href="{{ path('app_logout') }}">Se déconnecter</a>
+                            </li>
+                        {% endif %}
                     </ul>
-                    
                 </div>
             </nav>
         </header>
