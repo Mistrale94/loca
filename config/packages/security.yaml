@@ -45,6 +45,13 @@ security:
         - { path: ^/discover/show, roles: ROLE_ADMIN }
         - { path: ^/filter/show, roles: ROLE_ADMIN }
         - { path: ^/program/show, roles: ROLE_ADMIN }
+        - { path: ^/circuit/list, roles: ROLE_ADMIN }
+        - { path: ^/producer/list, roles: ROLE_ADMIN }
+        - { path: ^/filter/list, roles: ROLE_ADMIN }
+        - { path: ^/poducer/, roles: ROLE_ADMIN }
+        - { path: ^/filter/, roles: ROLE_ADMIN }
+        - { path: ^/discover/, roles: ROLE_ADMIN }
+        - { path: ^/program/, roles: ROLE_ADMIN }
 
 
 when@test:
