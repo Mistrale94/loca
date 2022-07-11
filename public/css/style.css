@@ -1562,7 +1562,8 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 95vh; }
+  height: 95vh;
+  position: relative; }
   .concept-headmain #concept-headcontainer {
     display: flex;
     justify-content: center;
@@ -1576,6 +1577,10 @@ body {
     font-style: normal;
     font-weight: 400;
     letter-spacing: -0.03em; }
+  .concept-headmain svg.left-cycle {
+    position: absolute;
+    left: 0;
+    top: 25%; }
 
 div#concept-headcontainer:after {
   position: absolute;
@@ -1810,17 +1815,6 @@ p:after {
         line-height: 20px;
         font-style: normal;
         font-weight: 300; }
-  #value:after {
-    position: absolute;
-    top: 950px;
-    left: -60px;
-    display: block;
-    content: "";
-    width: 120px;
-    height: 400px;
-    background-image: url(/image/deco.svg);
-    background-repeat: no-repeat;
-    background-size: contain; }
 
 section#travel {
   margin-bottom: 112px;
@@ -2085,7 +2079,7 @@ section#portraits {
     section#portraits div.farmer-container svg.circle-right {
       position: absolute;
       right: 0;
-      bottom: 30px; }
+      top: 0; }
 
 @media (max-width: 1600px) {
   #topfive {
