@@ -19,14 +19,14 @@
 </head>
 
 {% block body %}
-
+<section id="body-edit-circuit">
     {{ include('circuit/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href="{{ path('app_circuit_index') }}">back to list</a>
 
     {{ include('circuit/_delete_form.html.twig') }}
 {% endblock %}
-
+</section>
 {% block javascripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>

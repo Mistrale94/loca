@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class CircuitType extends AbstractType
 {
@@ -22,9 +23,9 @@ class CircuitType extends AbstractType
                 'data_class' => null,
                 'empty_data' => '',
             ])
-            ->add('title')
-            ->add('locality')
-            ->add('content')
+            ->add('title',TextType::class,['label'=>'Titre',])
+            ->add('locality',TextType::class,['label'=>'Lieu',])
+            ->add('content',TextType::class,['label'=>'Contenu',])
             ->add('filter', EntityType::class, [
                 'class' => Filter::class,
                 'multiple' => true,
@@ -38,12 +39,12 @@ class CircuitType extends AbstractType
                     'class' => 'select-filters'
                 ]
             ])
-            ->add('stage')
-            ->add('relationship')
-            ->add('duration')
-            ->add('price')
-            ->add('full_content')
-            ->add('destination')
+            ->add('stage',TextType::class,['label'=>'Etapes',])
+            ->add('relationship',TextType::class,['label'=>'Relation',])
+            ->add('duration',TextType::class,['label'=>'Durée',])
+            ->add('price',TextType::class,['label'=>'Prix',])
+            ->add('full_content',TextType::class,['label'=>'Contenu global',])
+            ->add('destination',TextType::class,['label'=>'Destination',])
         ;
     }
 

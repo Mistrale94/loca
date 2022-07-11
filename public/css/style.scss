@@ -4956,3 +4956,94 @@ admin list circuits
 
    
 }
+
+body{
+    #body-edit-circuit{
+        background: #ADC6C4;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        a{
+            text-decoration: underline;
+            color: black;
+            font-size: 24px;
+        }
+        form{
+
+            margin: 50px 0px;
+            width: 80%;
+            padding: 50px;
+            background: #36706B;
+            color: white;
+            border-radius: 20px;
+            a{
+                text-decoration: underline;
+                color: white;
+                font-size: 24px;
+            }
+            .btn{
+                color: #36706B;
+                        width: 218px;
+                        height: 56px;
+                        border-radius: 32px;
+                        background: white;
+                        transition: 300ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                        border: none;
+                        cursor: pointer;
+            }
+
+
+            #circuit_imageFile_file{
+                width: 10px;
+            }
+            label{
+                font-size: 24px
+            }
+        #circuit{
+
+            
+            #circuit_imageFile_delete{
+                width: 5%;
+            }
+            input{
+                height: 56px;
+                padding: 0 33px;
+                background-color: #FFFFFF;
+                border: 1px solid #8C8D8C;
+                border-radius: 8px;
+                margin-bottom: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-bottom: 25px;
+                margin-top: 5px;
+
+                #circuit_imageFile_file {
+                    button{
+                    height: 56px;
+                    padding: 0 33px;
+                    background-color: #FFFFFF;
+                    border: 1px solid #8C8D8C;
+                    border-radius: 8px;
+                    margin-bottom: 18px;
+                    font-family: 'Raleway', sans-serif;
+                    margin-bottom: 25px;
+                    margin-top: 5px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    }
+}
+

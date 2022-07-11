@@ -3470,5 +3470,71 @@ admin list circuits
             line-height: 24px;
             border: none;
             cursor: pointer; } }
+body #body-edit-circuit {
+  background: #ADC6C4;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  body #body-edit-circuit a {
+    text-decoration: underline;
+    color: black;
+    font-size: 24px; }
+  body #body-edit-circuit form {
+    margin: 50px 0px;
+    width: 80%;
+    padding: 50px;
+    background: #36706B;
+    color: white;
+    border-radius: 20px; }
+    body #body-edit-circuit form a {
+      text-decoration: underline;
+      color: white;
+      font-size: 24px; }
+    body #body-edit-circuit form .btn {
+      color: #36706B;
+      width: 218px;
+      height: 56px;
+      border-radius: 32px;
+      background: white;
+      transition: 300ms;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      border: none;
+      cursor: pointer; }
+    body #body-edit-circuit form #circuit_imageFile_file {
+      width: 10px; }
+    body #body-edit-circuit form label {
+      font-size: 24px; }
+    body #body-edit-circuit form #circuit #circuit_imageFile_delete {
+      width: 5%; }
+    body #body-edit-circuit form #circuit input {
+      height: 56px;
+      padding: 0 33px;
+      background-color: #FFFFFF;
+      border: 1px solid #8C8D8C;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 25px;
+      margin-top: 5px; }
+      body #body-edit-circuit form #circuit input #circuit_imageFile_file button {
+        height: 56px;
+        padding: 0 33px;
+        background-color: #FFFFFF;
+        border: 1px solid #8C8D8C;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 25px;
+        margin-top: 5px; }
 
 /*# sourceMappingURL=style.css.map */
