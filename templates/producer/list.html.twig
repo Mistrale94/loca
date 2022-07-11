@@ -1,21 +1,16 @@
-<head>
-    {% block stylesheets %}
-        <link rel="stylesheet" href="/css/style.css" />
-    {% endblock %}
 
-    {% block title %}
-        <title>Liste des circuits</title>
-    {% endblock %}
 
-    <link rel="icon" href="/image/favicon.png">
-</head>
+{% block stylesheets %}
+            <link rel="stylesheet" href="/css/style.css" />
+{% endblock %}
+
 
 {% block body %}
 <section id="body-circuit-list">
 
     <aside>
         <div id="logoaside">
-            <img src="/image/logo-white.png" alt="Logo">
+            <img src="/image/logo-white.png" alt="">
         </div>
 
 
@@ -38,22 +33,23 @@
         
                 <div class="admin-card-circuit-container">
                <div class="acc-new">
-               <h1>Liste des circuits</h1>
-                    <a href="{{ path('app_circuit_new') }}">Nouveau Circuit</a>
+               <h1>Liste des producteurs</h1>
+                    <a href="{{ path('app_producer_new') }}">Nouveau Producteur</a>
                 </div>
-                {% for circuit in listCircuits %}
+                {% for producer in listProducers %}
                     <div class="admin-card-circuit">
-                        <img src="/image/uploads/circuits/{{circuit.image}}" alt="Illustration circuit">
+                    <img src="/image/uploads/producers/{{producer.image}}" loading="lazy" alt="">
                         <div class="acc-content">
-                            <h3>{{circuit.title}}</h3>
-                            <p>{{circuit.locality}}</p>
+                            <h3> {{producer.name}}</h3>
+                            <p> {{producer.content}}</p>
+
                          </div>
                         <div class="acc-actions">
                             <p>
-                                <a href="{{ path('app_circuit_edit', {'id': circuit.id}) }}">Modifier</a>
+                                <a href="{{ path('app_producer_edit', {'id': producer.id}) }}">Modifier</a>
                             </p>
                             <p>
-                            {{ include('circuit/_delete_form.html.twig') }}
+                            {{ include('producer/_delete_form.html.twig') }}
                             </p>
                         </div>
                     </div>

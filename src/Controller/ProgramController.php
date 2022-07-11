@@ -31,7 +31,7 @@ class ProgramController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $programRepository->add($program, true);
 
-            return $this->redirectToRoute('app_program_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_producer_new', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('program/new.html.twig', [

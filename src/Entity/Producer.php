@@ -3,13 +3,15 @@
 namespace App\Entity;
 
 use App\Repository\ProducerRepository;
-use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Doctrine\ORM\Mapping as ORM;
+use DateTimeImmutable;
+
 
 #[ORM\Entity(repositoryClass: ProducerRepository::class)]
-#[Vich\Uploadable]
 #[ORM\HasLifecycleCallbacks]
+#[Vich\Uploadable]
 class Producer
 {
     #[ORM\Id]
@@ -156,6 +158,16 @@ class Producer
         return $this;
     }
 
+    #[ORM\PrePersist]
+    public function setCreatedAtValue(){
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    #[ORM\PrePersist]
+    public function setModifiedAtValue(){
+        $this->modifiedAt = new \DateTimeImmutable();
+    }
+    
     public function __toString()
     {
         return $this->name;
