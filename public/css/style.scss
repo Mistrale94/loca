@@ -25,6 +25,7 @@ header{
         align-items: center;
         width: 100%;
         background-color: #FFFFFF;
+        top: 0;
 
         a{
             img{
@@ -1293,7 +1294,6 @@ footer{
                 }
 
              }
-
              
 
         }
@@ -4213,6 +4213,7 @@ section#portraits{
 
 @media (max-width: 620px){
 
+
     header{
         #concept-headcontainer:after{
             display: none !important;
@@ -4373,6 +4374,7 @@ section#portraits{
         text-align: center;
 
     }
+    
     section#concept{
         height: 2150px;
         margin: 0;
@@ -4425,6 +4427,7 @@ section#portraits{
 
     }
     }
+
     section#quiz{
         h1{
             font-weight: 400;
