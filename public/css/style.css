@@ -17,7 +17,8 @@ header nav {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  top: 0; }
   header nav a img {
     height: 27px; }
   header nav ul {
@@ -1223,15 +1224,18 @@ section#show-circuit {
       align-items: flex-start; }
       section#show-circuit div.show-circuit-header div.show-circuit-title h1 {
         font-family: 'Ubuntu';
+        font-style: normal;
         font-weight: 400;
-        font-size: 29px;
-        letter-spacing: -0.03em;
-        margin-bottom: 8px; }
+        font-size: 56px;
+        line-height: 64px;
+        letter-spacing: -0.03em; }
       section#show-circuit div.show-circuit-header div.show-circuit-title p {
         font-family: 'Ubuntu';
         font-weight: 400;
-        font-size: 20px;
-        letter-spacing: -0.03em; }
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.03em;
+        margin-top: 8px; }
     section#show-circuit div.show-circuit-header div.show-circuit-icone {
       margin-bottom: 32px;
       display: flex;
@@ -1267,6 +1271,10 @@ section#show-circuit {
     justify-content: center; }
     section#show-circuit p.btn-fix a {
       color: #FFFFFF; }
+    section#show-circuit p.btn-fix:hover {
+      background-color: #F8961E;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s; }
   section#show-circuit div.show-circuit-container p.show-circuit-fullcontent {
     margin-bottom: 112px;
     width: 715px;
@@ -1467,7 +1475,8 @@ section#show-circuit {
       color: #191A19; }
     section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title svg {
       position: absolute;
-      left: 16%; }
+      top: 56px;
+      left: 216px; }
   section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
     display: flex;
     justify-content: space-evenly; }
@@ -1502,6 +1511,8 @@ section#show-circuit {
             font-weight: 700;
             font-size: 16px;
             color: #33706B; }
+          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p a:hover {
+            color: #F8961E; }
   section#show-circuit div.btn-fix-container {
     display: none; }
 
@@ -2254,10 +2265,8 @@ section#portraits {
 
   #topfive {
     padding: 100px 50px;
-    background-color: #D6E2E1;
-    overflow: hidden; }
+    background-color: #D6E2E1; }
     #topfive .container {
-      width: 350px;
       margin: 0 auto; }
       #topfive .container > svg {
         display: none; }
@@ -2286,13 +2295,14 @@ section#portraits {
       #topfive .container .slider {
         margin-top: 30px;
         margin-bottom: 50px;
-        margin-right: -150px; }
+        margin-right: -50px; }
         #topfive .container .slider .carousel-items {
           height: 500px;
           display: flex;
           overflow-x: scroll;
           margin-left: 0px;
-          margin-right: 0px;
+          justify-content: space-between;
+          width: 100%;
           scroll-snap-type: x mandatory; }
         #topfive .container .slider ::-webkit-scrollbar {
           display: none; }
@@ -2301,7 +2311,6 @@ section#portraits {
           margin-left: 32px;
           scroll-snap-align: start; }
         #topfive .container .slider article {
-          width: 323px;
           background-color: #FFFFFF;
           border-radius: 0px 0px 32px 32px; }
           #topfive .container .slider article img {
@@ -2486,18 +2495,22 @@ section#portraits {
         #aventure .container > div svg {
           display: none; }
 
-  section#circuits div.title-circuit-container svg:first-child {
-    right: 35%; }
-  section#circuits div.title-circuit-container h1 {
-    font-size: 29px; }
-  section#circuits div.title-circuit-container svg:last-child {
-    display: none; }
-  section#circuits div.card-circuit-container {
-    flex-direction: column;
-    align-items: center; }
+  section#circuits {
+    margin-top: 0px;
+    padding-top: 128px; }
+    section#circuits div.title-circuit-container svg:first-child {
+      right: 35%; }
+    section#circuits div.title-circuit-container h1 {
+      font-size: 29px; }
+    section#circuits div.title-circuit-container svg:last-child {
+      display: none; }
+    section#circuits div.card-circuit-container {
+      flex-direction: column;
+      align-items: center; }
 
   section#show-circuit {
-    padding: 0; }
+    padding: 0;
+    margin-bottom: 112px; }
     section#show-circuit div.show-circuit-header {
       display: flex;
       width: 100%;
@@ -2525,7 +2538,7 @@ section#portraits {
         section#show-circuit div.show-circuit-header div.show-circuit-icone p.btn-fix {
           display: none; }
     section#show-circuit div.show-circuit-container {
-      padding: 0 32px; }
+      padding-left: 32px; }
       section#show-circuit div.show-circuit-container p.show-circuit-fullcontent {
         width: 100%; }
       section#show-circuit div.show-circuit-container div.show-circuit-discover {
@@ -2610,11 +2623,11 @@ section#portraits {
         list-style: none;
         overflow-x: scroll;
         scroll-snap-type: x mandatory; }
-        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide .card-circuit {
+        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide .show-card-circuit-slider {
           margin-left: 32px;
           scroll-snap-align: start;
           min-width: 350px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide .card-circuit h3 {
+          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide .show-card-circuit-slider h3 {
             height: 59px; }
       section#show-circuit div.show-circuit-container ::-webkit-scrollbar {
         display: none; }
@@ -3039,12 +3052,13 @@ Page concept
         left: 7px;
         display: inline-block; } }
 @media (max-width: 620px) {
-  div.concept-headmain div#concept-headcontainer #concept-headtitle {
+  header #concept-headcontainer:after {
+    display: none !important; }
+  header #concept-headtitle {
     width: 300px; }
-    div.concept-headmain div#concept-headcontainer #concept-headtitle h1 svg:first-child {
+    header #concept-headtitle h1 svg:first-child {
       top: 10px;
-      left: 28%;
-      width: 185px; }
+      right: 25%; }
 
   #who {
     height: 750px; }
