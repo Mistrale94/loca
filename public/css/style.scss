@@ -1137,6 +1137,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 50%;
 
         figure{
             width: 166px;
@@ -1149,7 +1150,7 @@ footer{
         div.login-container{
             display: flex;
             flex-direction: column;
-            width: 610px;
+            width: 100%;
 
             hr{
                 margin-bottom: 48px;
