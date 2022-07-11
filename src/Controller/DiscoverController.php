@@ -31,7 +31,7 @@ class DiscoverController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $discoverRepository->add($discover, true);
 
-            return $this->redirectToRoute('app_discover_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_circuit_list', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('discover/new.html.twig', [

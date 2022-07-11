@@ -21,6 +21,14 @@ class ProducerController extends AbstractController
         ]);
     }
 
+    #[Route('/list', name: 'app_producer_list', methods: ['GET'])]
+    public function list(ProducerRepository $producerRepository): Response
+    {
+        return $this->render('producer/list.html.twig', [
+            'listProducers' => $producerRepository->findAll(),
+        ]);
+    }
+
     #[Route('/new', name: 'app_producer_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ProducerRepository $producerRepository): Response
     {
@@ -31,7 +39,7 @@ class ProducerController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $producerRepository->add($producer, true);
 
-            return $this->redirectToRoute('app_producer_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_discover_new', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('producer/new.html.twig', [

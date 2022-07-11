@@ -39,7 +39,7 @@ class CircuitController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $circuitRepository->add($circuit, true);
 
-            return $this->redirectToRoute('app_circuit_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_program_new', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('circuit/new.html.twig', [
@@ -66,7 +66,7 @@ class CircuitController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $circuitRepository->add($circuit, true);
 
-            return $this->redirectToRoute('app_circuit_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_circuit_list', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('circuit/edit.html.twig', [
@@ -74,7 +74,7 @@ class CircuitController extends AbstractController
             'form' => $form,
         ]);
     }
-    
+
     #[Route('/{id}/', name: 'app_circuit_delete', methods: ['POST'])]
     public function delete(Request $request, Circuit $circuit, CircuitRepository $circuitRepository): Response
     {
@@ -82,6 +82,6 @@ class CircuitController extends AbstractController
             $circuitRepository->remove($circuit, true);
         }
 
-        return $this->redirectToRoute('app_circuit_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_circuit_list', [], Response::HTTP_SEE_OTHER);
     }
 }

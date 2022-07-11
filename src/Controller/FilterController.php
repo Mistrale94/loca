@@ -21,6 +21,14 @@ class FilterController extends AbstractController
         ]);
     }
 
+    #[Route('/list', name: 'app_filter_list', methods: ['GET'])]
+    public function list(FilterRepository $filterRepository): Response
+    {
+        return $this->render('filter/list.html.twig', [
+            'listFilters' => $filterRepository->findAll(),
+        ]);
+    }
+
     #[Route('/new', name: 'app_filter_new', methods: ['GET', 'POST'])]
     public function new(Request $request, FilterRepository $filterRepository): Response
     {
