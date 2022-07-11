@@ -25,11 +25,7 @@
         <div class="select-container">
             <select name="filter" id="filter-select">
                 <option value="">Filtres</option>
-                {% for circuit in circuits %}
-                    {% for f in circuit.filter|slice(1) %}
-                        <option value="">{{f.name}}</option>
-                    {% endfor %}
-                {% endfor %}
+                {% include 'circuit/_filter.html.twig' with {form: form} only %}
             </select>
             <select name="filter" id="filter-select">
                 <option value="">Pertinence</option>

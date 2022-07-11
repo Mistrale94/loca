@@ -9,6 +9,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class CircuitType extends AbstractType
@@ -22,7 +23,10 @@ class CircuitType extends AbstractType
                 'data_class' => null,
                 'empty_data' => '',
             ])
-            ->add('title')
+            ->add('title',TextType::class, [
+                'label' => 'Titre',
+                ]
+            )
             ->add('locality')
             ->add('content')
             ->add('filter', EntityType::class, [

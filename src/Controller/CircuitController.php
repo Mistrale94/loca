@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Data\SearchData;
+use App\Form\SearchForm;
 use App\Entity\Circuit;
 use App\Form\CircuitType;
 use App\Repository\CircuitRepository;
@@ -16,8 +18,11 @@ class CircuitController extends AbstractController
     #[Route('/', name: 'app_circuit_index', methods: ['GET'])]
     public function index(CircuitRepository $circuitRepository): Response
     {
+        $data = new SearchData();
+        $form = $this->createForm(SearchForm::class, $data);
         return $this->render('circuit/index.html.twig', [
             'circuits' => $circuitRepository->findAll(),
+            'form' => $form->createView()
         ]);
     }
 
