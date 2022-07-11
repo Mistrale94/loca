@@ -1550,16 +1550,19 @@ section#show-circuit{
 
             h1{
                 font-family: 'Ubuntu';
+                font-style: normal;
                 font-weight: 400;
-                font-size: 29px;
+                font-size: 56px;
+                line-height: 64px;
                 letter-spacing: -0.03em;
-                margin-bottom: 8px;
             }
             p{
                 font-family: 'Ubuntu';
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 24px;
+                line-height: 28px;
                 letter-spacing: -0.03em;
+                margin-top: 8px;
             }
             
         }
@@ -1608,6 +1611,11 @@ section#show-circuit{
 
         a{
             color: #FFFFFF;
+        }
+        &:hover{
+            background-color: #F8961E;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
         }
     }
     div.show-circuit-container{
@@ -1875,7 +1883,8 @@ section#show-circuit{
                 }
                 svg{
                     position: absolute;
-                    left: 16%;
+                    top: 56px;
+                    left: 216px;
                 }
             }
             div.show-circuit-slider-slide{
@@ -1919,6 +1928,9 @@ section#show-circuit{
                                 font-weight: 700;
                                 font-size: 16px;
                                 color: #33706B;
+                            }
+                            a:hover{
+                                color: #F8961E;
                             }
                         }
                     }
@@ -2539,6 +2551,8 @@ section#quiz{
 
 section#circuits{
 
+    margin-top: 0px;
+    padding-top: 128px;
     div.title-circuit-container{
 
         svg:first-child{
@@ -2558,6 +2572,7 @@ section#circuits{
 }
 section#show-circuit{
     padding: 0;
+    margin-bottom: 112px;
 
     div.show-circuit-header{
         display: flex;
@@ -2596,7 +2611,8 @@ section#show-circuit{
         }
     }
     div.show-circuit-container{
-        padding: 0 32px;
+        //padding: 0 32px;
+        padding-left: 32px;
     
         p.show-circuit-fullcontent{
             width: 100%;
@@ -2720,14 +2736,14 @@ section#show-circuit{
             }
         }
         div.show-circuit-slider{
-            
             div.show-circuit-slider-slide{
+            
                 justify-content: space-between;
                 list-style:none;
                 overflow-x: scroll;
                 scroll-snap-type: x mandatory;
 
-                .card-circuit{
+                .show-card-circuit-slider{
                     margin-left: 32px;
                 
                     scroll-snap-align: start;
