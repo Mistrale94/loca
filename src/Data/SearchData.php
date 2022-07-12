@@ -9,6 +9,6 @@ class SearchData{
     /**
      * @var Filter[]
      */
-    public $filters = [];
+    public $filter = [];
 
 }

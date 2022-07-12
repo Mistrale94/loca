@@ -16,7 +16,7 @@ class SearchForm extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('filters', EntityType::class, [
+            ->add('filter', EntityType::class, [
                 'label' => false,
                 'required' => false,
                 'class' => Filter::class,
@@ -33,12 +33,6 @@ class SearchForm extends AbstractType
             'method' => 'GET',
             'csrf_protection' => false
         ]);
-    }
-
-    public function getBlockPrefix(){
-
-        return '';
-
     }
 
 }

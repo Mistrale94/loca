@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Data\SearchData;
 use App\Entity\Circuit;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -19,6 +20,25 @@ class CircuitRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Circuit::class);
+    }
+
+    /**
+     * @return Circuit[]
+     */
+    public function findSearch(SearchData $search): array
+    {
+        $query = $this
+            ->createQueryBuilder('c')
+            ->select('f', 'c')
+            ->join('c.filter', 'f');
+
+        if(!empty($search->filters)){
+            $query = $query
+                ->andWhere('f.id IN (:filter)')
+                ->setParameters('filter', $search->filters);
+        }
+
+        return $query->getQuery()->getResult();
     }
 
     public function add(Circuit $entity, bool $flush = false): void

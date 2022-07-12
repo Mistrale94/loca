@@ -16,10 +16,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class CircuitController extends AbstractController
 {
     #[Route('/', name: 'app_circuit_index', methods: ['GET'])]
-    public function index(CircuitRepository $circuitRepository): Response
+    public function index(CircuitRepository $circuitRepository, Request $request): Response
     {
         $data = new SearchData();
         $form = $this->createForm(SearchForm::class, $data);
+        $form->handleRequest($request);
+        $circuits = $circuitRepository->findSearch($data);
         return $this->render('circuit/index.html.twig', [
             'circuits' => $circuitRepository->findAll(),
             'form' => $form->createView()

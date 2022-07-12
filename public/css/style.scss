@@ -1747,13 +1747,15 @@ section#show-circuit{
             div.show-circuit-discover-container{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-around;
 
                 div.show-circuit-discover-card{
                     margin-bottom: 32px;
+                    width: 300px;
 
                     img{
                         margin-bottom: 16px;
+                        width: 100%;
                     }
                     p{
                         font-family: 'Ubuntu';
@@ -1797,6 +1799,7 @@ section#show-circuit{
 
                 img{
                     margin-bottom: 18px;
+                    width: 100%;
                 }
                 div.show-circuit-product-card{
                     background: #33706B;
