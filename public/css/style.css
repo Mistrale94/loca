@@ -1201,13 +1201,16 @@ section#circuits {
         background-color: #33706B;
         padding: 16px 56px;
         border-radius: 32px;
-        text-align: center; }
+        text-align: center;
+        cursor: pointer; }
         section#circuits div.card-circuit-container div.card-circuit p:nth-child(6) a {
           font-size: 16px;
           font-weight: 700;
           font-family: 'Raleway';
           text-decoration: none;
           color: #FFFFFF; }
+      section#circuits div.card-circuit-container div.card-circuit p:nth-child(6):hover {
+        background-color: #F28D00; }
     section#circuits div.card-circuit-container svg:first-child {
       position: absolute;
       left: 0;
@@ -1218,14 +1221,14 @@ section#circuits {
       bottom: 0; }
 
 section#show-circuit {
-  padding: 203px 100px 112px 100px; }
+  padding: 130px 100px 112px 100px; }
   section#show-circuit div.show-circuit-header {
     display: flex;
     justify-content: space-between;
     align-items: center; }
     section#show-circuit div.show-circuit-header img.show-circuit-banner {
       width: 715px;
-      border-radius: 0 0 10px 10px;
+      border-radius: 10px 10px 10px 10px;
       margin-bottom: 32px; }
     section#show-circuit div.show-circuit-header div.show-circuit-title {
       margin-bottom: 48px;
@@ -1345,9 +1348,10 @@ section#show-circuit {
         z-index: -1; }
     section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-around; }
       section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container img {
-        margin-bottom: 18px; }
+        margin-bottom: 18px;
+        width: 100%; }
       section#show-circuit div.show-circuit-container div.show-circuit-product div.show-circuit-product-container div.show-circuit-product-card {
         background: #33706B;
         width: 350px;
@@ -1474,55 +1478,57 @@ section#show-circuit {
         font-size: 16px;
         color: #595959;
         margin-bottom: 24px; }
-  section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title {
-    position: relative;
-    margin-bottom: 64px; }
-    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title h2 {
-      font-family: 'Ubuntu';
-      font-weight: 400;
-      font-size: 56px;
-      letter-spacing: -0.03em;
-      color: #191A19; }
-    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title svg {
-      position: absolute;
-      top: 56px;
-      left: 216px; }
-  section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
-    display: flex;
-    justify-content: space-evenly; }
-    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider {
-      border-radius: 0px 0px 32px 32px;
-      background: #D6E2E1;
-      width: 323px;
-      padding: 0 0 43px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider img {
-        width: 100%;
-        margin-bottom: 30px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider h3 {
+  section#show-circuit div.show-circuit-container div.show-circuit-slider {
+    padding: 0 100px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title {
+      position: relative;
+      margin-bottom: 64px; }
+      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title h2 {
         font-family: 'Ubuntu';
         font-weight: 400;
-        font-size: 24px;
+        font-size: 56px;
         letter-spacing: -0.03em;
-        padding: 0 16px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-card-discover-circuit {
-        padding: 16px 0 32px 16px; }
-      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button {
+        color: #191A19; }
+      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-title svg {
+        position: absolute;
+        top: 56px;
+        left: 216px; }
+    section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide {
+      display: flex;
+      justify-content: space-evenly; }
+      section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider {
+        border-radius: 0px 0px 32px 32px;
+        background: #D6E2E1;
+        width: 323px;
+        padding: 0 0 43px 0;
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding-right: 37px; }
-        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p {
-          margin: 0 8px; }
-          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p a {
-            font-family: 'Raleway';
-            font-weight: 700;
-            font-size: 16px;
-            color: #33706B; }
-          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p a:hover {
-            color: #F8961E; }
+        flex-direction: column;
+        justify-content: space-between; }
+        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider img {
+          width: 100%;
+          margin-bottom: 30px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider h3 {
+          font-family: 'Ubuntu';
+          font-weight: 400;
+          font-size: 24px;
+          letter-spacing: -0.03em;
+          padding: 0 16px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-card-discover-circuit {
+          padding: 16px 0 32px 16px; }
+        section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          padding-right: 37px; }
+          section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p {
+            margin: 0 8px; }
+            section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p a {
+              font-family: 'Raleway';
+              font-weight: 700;
+              font-size: 16px;
+              color: #33706B; }
+            section#show-circuit div.show-circuit-container div.show-circuit-slider div.show-circuit-slider-slide div.show-card-circuit-slider div.show-circuit-slider-button p a:hover {
+              color: #F8961E; }
   section#show-circuit div.btn-fix-container {
     display: none; }
 
@@ -1534,24 +1540,6 @@ section#show-circuit {
 
 .bepVfn svg path:last-child {
   fill: white !important; }
-
-body.light {
-  background-color: #FFFFFF;
-  color: #191A19; }
-  body.light header nav {
-    background-color: #FFFFFF; }
-  body.light header h1 {
-    color: #191A19; }
-  body.light #value div:first-child h1 {
-    color: #191A19; }
-  body.light #travel div.travel-title h1 {
-    color: #191A19; }
-  body.light #ccm {
-    color: #191A19; }
-  body.light #quiz h1 {
-    color: #191A19; }
-  body.light #portraits div:first-child h1 {
-    color: #191A19; }
 
 :root {
   --main-color-vert100:#162D2B;
@@ -2094,6 +2082,32 @@ section#portraits {
 @media (max-width: 1600px) {
   #topfive {
     padding: 100px 100px; } }
+@media (max-width: 1440px) {
+  header p:after {
+    top: 200px; }
+
+  div.container-title-concept svg:first-child {
+    left: 39%; }
+
+  section#travel {
+    padding: 0; }
+
+  section#concept {
+    padding: 100px 0;
+    flex-wrap: nowrap; }
+    section#concept div#leftconcept {
+      margin-left: 50px; }
+      section#concept div#leftconcept div#spacer svg#left {
+        left: -20%; }
+    section#concept div#rightconcept {
+      margin-right: 50px; }
+      section#concept div#rightconcept div#spacer svg#right {
+        right: -30%; }
+
+  #explain2 {
+    height: 500px; }
+    #explain2 #imgcontain2 {
+      width: 80%; } }
 @media (max-width: 1400px) {
   .headmain {
     padding: 120px 50px; }
@@ -2808,38 +2822,6 @@ section#portraits {
       width: 140px;
       margin: 0 auto;
       margin-top: 85px; } }
-/* 
-
------------------------------------------------------------------------------------
-Page concept
------------------------------------------------------------------------------------
-*/
-@media (max-width: 1440px) {
-  header p:after {
-    top: 200px; }
-
-  div.container-title-concept svg:first-child {
-    left: 39%; }
-
-  section#travel {
-    padding: 0; }
-
-  section#concept {
-    padding: 100px 0;
-    flex-wrap: nowrap; }
-    section#concept div#leftconcept {
-      margin-left: 50px; }
-      section#concept div#leftconcept div#spacer svg#left {
-        left: -20%; }
-    section#concept div#rightconcept {
-      margin-right: 50px; }
-      section#concept div#rightconcept div#spacer svg#right {
-        right: -30%; }
-
-  #explain2 {
-    height: 500px; }
-    #explain2 #imgcontain2 {
-      width: 80%; } }
 @media (max-width: 992px) {
   header nav {
     position: fixed;
@@ -3107,6 +3089,11 @@ Page concept
     left: 32%;
     z-index: -1; } }
 @media (max-width: 414px) {
+  .headmain #headcontainer figure {
+    width: 100%; }
+  .headmain #headcontainer article #headtitle h1 {
+    font-size: 36px; }
+
   header div.concept-headmain div#concept-headcontainer div#concept-headtitle {
     margin-bottom: 56px; }
     header div.concept-headmain div#concept-headcontainer div#concept-headtitle h1 {
